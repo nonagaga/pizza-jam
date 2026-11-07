@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dfs8wfox7kqvx"]
+
+[ext_resource type="Script" uid="uid://cua8f5k4v3uev" path="res://Utility/SceneManager/scene_manager.gd" id="1_w5pm8"]
+[ext_resource type="PackedScene" uid="uid://bjvnrpy1jd8p2" path="res://Utility/SceneManager/test_scene.tscn" id="2_vrua0"]
+[ext_resource type="PackedScene" uid="uid://dgy8c0ydtbm64" path="res://Utility/SceneManager/Transitions/TRANS_black_wipe.tscn" id="3_c2nx3"]
+[ext_resource type="PackedScene" uid="uid://dvv8e64tiq8ou" path="res://Utility/UI/main_menu.tscn" id="3_dbat5"]
+
+[node name="SceneManager" type="Node" unique_id=836661501]
+script = ExtResource("1_w5pm8")
+scene_list = Dictionary[StringName, PackedScene]({
+&"main_menu": ExtResource("3_dbat5"),
+&"test_scene": ExtResource("2_vrua0")
+})
+default_transition = ExtResource("3_c2nx3")
+default_scene = &"main_menu"
