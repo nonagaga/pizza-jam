@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://calr528djr23" path="res://Entities/Entity.tscn" id="1_41wu2"]
 [ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_0gd87"]
 [ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementInput.gd" id="3_c7jvw"]
+[ext_resource type="Script" uid="uid://duk7p1k5fwd7x" path="res://Entities/Modules/AbilityModule.gd" id="4_c7jvw"]
+[ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/LeftSwing.tres" id="5_2a4id"]
 
 [node name="Player" unique_id=639906909 instance=ExtResource("1_41wu2")]
 entity_name = "Player"
@@ -15,5 +17,46 @@ metadata/_custom_type_script = "uid://bufnrj8520j8s"
 script = ExtResource("3_c7jvw")
 metadata/_custom_type_script = "uid://b30auqqb707te"
 
-[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=975768696]
+[node name="AbilityModule" type="Node" parent="." index="3" unique_id=1674121974]
+script = ExtResource("4_c7jvw")
+primary_ability = ExtResource("5_2a4id")
+metadata/_custom_type_script = "uid://duk7p1k5fwd7x"
+
+[node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=975768696]
 zoom = Vector2(0.34, 0.34)
+
+[node name="TestUI" type="Control" parent="." index="5" unique_id=374077456]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="TestUI" index="0" unique_id=1701081411]
+layout_mode = 0
+offset_left = -917.0
+offset_top = 575.0
+offset_right = -812.0
+offset_bottom = 680.0
+
+[node name="Abil1" type="TextureRect" parent="TestUI/ColorRect" index="0" unique_id=120595597]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="TestUI" index="1" unique_id=1523958160]
+layout_mode = 0
+offset_left = -775.0
+offset_top = 575.0
+offset_right = -670.0
+offset_bottom = 680.0
+
+[node name="Abil2" type="TextureRect" parent="TestUI/ColorRect2" index="0" unique_id=78265030]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="changed_primary_icon" from="AbilityModule" to="TestUI/ColorRect/Abil1" method="set_texture"]

@@ -6,3 +6,5 @@ func _get_configuration_warnings() -> PackedStringArray:
 		return ["Parent should be an Entity."]
 	else:
 		return []
+
+@onready var entity = get_parent() as Entity

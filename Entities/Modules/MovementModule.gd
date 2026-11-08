@@ -1,8 +1,6 @@
 @tool
 class_name MovementModule extends EntityModule
 
-@onready var entity = get_parent() as Entity
-
 @export var walk_speed = 8.0 as float
 
 func _get_configuration_warnings() -> PackedStringArray:
