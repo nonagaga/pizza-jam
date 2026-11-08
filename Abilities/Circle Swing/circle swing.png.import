@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfmeumu83h3mh"
-path="res://.godot/imported/right swing.png-b21f0c062e3821d642863bea3b1f6bbc.ctex"
+uid="uid://mwakwgr8pkc7"
+path="res://.godot/imported/circle swing.png-3ad328cd38fc6e069da0febc152e35f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Abilities/right swing.png"
-dest_files=["res://.godot/imported/right swing.png-b21f0c062e3821d642863bea3b1f6bbc.ctex"]
+source_file="res://Abilities/Circle Swing/circle swing.png"
+dest_files=["res://.godot/imported/circle swing.png-3ad328cd38fc6e069da0febc152e35f4.ctex"]
 
 [params]
 

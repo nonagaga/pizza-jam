@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_0gd87"]
 [ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementInput.gd" id="3_c7jvw"]
 [ext_resource type="Script" uid="uid://duk7p1k5fwd7x" path="res://Entities/Modules/AbilityModule.gd" id="4_c7jvw"]
-[ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/LeftSwing.tres" id="5_2a4id"]
+[ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/Left Swing/LeftSwing.tres" id="5_2a4id"]
 
 [node name="Player" unique_id=639906909 instance=ExtResource("1_41wu2")]
 entity_name = "Player"

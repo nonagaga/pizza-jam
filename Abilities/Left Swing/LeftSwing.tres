@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Ability" format=3 uid="uid://hjesvj8vjia6"]
 
 [ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_2ffe3"]
-[ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/left swing.png" id="1_uaqwl"]
-[ext_resource type="PackedScene" uid="uid://d1mg5vkkhjcte" path="res://Abilities/Left Swing.tscn" id="2_lrpkq"]
-[ext_resource type="Resource" uid="uid://d3xqt82qcskox" path="res://Abilities/RightSwing.tres" id="2_t2xtd"]
+[ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="1_uaqwl"]
+[ext_resource type="PackedScene" uid="uid://d1mg5vkkhjcte" path="res://Abilities/Left Swing/Left Swing.tscn" id="2_lrpkq"]
+[ext_resource type="Resource" uid="uid://d3xqt82qcskox" path="res://Abilities/Right Swing/RightSwing.tres" id="2_t2xtd"]
 
 [resource]
 script = ExtResource("1_2ffe3")

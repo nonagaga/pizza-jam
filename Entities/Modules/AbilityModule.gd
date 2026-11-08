@@ -1,7 +1,7 @@
 
 class_name AbilityModule extends EntityModule
 
-static var LEFT_SWING = preload("res://Abilities/LeftSwing.tres") as Ability
+static var LEFT_SWING = preload("res://Abilities/Left Swing/LeftSwing.tres") as Ability
 
 @export var primary_ability: Ability
 

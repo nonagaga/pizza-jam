@@ -9,6 +9,7 @@ size = Vector2(294, 49)
 [node name="LeftSwing" type="CharacterBody2D" unique_id=737472381]
 collision_layer = 0
 collision_mask = 0
+motion_mode = 1
 script = ExtResource("1_vl3oe")
 starting_rotation = 35.0
 ending_rotation = -35.0

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://dowcjhgtymha4"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_o0w0y"]
+[ext_resource type="Texture2D" uid="uid://mwakwgr8pkc7" path="res://Abilities/Circle Swing/circle swing.png" id="1_yh2qq"]
+[ext_resource type="PackedScene" uid="uid://cboysd13g1cm5" path="res://Abilities/Circle Swing/Circle Swing.tscn" id="2_hgeqc"]
+
+[resource]
+script = ExtResource("1_o0w0y")
+ability_name = "Circle Swing"
+ability_icon = ExtResource("1_yh2qq")
+projectile = ExtResource("2_hgeqc")
+metadata/_custom_type_script = "uid://cch8y4ugk455o"
