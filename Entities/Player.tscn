@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cr5py23pbo0th"]
+
+[ext_resource type="PackedScene" uid="uid://calr528djr23" path="res://Entities/Entity.tscn" id="1_41wu2"]
+[ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_0gd87"]
+[ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementInput.gd" id="3_c7jvw"]
+
+[node name="Player" unique_id=639906909 instance=ExtResource("1_41wu2")]
+entity_name = "Player"
+
+[node name="MovementModule" type="Node" parent="." index="2" unique_id=1701972523]
+script = ExtResource("2_0gd87")
+metadata/_custom_type_script = "uid://bufnrj8520j8s"
+
+[node name="MovementInput" type="Node" parent="MovementModule" index="0" unique_id=997466126]
+script = ExtResource("3_c7jvw")
+metadata/_custom_type_script = "uid://b30auqqb707te"
+
+[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=975768696]
+zoom = Vector2(0.34, 0.34)
