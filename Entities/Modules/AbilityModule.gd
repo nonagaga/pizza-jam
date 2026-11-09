@@ -2,14 +2,19 @@ class_name AbilityModule extends EntityModule
 
 @export var default_primary_ability: Ability
 @export var default_secondary_ability: Ability
+@export var default_dash_ability: Ability
 
 var primary_ability: Ability
 var secondary_ability: Ability
+var dash_ability: Ability
 
 var _slot_timer_primary = 0.0 as float
 var _combo_timer_primary = 0.0 as float
 var _slot_timer_secondary = 0.0 as float
 var _combo_timer_secondary = 0.0 as float
+var _slot_timer_dash = 0.0 as float
+var _combo_timer_dash = 0.0 as float
+
 
 ## Ability modifiers as percentages.
 ## Gained from rougelike items, can upgrade each ability.
@@ -26,8 +31,10 @@ signal changed_secondary_icon(texture: Texture2D)
 func _ready() -> void:
 	primary_ability = default_primary_ability
 	secondary_ability = default_secondary_ability
+	dash_ability = default_dash_ability
 	swap_primary_ability(primary_ability)
 	swap_secondary_ability(secondary_ability)
+	swap_dash_ability(dash_ability)
 
 func _process(delta: float) -> void:
 	if _slot_timer_primary >= 0.0:
@@ -43,6 +50,13 @@ func _process(delta: float) -> void:
 		_combo_timer_secondary -= delta
 		if _combo_timer_secondary <= 0.0:
 			swap_secondary_ability(default_secondary_ability)
+	
+	if _slot_timer_dash >= 0.0:
+		_slot_timer_dash -= delta
+	if _combo_timer_dash >= 0.0:
+		_combo_timer_dash -= delta
+		if _combo_timer_dash <= 0.0:
+			swap_dash_ability(default_dash_ability)
 
 func swap_primary_ability(new_ability: Ability) -> void:
 	primary_ability = new_ability
@@ -55,6 +69,11 @@ func swap_secondary_ability(new_ability: Ability) -> void:
 	if new_ability == null:
 		return
 	changed_secondary_icon.emit(new_ability.ability_icon)
+
+func swap_dash_ability(new_ability: Ability) -> void:
+	dash_ability = new_ability
+	if new_ability == null:
+		return
 
 func use_primary_ability() -> void:
 	if primary_ability == null:
@@ -92,3 +111,23 @@ func use_secondary_ability() -> void:
 	else:
 		swap_secondary_ability(secondary_ability.combo_ability)
 		_combo_timer_secondary = secondary_ability.combo_timer
+
+func use_dash_ability() -> void:
+	if dash_ability == null:
+		return
+	
+	_slot_timer_dash = dash_ability.slot_cooldown
+	
+	if dash_ability.projectile != null:
+		var proj = dash_ability.projectile.instantiate() as AbilityProjectile
+		entity.add_child(proj)
+	if dash_ability.effect != null:
+		var eff = dash_ability.effect.instantiate() as EntityEffect
+		entity.add_child(eff)
+		eff.do_effect()
+	
+	if dash_ability.combo_ability == null:
+		swap_dash_ability(default_dash_ability)
+	else:
+		swap_dash_ability(dash_ability.combo_ability)
+		_combo_timer_dash = dash_ability.combo_timer

@@ -10,3 +10,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if ability_module._slot_timer_secondary > 0.0:
 			return
 		ability_module.use_secondary_ability()
+	
+	elif event.is_action_pressed("Dash"):
+		if ability_module._slot_timer_dash > 0.0:
+			return
+		ability_module.use_dash_ability()

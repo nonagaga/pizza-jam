@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://b30auqqb707te"
 [node name="AbilityModule" type="Node" parent="." index="3" unique_id=1674121974]
 script = ExtResource("4_c7jvw")
 default_primary_ability = ExtResource("5_2a4id")
-default_secondary_ability = ExtResource("6_io258")
+default_dash_ability = ExtResource("6_io258")
 metadata/_custom_type_script = "uid://duk7p1k5fwd7x"
 
 [node name="AbilityModuleIO" type="Node" parent="AbilityModule" index="0" unique_id=699341851]
