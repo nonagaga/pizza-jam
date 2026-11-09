@@ -2,28 +2,34 @@
 
 [ext_resource type="PackedScene" uid="uid://calr528djr23" path="res://Entities/Entity.tscn" id="1_41wu2"]
 [ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_0gd87"]
-[ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementInput.gd" id="3_c7jvw"]
+[ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementIO.gd" id="3_c7jvw"]
 [ext_resource type="Script" uid="uid://duk7p1k5fwd7x" path="res://Entities/Modules/AbilityModule.gd" id="4_c7jvw"]
 [ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/Left Swing/LeftSwing.tres" id="5_2a4id"]
 [ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="6_drum4"]
 [ext_resource type="Resource" uid="uid://dx1dayt7webm7" path="res://Abilities/Dash/Dash.tres" id="6_io258"]
+[ext_resource type="Script" uid="uid://1adqfnkapsco" path="res://Entities/Modules/AbilityModuleIO.gd" id="7_nn0oq"]
+[ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Dash/dash.png" id="8_w6hej"]
 
-[node name="Player" unique_id=639906909 instance=ExtResource("1_41wu2")]
+[node name="Player" unique_id=639906909 groups=["Player"] instance=ExtResource("1_41wu2")]
 entity_name = "Player"
 
 [node name="MovementModule" type="Node" parent="." index="2" unique_id=1701972523]
 script = ExtResource("2_0gd87")
 metadata/_custom_type_script = "uid://bufnrj8520j8s"
 
-[node name="MovementInput" type="Node" parent="MovementModule" index="0" unique_id=997466126]
+[node name="MovementIO" type="Node" parent="MovementModule" index="0" unique_id=997466126]
 script = ExtResource("3_c7jvw")
 metadata/_custom_type_script = "uid://b30auqqb707te"
 
 [node name="AbilityModule" type="Node" parent="." index="3" unique_id=1674121974]
 script = ExtResource("4_c7jvw")
-primary_ability = ExtResource("5_2a4id")
-secondary_ability = ExtResource("6_io258")
+default_primary_ability = ExtResource("5_2a4id")
+default_secondary_ability = ExtResource("6_io258")
 metadata/_custom_type_script = "uid://duk7p1k5fwd7x"
+
+[node name="AbilityModuleIO" type="Node" parent="AbilityModule" index="0" unique_id=699341851]
+script = ExtResource("7_nn0oq")
+metadata/_custom_type_script = "uid://1adqfnkapsco"
 
 [node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=975768696]
 zoom = Vector2(0.34, 0.34)
@@ -62,6 +68,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("8_w6hej")
 
 [connection signal="changed_primary_icon" from="AbilityModule" to="TestUI/ColorRect/Abil1" method="set_texture"]
 [connection signal="changed_secondary_icon" from="AbilityModule" to="TestUI/ColorRect2/Abil2" method="set_texture"]

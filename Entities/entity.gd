@@ -4,7 +4,7 @@ class_name Entity extends CharacterBody2D
 
 ## This is true when the entity is being forced to move somehow.
 ## After the forced movement ends (push, pull, dash, etc.), this becomes false.
-var is_forced_moved = false as bool
+var is_force_moved = false as bool
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
@@ -17,10 +17,10 @@ func get_movement_module() -> MovementModule:
 
 func codex_dash(direction: Vector2, dash_mult: float,
 		dash_duration: float):
-	if is_forced_moved or direction == Vector2.ZERO:
+	if is_force_moved or direction == Vector2.ZERO:
 		return
 		
-	is_forced_moved = true
+	is_force_moved = true
 	
 	var normal_speed = get_movement_module().walk_speed * Physics.PIXEL_METER
 	var dash_speed = normal_speed * dash_mult
@@ -39,4 +39,4 @@ func codex_dash(direction: Vector2, dash_mult: float,
 	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	
 	await tween.finished
-	is_forced_moved = false
+	is_force_moved = false

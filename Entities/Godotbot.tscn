@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://camuf4gugq7o3"]
+
+[ext_resource type="PackedScene" uid="uid://calr528djr23" path="res://Entities/Entity.tscn" id="1_wgj20"]
+[ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_selh3"]
+[ext_resource type="Script" uid="uid://duk7p1k5fwd7x" path="res://Entities/Modules/AbilityModule.gd" id="3_gx638"]
+[ext_resource type="Script" uid="uid://bo74fsscbnqd1" path="res://Entities/Modules/MovementAI.gd" id="3_hms4s"]
+[ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/Left Swing/LeftSwing.tres" id="4_hms4s"]
+[ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilityModuleAI.gd" id="7_hms4s"]
+
+[node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
+entity_name = "Godotbot"
+
+[node name="MovementModule" type="Node" parent="." index="2" unique_id=842800881]
+script = ExtResource("2_selh3")
+walk_speed = 5.0
+metadata/_custom_type_script = "uid://bufnrj8520j8s"
+
+[node name="MovementAI" type="Node" parent="MovementModule" index="0" unique_id=470302328]
+script = ExtResource("3_hms4s")
+follow_distance = 5.0
+metadata/_custom_type_script = "uid://bo74fsscbnqd1"
+
+[node name="AbilityModule" type="Node" parent="." index="3" unique_id=322424456]
+script = ExtResource("3_gx638")
+default_primary_ability = ExtResource("4_hms4s")
+metadata/_custom_type_script = "uid://duk7p1k5fwd7x"
+
+[node name="AbilityModuleAI" type="Node" parent="AbilityModule" index="0" unique_id=759484961]
+script = ExtResource("7_hms4s")
+metadata/_custom_type_script = "uid://blthoc0bdrqwn"
