@@ -4,6 +4,7 @@ class_name Ability extends Resource
 @export var ability_icon: Texture
 
 @export var projectile: PackedScene
+@export var effect: PackedScene
 
 ## The cooldown for the button for this ability.
 ## If the ability has an expected duration, then

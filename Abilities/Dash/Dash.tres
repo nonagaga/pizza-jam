@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://dx1dayt7webm7"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_6t2kw"]
+[ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Dash/dash.png" id="1_pt346"]
+[ext_resource type="PackedScene" uid="uid://dowhf77m1ghj4" path="res://Abilities/Dash/Dash.tscn" id="2_nrym5"]
+
+[resource]
+script = ExtResource("1_6t2kw")
+ability_name = "Dash"
+ability_icon = ExtResource("1_pt346")
+effect = ExtResource("2_nrym5")
+slot_cooldown = 3.0
+metadata/_custom_type_script = "uid://cch8y4ugk455o"
