@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bn87r1j8qa7k2"]
+
+[ext_resource type="Script" uid="uid://d2r50qriwttvn" path="res://Utility/UI/DialogueSystem/dialogue_system.gd" id="1_y3xpn"]
+
+[node name="DialogueSystem" type="Control" unique_id=965254132 node_paths=PackedStringArray("dialogue_box", "response_box", "option1", "option2", "option3", "option4")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3xpn")
+dialogue_box = NodePath("VBoxContainer/DialogueBox")
+response_box = NodePath("VBoxContainer/ResponseBox")
+option1 = NodePath("VBoxContainer/ResponseBox/OptionSet1/Option1")
+option2 = NodePath("VBoxContainer/ResponseBox/OptionSet1/Option2")
+option3 = NodePath("VBoxContainer/ResponseBox/OptionSet2/Option3")
+option4 = NodePath("VBoxContainer/ResponseBox/OptionSet2/Option4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=684470652]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.62100005
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.08001709
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="DialogueBox" type="RichTextLabel" parent="VBoxContainer" unique_id=1890733933]
+layout_mode = 2
+text = "Writing text to see how many characters can fit comfortably in the dialogue box before we have to wrap around and have the player click to progress the dialogue tree. I think it should cut at this third line so around here should work..."
+fit_content = true
+
+[node name="ResponseBox" type="VBoxContainer" parent="VBoxContainer" unique_id=138005390]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="OptionSet1" type="HBoxContainer" parent="VBoxContainer/ResponseBox" unique_id=795715151]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Option1" type="Button" parent="VBoxContainer/ResponseBox/OptionSet1" unique_id=708911491]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 1"
+
+[node name="Option2" type="Button" parent="VBoxContainer/ResponseBox/OptionSet1" unique_id=1239258747]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 2"
+
+[node name="OptionSet2" type="HBoxContainer" parent="VBoxContainer/ResponseBox" unique_id=145881438]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Option3" type="Button" parent="VBoxContainer/ResponseBox/OptionSet2" unique_id=1072236713]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 3"
+
+[node name="Option4" type="Button" parent="VBoxContainer/ResponseBox/OptionSet2" unique_id=425699329]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 4"
+
+[connection signal="pressed" from="VBoxContainer/ResponseBox/OptionSet1/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResponseBox/OptionSet1/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResponseBox/OptionSet2/Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResponseBox/OptionSet2/Option4" to="." method="_on_option_4_pressed"]
