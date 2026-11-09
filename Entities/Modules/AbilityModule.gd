@@ -105,7 +105,7 @@ func use_secondary_ability(direction: Vector2) -> void:
 		entity.add_child(proj)
 	if secondary_ability.effect != null:
 		var eff = secondary_ability.effect.instantiate() as EntityEffect
-		eff.set_aim_rotation(direction)
+		#eff.set_aim_rotation(direction)
 		entity.add_child(eff)
 		eff.do_effect()
 	
@@ -127,7 +127,7 @@ func use_dash_ability(direction: Vector2) -> void:
 		entity.add_child(proj)
 	if dash_ability.effect != null:
 		var eff = dash_ability.effect.instantiate() as EntityEffect
-		eff.set_aim_rotation(direction)
+		#eff.set_aim_rotation(direction)
 		entity.add_child(eff)
 		eff.do_effect()
 	
