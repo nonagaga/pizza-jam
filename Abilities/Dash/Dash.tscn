@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://dowhf77m1ghj4"]
-
-[ext_resource type="Script" uid="uid://c236engucchhj" path="res://Abilities/Dash/dash.gd" id="1_ohip8"]
-
-[node name="Dash" type="Node2D" unique_id=295071379]
-script = ExtResource("1_ohip8")
-metadata/_custom_type_script = "uid://5og2uxwi2y2e"

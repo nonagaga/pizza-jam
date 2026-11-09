@@ -2,16 +2,39 @@
 
 [ext_resource type="PackedScene" uid="uid://calr528djr23" path="res://Entities/Entity.tscn" id="1_41wu2"]
 [ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_0gd87"]
+[ext_resource type="Script" uid="uid://dct7rekk327cg" path="res://Entities/EntityCivilStats.gd" id="2_mwl8m"]
+[ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="3_8td47"]
 [ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementIO.gd" id="3_c7jvw"]
-[ext_resource type="Script" uid="uid://duk7p1k5fwd7x" path="res://Entities/Modules/AbilityModule.gd" id="4_c7jvw"]
-[ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/Left Swing/LeftSwing.tres" id="5_2a4id"]
+[ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_opvli"]
 [ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="6_drum4"]
-[ext_resource type="Resource" uid="uid://dx1dayt7webm7" path="res://Abilities/Dash/Dash.tres" id="6_io258"]
-[ext_resource type="Script" uid="uid://1adqfnkapsco" path="res://Entities/Modules/AbilityModuleIO.gd" id="7_nn0oq"]
+[ext_resource type="Script" uid="uid://1adqfnkapsco" path="res://Entities/Modules/AbilitySlotIO.gd" id="7_nn0oq"]
 [ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Dash/dash.png" id="8_w6hej"]
+[ext_resource type="PackedScene" uid="uid://ddor4v8jhoemv" path="res://Abilities/Right Swing/Right Swing.tscn" id="8_yytyf"]
+[ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="9_paumt"]
+[ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing.tscn" id="10_8td47"]
+[ext_resource type="PackedScene" uid="uid://deorq65d05rx" path="res://Abilities/Circle Swing/Circle Swing.tscn" id="10_hmggr"]
+
+[sub_resource type="Resource" id="Resource_wliak"]
+script = ExtResource("2_mwl8m")
+name = "Player"
+metadata/_custom_type_script = "uid://dct7rekk327cg"
+
+[sub_resource type="Resource" id="Resource_oa24y"]
+script = ExtResource("3_8td47")
+walk_speed = 8.0
+metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
+
+[sub_resource type="Resource" id="Resource_jo2oe"]
+script = ExtResource("4_opvli")
+metadata/_custom_type_script = "uid://c63a4rftwo8ch"
+
+[sub_resource type="InputEventAction" id="InputEventAction_cfvty"]
+action = &"Primary Ability"
 
 [node name="Player" unique_id=639906909 groups=["Player"] instance=ExtResource("1_41wu2")]
-entity_name = "Player"
+civil = SubResource("Resource_wliak")
+combat = SubResource("Resource_oa24y")
+director = SubResource("Resource_jo2oe")
 
 [node name="MovementModule" type="Node" parent="." index="2" unique_id=1701972523]
 script = ExtResource("2_0gd87")
@@ -21,14 +44,23 @@ metadata/_custom_type_script = "uid://bufnrj8520j8s"
 script = ExtResource("3_c7jvw")
 metadata/_custom_type_script = "uid://b30auqqb707te"
 
-[node name="AbilityModule" type="Node" parent="." index="3" unique_id=1674121974]
-script = ExtResource("4_c7jvw")
-default_primary_ability = ExtResource("5_2a4id")
-default_dash_ability = ExtResource("6_io258")
-metadata/_custom_type_script = "uid://duk7p1k5fwd7x"
+[node name="Primary Ability" type="Node" parent="." index="3" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
+script = ExtResource("9_paumt")
+default_ability = NodePath("LeftSwing")
+metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
-[node name="AbilityModuleIO" type="Node" parent="AbilityModule" index="0" unique_id=699341851]
+[node name="LeftSwing" parent="Primary Ability" index="0" unique_id=821849793 node_paths=PackedStringArray("combo_ability") instance=ExtResource("10_8td47")]
+combo_ability = NodePath("../RightSwing")
+
+[node name="RightSwing" parent="Primary Ability" index="1" unique_id=1919250664 node_paths=PackedStringArray("combo_ability") instance=ExtResource("8_yytyf")]
+combo_ability = NodePath("../CircleSwing")
+combo_timer = 1.0
+
+[node name="CircleSwing" parent="Primary Ability" index="2" unique_id=233933718 instance=ExtResource("10_hmggr")]
+
+[node name="AbilityModuleIO" type="Node" parent="Primary Ability" index="3" unique_id=997080805]
 script = ExtResource("7_nn0oq")
+input_action = SubResource("InputEventAction_cfvty")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
 [node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=975768696]
@@ -70,5 +102,4 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_w6hej")
 
-[connection signal="changed_primary_icon" from="AbilityModule" to="TestUI/ColorRect/Abil1" method="set_texture"]
-[connection signal="changed_secondary_icon" from="AbilityModule" to="TestUI/ColorRect2/Abil2" method="set_texture"]
+[connection signal="swapped_ability_icon" from="Primary Ability" to="TestUI/ColorRect/Abil1" method="set_texture"]

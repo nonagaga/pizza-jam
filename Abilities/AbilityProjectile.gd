@@ -23,3 +23,7 @@ func _physics_process(delta: float) -> void:
 
 func set_aim_rotation(direction: Vector2) -> void:
 	aim_rotation = rad_to_deg(get_angle_to(direction))
+
+
+func apply_range_mult(mult: float) -> void:
+	scale *= mult

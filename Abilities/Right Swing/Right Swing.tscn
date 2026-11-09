@@ -1,28 +1,24 @@
-[gd_scene format=3 uid="uid://c0pcglsdxhgef"]
+[gd_scene format=3 uid="uid://ddor4v8jhoemv"]
 
-[ext_resource type="Script" uid="uid://bfe2bxvrm0ckr" path="res://Abilities/AbilityProjectile.gd" id="1_cuar2"]
-[ext_resource type="Texture2D" uid="uid://c2yyt00kfwidx" path="res://Abilities/basic staff.png" id="2_b27ek"]
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_bi0ow"]
+[ext_resource type="Texture2D" uid="uid://cfmeumu83h3mh" path="res://Abilities/Right Swing/right swing.png" id="2_cuar2"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_4ovpc"]
+[ext_resource type="PackedScene" uid="uid://qgaibw6j5r03" path="res://Abilities/Right Swing/Right Swing Projectile.tscn" id="3_b27ek"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wfpr"]
-size = Vector2(294, 49)
+[sub_resource type="Resource" id="Resource_bw3td"]
+script = ExtResource("3_4ovpc")
+base_damage = 25.0
+base_multishot = 1.0
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
 
-[node name="RightSwing" type="CharacterBody2D" unique_id=1635843470]
-collision_layer = 0
-collision_mask = 0
-motion_mode = 1
-script = ExtResource("1_cuar2")
-starting_rotation = -45.0
-ending_rotation = 45.0
-lifetime = 0.2
-follows_owner = true
-metadata/_custom_type_script = "uid://bfe2bxvrm0ckr"
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2027936902]
-position = Vector2(157.00002, 5.5777605e-13)
-rotation = 1.5707964
-scale = Vector2(2.19, 2.19)
-texture = ExtResource("2_b27ek")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1814948410]
-position = Vector2(123, -2.5)
-shape = SubResource("RectangleShape2D_3wfpr")
+[node name="RightSwing" type="Node" unique_id=1919250664]
+script = ExtResource("1_bi0ow")
+ability_name = "Right Swing"
+ability_icon = ExtResource("2_cuar2")
+ar_modifier = SubResource("Resource_bw3td")
+tag_melee = true
+slot_cooldown = 0.3
+combo_timer = 0.5
+projectile = ExtResource("3_b27ek")
+multishot_spread = 360.0
+metadata/_custom_type_script = "uid://cch8y4ugk455o"

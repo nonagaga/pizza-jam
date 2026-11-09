@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
-[ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="3_wliak"]
 
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
@@ -28,5 +27,3 @@ texture = ExtResource("2_vl2lw")
 position = Vector2(511, 556)
 scale = Vector2(0.1484375, 1)
 texture = ExtResource("2_vl2lw")
-
-[node name="Godotbot" parent="." unique_id=2121663690 instance=ExtResource("3_wliak")]

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_selh3"]
 [ext_resource type="Script" uid="uid://duk7p1k5fwd7x" path="res://Entities/Modules/AbilityModule.gd" id="3_gx638"]
 [ext_resource type="Script" uid="uid://bo74fsscbnqd1" path="res://Entities/Modules/MovementAI.gd" id="3_hms4s"]
-[ext_resource type="Resource" uid="uid://hjesvj8vjia6" path="res://Abilities/Left Swing/LeftSwing.tres" id="4_hms4s"]
-[ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilityModuleAI.gd" id="7_hms4s"]
+[ext_resource type="Resource" path="res://Abilities/Left Swing/LeftSwing.tres" id="4_hms4s"]
+[ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilitySlotAI.gd" id="7_hms4s"]
 
 [node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
 entity_name = "Godotbot"

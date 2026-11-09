@@ -1,19 +1,21 @@
 class_name Entity extends CharacterBody2D
 
-@export var entity_name = "Unnamed Entity" as String
+@export var civil: EntityCivilStats
+@export var combat: EntityCombatStats
+@export var director: EntityDirectorStats
 
 ## This is true when the entity is being forced to move somehow.
 ## After the forced movement ends (push, pull, dash, etc.), this becomes false.
 var is_force_moved = false as bool
 
+var _movement_module: MovementModule
+var _ability_module: AbilityModule
+
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func get_movement_module() -> MovementModule:
-	for child in get_children():
-		if child is MovementModule:
-			return child
-	return null
+	return _movement_module
 
 func codex_dash(direction: Vector2, dash_mult: float,
 		dash_duration: float):

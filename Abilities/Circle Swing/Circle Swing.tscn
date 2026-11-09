@@ -1,26 +1,24 @@
-[gd_scene format=3 uid="uid://cboysd13g1cm5"]
+[gd_scene format=3 uid="uid://deorq65d05rx"]
 
-[ext_resource type="Script" uid="uid://bfe2bxvrm0ckr" path="res://Abilities/AbilityProjectile.gd" id="1_u3w1p"]
-[ext_resource type="Texture2D" uid="uid://c2yyt00kfwidx" path="res://Abilities/basic staff.png" id="2_dfdj5"]
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_u3w1p"]
+[ext_resource type="Texture2D" uid="uid://mwakwgr8pkc7" path="res://Abilities/Circle Swing/circle swing.png" id="2_dfdj5"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_brkqr"]
+[ext_resource type="PackedScene" uid="uid://cboysd13g1cm5" path="res://Abilities/Circle Swing/Circle Swing Projectile.tscn" id="3_psscn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_psscn"]
-size = Vector2(294, 49)
+[sub_resource type="Resource" id="Resource_4ovpc"]
+script = ExtResource("3_brkqr")
+base_damage = 30.0
+base_multishot = 1.0
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
 
-[node name="CircleSwing" type="CharacterBody2D" unique_id=1732380924]
-collision_layer = 0
-collision_mask = 0
-motion_mode = 1
+[node name="CircleSwing" type="Node" unique_id=233933718]
 script = ExtResource("1_u3w1p")
-ending_rotation = 720.0
-follows_owner = true
-metadata/_custom_type_script = "uid://bfe2bxvrm0ckr"
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=834009229]
-position = Vector2(157.00002, 5.5777605e-13)
-rotation = 1.5707964
-scale = Vector2(2.19, 2.19)
-texture = ExtResource("2_dfdj5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850880441]
-position = Vector2(123, -2.5)
-shape = SubResource("RectangleShape2D_psscn")
+ability_name = "Circle Swing"
+ability_icon = ExtResource("2_dfdj5")
+ar_modifier = SubResource("Resource_4ovpc")
+tag_melee = true
+slot_cooldown = 0.5
+combo_timer = 1.0
+projectile = ExtResource("3_psscn")
+multishot_spread = 360.0
+metadata/_custom_type_script = "uid://cch8y4ugk455o"

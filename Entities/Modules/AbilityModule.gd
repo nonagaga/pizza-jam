@@ -35,6 +35,7 @@ func _ready() -> void:
 	swap_primary_ability(primary_ability)
 	swap_secondary_ability(secondary_ability)
 	swap_dash_ability(dash_ability)
+	entity._ability_module = self
 
 func _process(delta: float) -> void:
 	if _slot_timer_primary >= 0.0:
