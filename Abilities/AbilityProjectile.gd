@@ -10,7 +10,8 @@ var _time_alive = 0.0 as float
 @export var follows_owner = false as bool
 
 func _ready() -> void:
-	aim_rotation = rad_to_deg(get_angle_to(get_global_mouse_position()))
+	pass
+	#aim_rotation = rad_to_deg(get_angle_to(get_global_mouse_position()))
 
 func _physics_process(delta: float) -> void:
 	rotation_degrees = remap(_time_alive, 0.0, lifetime, starting_rotation, ending_rotation)
@@ -19,3 +20,6 @@ func _physics_process(delta: float) -> void:
 	if _time_alive >= lifetime:
 		queue_free()
 	_time_alive += delta
+
+func set_aim_rotation(direction: Vector2) -> void:
+	aim_rotation = rad_to_deg(get_angle_to(direction))

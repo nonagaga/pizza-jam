@@ -75,7 +75,7 @@ func swap_dash_ability(new_ability: Ability) -> void:
 	if new_ability == null:
 		return
 
-func use_primary_ability() -> void:
+func use_primary_ability(direction: Vector2) -> void:
 	if primary_ability == null:
 		return
 	
@@ -83,6 +83,7 @@ func use_primary_ability() -> void:
 	
 	if primary_ability.projectile != null:
 		var proj = primary_ability.projectile.instantiate() as AbilityProjectile
+		proj.set_aim_rotation(direction)
 		entity.add_child(proj)
 	
 	if primary_ability.combo_ability == null:
@@ -92,7 +93,7 @@ func use_primary_ability() -> void:
 		_combo_timer_primary = primary_ability.combo_timer
 
 
-func use_secondary_ability() -> void:
+func use_secondary_ability(direction: Vector2) -> void:
 	if secondary_ability == null:
 		return
 	
@@ -100,9 +101,11 @@ func use_secondary_ability() -> void:
 	
 	if secondary_ability.projectile != null:
 		var proj = secondary_ability.projectile.instantiate() as AbilityProjectile
+		proj.set_aim_rotation(direction)
 		entity.add_child(proj)
 	if secondary_ability.effect != null:
 		var eff = secondary_ability.effect.instantiate() as EntityEffect
+		eff.set_aim_rotation(direction)
 		entity.add_child(eff)
 		eff.do_effect()
 	
@@ -112,7 +115,7 @@ func use_secondary_ability() -> void:
 		swap_secondary_ability(secondary_ability.combo_ability)
 		_combo_timer_secondary = secondary_ability.combo_timer
 
-func use_dash_ability() -> void:
+func use_dash_ability(direction: Vector2) -> void:
 	if dash_ability == null:
 		return
 	
@@ -120,9 +123,11 @@ func use_dash_ability() -> void:
 	
 	if dash_ability.projectile != null:
 		var proj = dash_ability.projectile.instantiate() as AbilityProjectile
+		proj.set_aim_rotation(direction)
 		entity.add_child(proj)
 	if dash_ability.effect != null:
 		var eff = dash_ability.effect.instantiate() as EntityEffect
+		eff.set_aim_rotation(direction)
 		entity.add_child(eff)
 		eff.do_effect()
 	

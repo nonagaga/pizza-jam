@@ -14,6 +14,6 @@ func _process(delta: float) -> void:
 		_player.global_position) / Physics.PIXEL_METER
 	
 	if focus_meters <= distance_for_abil1 && ability_module._slot_timer_primary <= 0.0:
-		ability_module.use_primary_ability()
+		ability_module.use_primary_ability(_player.global_position)
 	elif focus_meters <= distance_for_abil2 && ability_module._slot_timer_secondary <= 0.0:
-		ability_module.use_secondary_ability()
+		ability_module.use_secondary_ability(_player.global_position)
