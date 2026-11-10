@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://3i0feiw858l6" path="res://Pickups/Pickup.tscn" id="1_k58lp"]
 [ext_resource type="PackedScene" uid="uid://d3ybqntbobkub" path="res://Effects/Stims/Walk Speed Stim Effect.tscn" id="2_w1piv"]
+[ext_resource type="Texture2D" uid="uid://ppr1ptj3fak2" path="res://Effects/Enduring_Speed.png" id="3_y1r7e"]
 
 [node name="Walk Speed Stim Pickup" unique_id=1324348048 instance=ExtResource("1_k58lp")]
 entity_effect = ExtResource("2_w1piv")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1174950053]
+texture = ExtResource("3_y1r7e")
