@@ -1,0 +1,48 @@
+[gd_resource type="TileSet" format=3 uid="uid://yuq702wpi4d3"]
+
+[ext_resource type="Texture2D" uid="uid://dmnwov2qb2clk" path="res://Locations/Levels/Tilemaps/Tilemap.png" id="1_mh3ki"]
+[ext_resource type="Texture2D" uid="uid://dmdieq7trhdt8" path="res://Locations/Levels/Tilemaps/HallwayTest.png" id="2_0b6x7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fh7vj"]
+texture = ExtResource("1_mh3ki")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -8, 16, -8, -8, 16, -8, 16, -16, -16, -16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -8, -16, -8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, -8, 8, -8, 8, 16, 16, 16, 16, -16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -16, -16, -8, -16, -8, 16)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, 8, 16, 8, -16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, 16, 8, -8, 8, -8, -16, -16, -16, -16, 16)
+1:2/next_alternative_id = 3
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -16, 8, 16, 8, 16, 16)
+1:2/1 = 1
+1:2/1/modulate = Color(0.28133333, 1, 0.01999998, 1)
+1:2/1/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 8, 16, 8, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 8, -16, 8, 8, -16, 8, -16, 16, 16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qoidl"]
+texture = ExtResource("2_0b6x7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 8, -8, 8, -8, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 16, 8, 8, 16, 8, 16, 16)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -16, -8, -8, -16, -8, -16, -16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -8, 8, -8, 8, -16, 16, -16)
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_fh7vj")
+sources/1 = SubResource("TileSetAtlasSource_qoidl")
