@@ -1,4 +1,11 @@
 class_name SceneManager extends Node
+## SceneManager singleton used to allow game scenes to load/unload with transitions
+##
+## Scenes interact with the scenemanager by calling change_scene(...), passing the desired
+## scene name as an argument.
+## The SceneManager is NOT a global, and references must manually be passed via dependency
+## injection. The SceneManager will automatically pass itself if it sees a setup() method 
+## (See main_menu.tscn for an example).
 
 @export var scene_list : Dictionary[StringName, PackedScene]
 @export var default_transition : PackedScene
