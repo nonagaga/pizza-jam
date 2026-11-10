@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://deorq65d05rx"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_u3w1p"]
+[ext_resource type="Texture2D" uid="uid://mwakwgr8pkc7" path="res://Abilities/Circle Swing/circle swing.png" id="2_dfdj5"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_brkqr"]
+[ext_resource type="PackedScene" uid="uid://cboysd13g1cm5" path="res://Abilities/Circle Swing/Circle Swing Projectile.tscn" id="3_psscn"]
+
+[sub_resource type="Resource" id="Resource_4ovpc"]
+script = ExtResource("3_brkqr")
+base_damage = 30.0
+base_multishot = 3.0
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[node name="CircleSwing" type="Node" unique_id=233933718]
+script = ExtResource("1_u3w1p")
+ability_name = "Circle Swing"
+ability_icon = ExtResource("2_dfdj5")
+ar_modifier = SubResource("Resource_4ovpc")
+tag_melee = true
+slot_cooldown = 0.5
+combo_timer = 1.0
+projectile = ExtResource("3_psscn")
+multishot_spread = 360.0
+metadata/_custom_type_script = "uid://cch8y4ugk455o"

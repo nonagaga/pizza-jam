@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3i0feiw858l6"]
+
+[ext_resource type="Script" uid="uid://fapqf3g2pv63" path="res://Pickups/Pickup.gd" id="1_v6qaj"]
+[ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_ki6cw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 70.0
+
+[node name="Pickup" type="Node2D" unique_id=1324348048]
+script = ExtResource("1_v6qaj")
+metadata/_custom_type_script = "uid://fapqf3g2pv63"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1174950053]
+texture = ExtResource("2_ki6cw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1748105091]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=136595272]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

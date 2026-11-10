@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://camuf4gugq7o3"]
+
+[ext_resource type="PackedScene" uid="uid://calr528djr23" path="res://Entities/Entity.tscn" id="1_wgj20"]
+[ext_resource type="Script" uid="uid://bufnrj8520j8s" path="res://Entities/Modules/MovementModule.gd" id="2_selh3"]
+[ext_resource type="Script" uid="uid://dct7rekk327cg" path="res://Entities/EntityCivilStats.gd" id="2_ujlot"]
+[ext_resource type="Script" uid="uid://bo74fsscbnqd1" path="res://Entities/Modules/MovementAI.gd" id="3_hms4s"]
+[ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="3_selh3"]
+[ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_gx638"]
+[ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="7_3ve2a"]
+[ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilitySlotAI.gd" id="7_hms4s"]
+[ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing.tscn" id="8_gasj4"]
+
+[sub_resource type="Resource" id="Resource_wgj20"]
+script = ExtResource("2_ujlot")
+name = "Godotbot"
+metadata/_custom_type_script = "uid://dct7rekk327cg"
+
+[sub_resource type="Resource" id="Resource_kxl0c"]
+script = ExtResource("3_selh3")
+metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
+
+[sub_resource type="Resource" id="Resource_e0011"]
+script = ExtResource("4_gx638")
+metadata/_custom_type_script = "uid://c63a4rftwo8ch"
+
+[node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
+civil = SubResource("Resource_wgj20")
+combat = SubResource("Resource_kxl0c")
+director = SubResource("Resource_e0011")
+
+[node name="MovementModule" type="Node" parent="." index="2" unique_id=1140205346]
+script = ExtResource("2_selh3")
+metadata/_custom_type_script = "uid://bufnrj8520j8s"
+
+[node name="MovementAI" type="Node" parent="MovementModule" index="0" unique_id=1625259126]
+script = ExtResource("3_hms4s")
+metadata/_custom_type_script = "uid://bo74fsscbnqd1"
+
+[node name="Swing" type="Node" parent="." index="3" unique_id=1252636442 node_paths=PackedStringArray("default_ability")]
+script = ExtResource("7_3ve2a")
+default_ability = NodePath("LeftSwing")
+metadata/_custom_type_script = "uid://cnsr7os6okjd"
+
+[node name="LeftSwing" parent="Swing" index="0" unique_id=1098785488 instance=ExtResource("8_gasj4")]
+slot_cooldown = 1.0
+
+[node name="AbilitySlotAI" type="Node" parent="Swing" index="1" unique_id=2008964635]
+script = ExtResource("7_hms4s")
+metadata/_custom_type_script = "uid://blthoc0bdrqwn"

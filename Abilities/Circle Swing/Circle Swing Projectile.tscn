@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cboysd13g1cm5"]
+
+[ext_resource type="Script" uid="uid://bfe2bxvrm0ckr" path="res://Abilities/AbilityProjectile.gd" id="1_0ey2j"]
+[ext_resource type="Texture2D" uid="uid://c2yyt00kfwidx" path="res://Abilities/basic staff.png" id="2_f576y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psscn"]
+size = Vector2(294, 49)
+
+[node name="CircleSwingProjectile" type="CharacterBody2D" unique_id=1732380924]
+collision_layer = 0
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_0ey2j")
+starting_rotation = -45.0
+ending_rotation = 405.0
+follows_owner = true
+metadata/_custom_type_script = "uid://bfe2bxvrm0ckr"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=834009229]
+position = Vector2(157.00002, 5.5777605e-13)
+rotation = 1.5707964
+scale = Vector2(2.19, 2.19)
+texture = ExtResource("2_f576y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850880441]
+position = Vector2(123, -2.5)
+shape = SubResource("RectangleShape2D_psscn")
