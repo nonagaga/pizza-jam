@@ -1,5 +1,7 @@
 class_name Entity extends CharacterBody2D
 
+static var STACKS_LBL_SETTINGS = preload("res://Effects/Buffbar Stacks.tres")
+
 @export var civil: EntityCivilStats
 @export var combat: EntityCombatStats
 @export var director: EntityDirectorStats
@@ -12,6 +14,8 @@ var _movement_module: MovementModule
 
 var _effects = [] as Array[EntityEffect]
 
+signal added_buff_icon(texture_rect: TextureRect)
+
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 
@@ -20,24 +24,42 @@ func get_movement_module() -> MovementModule:
 
 func add_effect(new_effect: EntityEffect) -> void:
 	if new_effect.stacks_separately:
-		add_child(new_effect)
-		_effects.append(new_effect)
+		_add_new_effect(new_effect)
 		return
 	
 	for effect in _effects:
 		if new_effect.effect_name == effect.effect_name:
-			effect.dupes += 1
+			effect.add_dupes(1)
 			return
 	# else...
-	add_child(new_effect)
-	_effects.append(new_effect)
+	_add_new_effect(new_effect)
 
 func remove_effect(owned_effect: EntityEffect) -> void:
 	_effects.erase(owned_effect)
 	owned_effect.queue_free()
 
 func diminish_effect(owned_effect: EntityEffect, amt: int) -> void:
-	owned_effect.dupes -= amt
+	owned_effect.add_dupes(-amt)
+
+func _add_new_effect(new_effect: EntityEffect) -> void:
+	add_child(new_effect)
+	_effects.append(new_effect)
+	
+	var trect = TextureRect.new()
+	trect.texture = new_effect.effect_icon
+	trect.expand_mode = TextureRect.EXPAND_FIT_WIDTH
+	added_buff_icon.emit(trect)
+	
+	var lbl = Label.new()
+	lbl.text = str(new_effect.dupes)
+	lbl.set_anchors_preset(Control.PRESET_FULL_RECT)
+	lbl.label_settings = STACKS_LBL_SETTINGS
+	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	lbl.vertical_alignment = VERTICAL_ALIGNMENT_BOTTOM
+	new_effect.updated_dupes_str.connect(lbl.set_text)
+	trect.add_child(lbl)
+	
+	new_effect.update_icon()
 
 func modify_ability_roll(abroll: AbilityRoll) -> AbilityRoll:
 	for effect in _effects:

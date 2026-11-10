@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="9_paumt"]
 [ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing.tscn" id="10_8td47"]
 [ext_resource type="PackedScene" uid="uid://deorq65d05rx" path="res://Abilities/Circle Swing/Circle Swing.tscn" id="10_hmggr"]
+[ext_resource type="Script" uid="uid://br2cxxlgwyq84" path="res://Entities/buffbar.gd" id="14_1v5ml"]
 
 [sub_resource type="Resource" id="Resource_wliak"]
 script = ExtResource("2_mwl8m")
@@ -102,11 +103,13 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_w6hej")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TestUI" index="2" unique_id=142582480]
+[node name="Buffbar" type="HBoxContainer" parent="TestUI" index="2" unique_id=142582480]
 layout_mode = 0
 offset_left = -936.0
 offset_top = 705.0
 offset_right = 1464.0
 offset_bottom = 823.0
+script = ExtResource("14_1v5ml")
 
+[connection signal="added_buff_icon" from="." to="TestUI/Buffbar" method="_on_player_added_buff_icon"]
 [connection signal="swapped_ability_icon" from="Primary Ability" to="TestUI/ColorRect/Abil1" method="set_texture"]

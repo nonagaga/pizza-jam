@@ -5,7 +5,11 @@ class_name EntityEffect extends Node
 
 @onready var _entity = get_parent() as Entity
 
+signal updated_dupes(new_amt: int)
+signal updated_dupes_str(new_amt: String)
+
 @export var effect_name = "Unnamed Effect" as String
+@export var effect_icon: Texture2D
 
 @export var ability_roll_modifier: AbilityRollModifier
 
@@ -23,3 +27,11 @@ func _process(delta: float) -> void:
 	lifetime -= delta
 	if lifetime <= 0.0:
 		_entity.remove_effect(self)
+
+func add_dupes(amt: int) -> void:
+	dupes += amt
+	update_icon()
+
+func update_icon() -> void:
+	updated_dupes.emit(dupes)
+	updated_dupes_str.emit(str(dupes))
