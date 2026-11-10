@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmtsn0krhhios"]
 
 [ext_resource type="PackedScene" uid="uid://3i0feiw858l6" path="res://Pickups/Pickup.tscn" id="1_eyo7w"]
-[ext_resource type="PackedScene" uid="uid://xpwbbuff7mfc" path="res://Effects/Multishot Stim.tscn" id="2_smfnl"]
+[ext_resource type="PackedScene" uid="uid://xpwbbuff7mfc" path="res://Effects/Stims/Multishot Stim Effect.tscn" id="2_smfnl"]
 
-[node name="Pickup" unique_id=1324348048 instance=ExtResource("1_eyo7w")]
+[node name="Multishot Stim Pickup" unique_id=1324348048 instance=ExtResource("1_eyo7w")]
 entity_effect = ExtResource("2_smfnl")

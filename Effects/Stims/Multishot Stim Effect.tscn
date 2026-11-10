@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://xpwbbuff7mfc"]
+
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_fkvjd"]
+[ext_resource type="Texture2D" uid="uid://butewv1lsrf5d" path="res://Effects/Split_Shot.png" id="2_eeikn"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_hlhk2"]
+
+[sub_resource type="Resource" id="Resource_utvxe"]
+script = ExtResource("3_hlhk2")
+base_multishot = 0.5
+multishot_mult = 0.5
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[node name="MultishotStim" type="Node" unique_id=939705344]
+script = ExtResource("1_fkvjd")
+effect_name = "Multishot Stim"
+effect_icon = ExtResource("2_eeikn")
+ability_roll_modifier = SubResource("Resource_utvxe")
+is_permanent = false
+stacks_separately = true
+lifespan = 10.0
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

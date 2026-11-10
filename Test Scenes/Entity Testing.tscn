@@ -7,7 +7,7 @@
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
 [node name="Player" parent="." unique_id=639906909 instance=ExtResource("1_gfd0l")]
-position = Vector2(156, 191)
+position = Vector2(178, 164)
 
 [node name="Godotbot" parent="." unique_id=930295659 instance=ExtResource("2_wliak")]
 position = Vector2(-999, -474)

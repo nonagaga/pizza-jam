@@ -20,6 +20,11 @@ signal added_buff_icon(texture_rect: TextureRect)
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 
+## Creates a [StatRoll] object and passes it through all effects.
+## This will update the entity's max health, speed, etc.
+func make_stat_roll() -> void:
+	pass
+
 func get_movement_module() -> MovementModule:
 	return _movement_module
 
@@ -69,7 +74,12 @@ func _add_new_effect(new_effect: EntityEffect) -> void:
 
 func modify_ability_roll(abroll: AbilityRoll) -> AbilityRoll:
 	for effect in _effects:
-		for i in range(effect.dupes):
-			effect.ability_roll_modifier.modify_ability_roll(abroll)
+		effect.modify_ability_roll(abroll)
 	
 	return abroll
+
+func modify_stat_roll(stroll: StatRoll) -> StatRoll:
+	for effect in _effects:
+		effect.modify_stat_roll(stroll)
+	
+	return stroll
