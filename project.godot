@@ -25,6 +25,9 @@ Compute="*uid://deom6o4v3dc1t"
 
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
+"<<<<<<<HEAD[file_customization]folder_colors"={
+"res://Globals/": "purple"
+}
 
 [file_customization]
 

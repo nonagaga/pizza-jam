@@ -43,6 +43,8 @@ func use_ability(target_pos: Vector2) -> void:
 		return
 	
 	var abroll = ability.ar_modifier.generate_ability_roll()
+	entity.modify_ability_roll(abroll)
+	
 	var ms = abroll.get_final_multishot()
 	
 	if ability.projectile != null:
