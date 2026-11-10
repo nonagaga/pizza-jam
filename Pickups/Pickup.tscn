@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" uid="uid://fapqf3g2pv63" path="res://Pickups/Pickup.gd" id="1_v6qaj"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_ki6cw"]
-[ext_resource type="PackedScene" uid="uid://dk2jvrba8drny" path="res://Effects/MultishotBoon.tscn" id="2_py0ns"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 70.0
 
 [node name="Pickup" type="Node2D" unique_id=1324348048]
 script = ExtResource("1_v6qaj")
-permanent_buff = ExtResource("2_py0ns")
 metadata/_custom_type_script = "uid://fapqf3g2pv63"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1174950053]

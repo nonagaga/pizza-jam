@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c6tspxjj2cd6s"]
+
+[ext_resource type="PackedScene" uid="uid://3i0feiw858l6" path="res://Pickups/Pickup.tscn" id="1_7mubj"]
+[ext_resource type="PackedScene" uid="uid://dgih2oboq2wl0" path="res://Effects/Range Stim.tscn" id="2_m83ky"]
+
+[node name="Pickup" unique_id=1324348048 instance=ExtResource("1_7mubj")]
+entity_effect = ExtResource("2_m83ky")

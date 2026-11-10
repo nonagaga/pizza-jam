@@ -10,3 +10,8 @@ class_name EntityDirectorStats extends Resource
 @export var elite_prob = 0.0 as float
 ## Additive elite probability per difficulty.
 @export var elite_prob_diff = 0.0 as float
+
+## Chance that the entity will drop a boon (tiny permanent buff).
+@export var boon_drop_chance = 0.0 as float
+## Chance that the entity will drop a stim (large temporary buff).
+@export var stim_drop_chance = 0.0 as float

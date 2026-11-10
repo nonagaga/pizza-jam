@@ -102,4 +102,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_w6hej")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="TestUI" index="2" unique_id=142582480]
+layout_mode = 0
+offset_left = -936.0
+offset_top = 705.0
+offset_right = 1464.0
+offset_bottom = 823.0
+
 [connection signal="swapped_ability_icon" from="Primary Ability" to="TestUI/ColorRect/Abil1" method="set_texture"]
