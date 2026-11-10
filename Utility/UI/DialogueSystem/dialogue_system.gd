@@ -1,4 +1,8 @@
 extends Control
+#Making custom dialogue should be incredibly easy. The system loads up a "Dialogue" which is a custom resource class you guys can write text for and then automatically cuts it off when appropriate
+#If the dialogue resource has any "DialogueChoices", which are another custom resource class, than it will automatically make the relevant buttons available at the end of the dialogue.
+#More detailed explanations for the Dialogue and DialogueChoice classes are available in those scripts.
+
 @export var dialogue_box:RichTextLabel
 @export var response_box:VBoxContainer
 @export var option1:Button
@@ -25,7 +29,7 @@ func setup_dialogue(dialogue:Dialogue):
 	option4.visible = false
 	iterate_dialogue(dialogue)
 
-#writes the current dialogue to the dialogue box cutting it off when it hits the character limit for said box.
+##writes the current dialogue to the dialogue box cutting it off when it hits the character limit for said box.
 func iterate_dialogue(dialogue:Dialogue):
 	if dialogue.text.length() - current_point > max_chars:
 		var cut_point = dialogue.text.findn(" ", current_point + max_chars)
@@ -37,7 +41,7 @@ func iterate_dialogue(dialogue:Dialogue):
 		if dialogue.options.size() >0:
 			display_options(dialogue)
 
-#shows the options for the current dialogue and sets up the data for said dialogue to be accurate
+##shows the options for the current dialogue and sets up the data for said dialogue to be accurate
 func display_options(dialogue:Dialogue):
 	var options = dialogue.options
 	match dialogue.options.size():
@@ -87,7 +91,7 @@ func _ready() -> void:
 func close_dialogue():
 	pass
 
-#checks if we're left clicking to iterate through dialogue
+##checks if we're left clicking to iterate through dialogue
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Primary Ability") && current_point < current_dialogue.text.length():
 		iterate_dialogue(current_dialogue)
@@ -122,8 +126,3 @@ func _on_option_4_pressed() -> void:
 		setup_dialogue(selected_data.linked_dialogue)
 	else:
 		close_dialogue()
-
-
-#Making custom dialogue should be incredibly easy. The system loads up a "Dialogue" which is a custom resource class you guys can write text for and then automatically cuts it off when appropriate
-#If the dialogue resource has any "DialogueChoices", which are another custom resource class, than it will automatically make the relevant buttons available at the end of the dialogue.
-#More detailed explanations for the Dialogue and DialogueChoice classes are available in those scripts.
