@@ -19,14 +19,24 @@ signal updated_dupes_str(new_amt: String)
 
 var dupes = 1 as int
 
+var _buff_icon: TextureRect
+
 func _ready() -> void:
 	if is_permanent:
 		set_process(false)
+	start_effect()
 
 func _process(delta: float) -> void:
 	lifetime -= delta
 	if lifetime <= 0.0:
+		end_effect()
 		_entity.remove_effect(self)
+
+func start_effect() -> void:
+	pass
+
+func end_effect() -> void:
+	pass
 
 func add_dupes(amt: int) -> void:
 	dupes += amt
