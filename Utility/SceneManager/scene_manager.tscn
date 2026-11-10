@@ -4,12 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://bjvnrpy1jd8p2" path="res://Utility/SceneManager/test_scene.tscn" id="2_vrua0"]
 [ext_resource type="PackedScene" uid="uid://dgy8c0ydtbm64" path="res://Utility/SceneManager/Transitions/TRANS_black_wipe.tscn" id="3_c2nx3"]
 [ext_resource type="PackedScene" uid="uid://dvv8e64tiq8ou" path="res://Utility/UI/main_menu.tscn" id="3_dbat5"]
+[ext_resource type="PackedScene" uid="uid://bxkb1jyo3t6im" path="res://Test Scenes/Entity Testing.tscn" id="4_nmoos"]
 
-[node name="SceneManager" type="Node" unique_id=836661501]
+[node name="SceneManager" type="Node" unique_id=836661501 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_w5pm8")
 scene_list = Dictionary[StringName, PackedScene]({
+&"entity_testing": ExtResource("4_nmoos"),
 &"main_menu": ExtResource("3_dbat5"),
 &"test_scene": ExtResource("2_vrua0")
 })
 default_transition = ExtResource("3_c2nx3")
 default_scene = &"main_menu"
+canvas_layer = NodePath("CanvasLayer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2067561443]
