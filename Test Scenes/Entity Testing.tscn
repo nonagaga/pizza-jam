@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bxkb1jyo3t6im"]
+
+[ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
+[ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
+[ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="2_wliak"]
+[ext_resource type="PackedScene" uid="uid://dmtsn0krhhios" path="res://Pickups/Multishot Stim Pickup.tscn" id="4_jo2oe"]
+[ext_resource type="PackedScene" uid="uid://c6tspxjj2cd6s" path="res://Pickups/Range Stim Pickup.tscn" id="5_0nlcj"]
+
+[node name="EntityTesting" type="Node2D" unique_id=1040795723]
+
+[node name="Player" parent="." unique_id=639906909 instance=ExtResource("1_gfd0l")]
+position = Vector2(156, 191)
+
+[node name="Godotbot" parent="." unique_id=930295659 instance=ExtResource("2_wliak")]
+position = Vector2(-999, -474)
+
+[node name="Pillar" type="Sprite2D" parent="." unique_id=1305690357]
+position = Vector2(-442.5, -229)
+scale = Vector2(0.1484375, 1)
+texture = ExtResource("2_vl2lw")
+
+[node name="Pillar2" type="Sprite2D" parent="." unique_id=1134259983]
+position = Vector2(-400, 616)
+scale = Vector2(0.1484375, 1)
+texture = ExtResource("2_vl2lw")
+
+[node name="Pillar3" type="Sprite2D" parent="." unique_id=1239970217]
+position = Vector2(-286, 226)
+scale = Vector2(0.1484375, 1)
+texture = ExtResource("2_vl2lw")
+
+[node name="Pillar4" type="Sprite2D" parent="." unique_id=347517948]
+position = Vector2(511, 556)
+scale = Vector2(0.1484375, 1)
+texture = ExtResource("2_vl2lw")
+
+[node name="Pickup" parent="." unique_id=1324348048 instance=ExtResource("4_jo2oe")]
+position = Vector2(898, 373)
+
+[node name="Pickup2" parent="." unique_id=1154273806 instance=ExtResource("5_0nlcj")]
+position = Vector2(896, -358)
