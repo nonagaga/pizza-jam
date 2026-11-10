@@ -12,4 +12,4 @@ func _ready() -> void:
 	start_button.pressed.connect(_on_start_pressed)
 
 func _on_start_pressed():
-	scene_manager.change_scene("entity_testing")
+	scene_manager.change_scene("test_level")
