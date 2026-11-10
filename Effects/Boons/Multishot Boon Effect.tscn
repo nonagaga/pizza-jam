@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk2jvrba8drny"]
 
 [ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_wgb6p"]
-[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="2_ahuoo"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="2_ahuoo"]
 [ext_resource type="Texture2D" uid="uid://butewv1lsrf5d" path="res://Effects/Split_Shot.png" id="2_ngvdd"]
 
 [sub_resource type="Resource" id="Resource_0ey2j"]

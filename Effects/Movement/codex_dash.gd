@@ -1,22 +1,23 @@
 extends EntityEffect
 
 func start_effect() -> void:
+	if _entity._last_move_vec == Vector2.ZERO:
+		_entity.remove_effect(self)
+		return
 	codex_dash(_entity._last_move_vec, 4.0, 0.4)
-	#_entity.remove_effect(self)
 
 func codex_dash(direction: Vector2, dash_mult: float,
 		dash_duration: float):
 	if _entity.is_force_moved or direction == Vector2.ZERO:
+		_entity.remove_effect(self)
 		return
 		
 	_entity.is_force_moved = true
 	
-	var normal_speed = _entity.combat.get_walk_speed()
+	var normal_speed = _entity.live.get_pixel_speed()
 	var dash_speed = normal_speed * dash_mult
 	# Calculate the ratio to hand off perfectly to normal running speed
 	var normal_speed_ratio = 1 / dash_mult
-	
-	print(normal_speed, dash_speed, normal_speed_ratio)
 	
 	var tween = create_tween()
 	

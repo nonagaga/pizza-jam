@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://lxs678q0or5f"]
+
+[ext_resource type="PackedScene" uid="uid://3i0feiw858l6" path="res://Pickups/Pickup.tscn" id="1_k58lp"]
+[ext_resource type="PackedScene" uid="uid://d3ybqntbobkub" path="res://Effects/Stims/Walk Speed Stim Effect.tscn" id="2_w1piv"]
+
+[node name="Walk Speed Stim Pickup" unique_id=1324348048 instance=ExtResource("1_k58lp")]
+entity_effect = ExtResource("2_w1piv")

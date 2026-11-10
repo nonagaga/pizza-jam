@@ -1,4 +1,4 @@
-class_name AbilityRoll extends Object
+class_name AbilityRoll extends NumberRoll
 
 ## Running raw damage.
 var base_damage = 0.0 as float
@@ -23,7 +23,7 @@ var duration_mult = 0.0 as float
 ## Additive cooldown multipliers.
 var cooldown_mult = 0.0 as float
 
-var finalized = false as bool
+# Final numbers
 
 var final_damage = 0.0 as float
 var final_multishot = 1 as int

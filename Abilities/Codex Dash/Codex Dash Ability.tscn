@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_22u1c"]
 [ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Codex Dash/dash.png" id="2_3a038"]
 [ext_resource type="PackedScene" uid="uid://m65yvuctbwar" path="res://Effects/Movement/Codex Dash Effect.tscn" id="3_6h8qh"]
-[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_srvti"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="3_srvti"]
 
 [sub_resource type="Resource" id="Resource_oa24y"]
 script = ExtResource("3_srvti")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_e4jwb"]
 [ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="2_hxgit"]
-[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_bw3td"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="3_bw3td"]
 [ext_resource type="PackedScene" uid="uid://bps35ug4vgnbe" path="res://Abilities/Left Swing/Left Swing Projectile.tscn" id="3_v3qvy"]
 
 [sub_resource type="Resource" id="Resource_5jjk8"]
