@@ -1,6 +1,7 @@
+class_name Pick3System
 extends Control
-#Ui thing which lets you pick one of three randomized upgrades yippee
-#Upgrades are sorted in to several folders based on their rarity more details are in the Upgrade.gd script
+##Ui thing which lets you pick one of three randomized upgrades yippee.
+##Upgrades are sorted in to several folders based on their rarity more details are in the Upgrade.gd script
 
 @export var option1:Button
 @export var option2:Button

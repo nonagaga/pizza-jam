@@ -1,7 +1,8 @@
+class_name DialogueSystem
 extends Control
-#Making custom dialogue should be incredibly easy. The system loads up a "Dialogue" which is a custom resource class you guys can write text for and then automatically cuts it off when appropriate
-#If the dialogue resource has any "DialogueChoices", which are another custom resource class, than it will automatically make the relevant buttons available at the end of the dialogue.
-#More detailed explanations for the Dialogue and DialogueChoice classes are available in those scripts.
+##Making custom dialogue should be incredibly easy. The system loads up a "Dialogue" which is a custom resource class you guys can write text for and then automatically cuts it off when appropriate
+##If the dialogue resource has any "DialogueChoices", which are another custom resource class, than it will automatically make the relevant buttons available at the end of the dialogue.
+##More detailed explanations for the Dialogue and DialogueChoice classes are available in those scripts.
 
 @export var dialogue_box:RichTextLabel
 @export var response_box:VBoxContainer
