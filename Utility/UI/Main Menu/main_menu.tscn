@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c5ix564cfw5mb" path="res://Utility/UI/Main Menu/main_menu.gd" id="1_r43h1"]
 [ext_resource type="Theme" uid="uid://d2vsi8sdrtiql" path="res://Utility/UI/Main Menu/main_menu.tres" id="2_bhgc5"]
-[ext_resource type="Texture2D" uid="uid://b7lw7oyumcult" path="res://Locations/Levels/all_the_ui_so_far.png" id="2_xs6v4"]
 
 [node name="MainMenu" type="Control" unique_id=1134082915 node_paths=PackedStringArray("start_button", "quit_button", "credits_button")]
 layout_mode = 3
@@ -43,14 +42,3 @@ text = "Quit"
 layout_mode = 2
 theme = ExtResource("2_bhgc5")
 text = "Credits"
-
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=830852658]
-layout_mode = 0
-offset_right = 233.0
-offset_bottom = 46.0
-texture = ExtResource("2_xs6v4")
-region_rect = Rect2(42, 25, 214, 64)
-patch_margin_left = 9
-patch_margin_top = 9
-patch_margin_right = 9
-patch_margin_bottom = 9

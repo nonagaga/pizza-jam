@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo676s2id2ykb"]
 
-[ext_resource type="PackedScene" uid="uid://bppm1o2rvvcxd" path="res://Locations/Levels/square_room.tscn" id="1_5domc"]
+[ext_resource type="PackedScene" uid="uid://bppm1o2rvvcxd" path="res://Locations/Levels/Rooms/stone_room.tscn" id="1_5domc"]
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="3_5domc"]
 [ext_resource type="PackedScene" uid="uid://cnu3rqiqvfnb6" path="res://Locations/Levels/hallway_test.tscn" id="3_h0iqr"]
 [ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="4_h0iqr"]

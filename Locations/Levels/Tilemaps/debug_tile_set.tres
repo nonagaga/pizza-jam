@@ -1,10 +1,12 @@
 [gd_resource type="TileSet" format=3 uid="uid://yuq702wpi4d3"]
 
-[ext_resource type="Texture2D" uid="uid://dmnwov2qb2clk" path="res://Locations/Levels/Tilemaps/Tilemap.png" id="1_mh3ki"]
-[ext_resource type="Texture2D" uid="uid://dmdieq7trhdt8" path="res://Locations/Levels/Tilemaps/HallwayTest.png" id="2_0b6x7"]
+[ext_resource type="Texture2D" uid="uid://dmnwov2qb2clk" path="res://Locations/Levels/Tilemaps/Textures/Tilemap.png" id="1_0b6x7"]
+[ext_resource type="Texture2D" uid="uid://dmdieq7trhdt8" path="res://Locations/Levels/Tilemaps/Textures/HallwayTest.png" id="2_0b6x7"]
+[ext_resource type="Texture2D" uid="uid://eag4kmghwd3r" path="res://Locations/Levels/Tilemaps/Textures/Floor Tile_TILES.png" id="3_0b6x7"]
+[ext_resource type="Texture2D" uid="uid://bje0s7cicmtmh" path="res://Locations/Levels/Tilemaps/Textures/Disco Tiles FULL TILES.png" id="3_giu0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fh7vj"]
-texture = ExtResource("1_mh3ki")
+texture = ExtResource("1_0b6x7")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -8, 16, -8, -8, 16, -8, 16, -16, -16, -16)
@@ -39,6 +41,38 @@ texture_region_size = Vector2i(32, 32)
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -16, -8, -8, -16, -8, -16, -16)
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -8, 8, -8, 8, -16, 16, -16)
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llld0"]
+texture = ExtResource("3_giu0a")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_giu0a"]
+texture = ExtResource("3_0b6x7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
 
 [resource]
 tile_size = Vector2i(32, 32)
@@ -46,3 +80,5 @@ physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_fh7vj")
 sources/1 = SubResource("TileSetAtlasSource_qoidl")
+sources/9 = SubResource("TileSetAtlasSource_giu0a")
+sources/10 = SubResource("TileSetAtlasSource_llld0")
