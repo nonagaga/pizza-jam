@@ -23,6 +23,8 @@ Compute="*uid://deom6o4v3dc1t"
 
 [display]
 
+window/size/viewport_width=400
+window/size/viewport_height=300
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 "<<<<<<<HEAD[file_customization]folder_colors"={
@@ -116,6 +118,7 @@ Dash={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
