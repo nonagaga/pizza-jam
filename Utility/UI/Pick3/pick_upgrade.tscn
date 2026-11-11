@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dvmn6gtuyxxdk"]
+
+[ext_resource type="Script" uid="uid://q2ggtg5stgsh" path="res://Utility/UI/Pick3/pick_upgrade.gd" id="1_7sy8n"]
+
+[node name="PickUpgrade" type="Control" unique_id=925021869 node_paths=PackedStringArray("option1", "option2", "option3")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7sy8n")
+option1 = NodePath("Options/Option1")
+option2 = NodePath("Options/Option2")
+option3 = NodePath("Options/Option3")
+
+[node name="Options" type="HBoxContainer" parent="." unique_id=1763122899]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.344
+anchor_right = 0.998
+anchor_bottom = 0.781
+offset_top = -0.120010376
+offset_right = 0.27996826
+offset_bottom = 0.11999512
+
+[node name="Option1" type="Button" parent="Options" unique_id=738992532]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Option2" type="Button" parent="Options" unique_id=491270356]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Option3" type="Button" parent="Options" unique_id=800890900]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="Options/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="Options/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="Options/Option3" to="." method="_on_option_3_pressed"]

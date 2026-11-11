@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://drcpplxl7pc5m"]
+
+[ext_resource type="Script" uid="uid://bmrxixbjfctup" path="res://Utility/UI/DialogueSystem/DialogueChoices/DialogueChoice.gd" id="1_qbwv2"]
+[ext_resource type="Script" uid="uid://b1ldlngofb26k" path="res://Utility/UI/DialogueSystem/Dialogue/dialogue.gd" id="2_r17iy"]
+
+[resource]
+script = ExtResource("2_r17iy")
+text = "Wow that was incredibly annoying."
+metadata/_custom_type_script = "uid://b1ldlngofb26k"
