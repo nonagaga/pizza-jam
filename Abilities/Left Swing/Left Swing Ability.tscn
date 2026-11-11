@@ -11,7 +11,7 @@ base_damage = 20.0
 base_multishot = 1.0
 metadata/_custom_type_script = "uid://c0ny0w83asqax"
 
-[node name="LeftSwing" type="Node" unique_id=1098785488]
+[node name="LeftSwingAbility" type="Node" unique_id=1098785488]
 script = ExtResource("1_e4jwb")
 ability_name = "Left Swing"
 ability_icon = ExtResource("2_hxgit")

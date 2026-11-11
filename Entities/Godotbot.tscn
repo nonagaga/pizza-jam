@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_gx638"]
 [ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="7_3ve2a"]
 [ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilitySlotAI.gd" id="7_hms4s"]
-[ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing.tscn" id="8_gasj4"]
+[ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing Ability.tscn" id="8_gasj4"]
 
 [sub_resource type="Resource" id="Resource_wgj20"]
 script = ExtResource("2_ujlot")
@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://dct7rekk327cg"
 
 [sub_resource type="Resource" id="Resource_kxl0c"]
 script = ExtResource("3_selh3")
+max_health = 50.0
 metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 
 [sub_resource type="Resource" id="Resource_e0011"]
