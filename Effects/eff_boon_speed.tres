@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://dlwe478lg81da"]
+
+[ext_resource type="Texture2D" uid="uid://ppr1ptj3fak2" path="res://Effects/Enduring_Speed.png" id="1_bunp1"]
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="3_ix36v"]
+[ext_resource type="Script" uid="uid://r7ii7483bc4a" path="res://Rolls/StatRollModifier.gd" id="3_x0b13"]
+
+[sub_resource type="Resource" id="Resource_1pua5"]
+script = ExtResource("3_x0b13")
+walk_speed_mult = 0.01
+metadata/_custom_type_script = "uid://r7ii7483bc4a"
+
+[resource]
+script = ExtResource("3_ix36v")
+effect_name = "Speed Boon"
+effect_icon = ExtResource("1_bunp1")
+stat_roll_modifier = SubResource("Resource_1pua5")
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

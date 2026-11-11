@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ct2s81llgt60c"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_22u1c"]
+[ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Codex Dash/dash.png" id="2_3a038"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="3_srvti"]
+
+[sub_resource type="Resource" id="Resource_oa24y"]
+script = ExtResource("3_srvti")
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[node name="CodexDashAbility" type="Node" unique_id=552780746]
+script = ExtResource("1_22u1c")
+ability_name = "Codex Dash"
+ability_icon = ExtResource("2_3a038")
+ar_modifier = SubResource("Resource_oa24y")
+slot_cooldown = 1.0
+metadata/_custom_type_script = "uid://cch8y4ugk455o"

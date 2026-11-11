@@ -57,7 +57,7 @@ func use_ability(target_pos: Vector2) -> void:
 	
 	if ability.effects != null:
 		for effect in ability.effects:
-			entity.add_effect(effect.instantiate())
+			entity.add_effect(effect)
 	
 	if ability.combo_ability == null:
 		swap_ability(default_ability)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://difljdf37nadr"]
+
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="1_6omd4"]
+[ext_resource type="Texture2D" uid="uid://butewv1lsrf5d" path="res://Effects/Split_Shot.png" id="2_6omd4"]
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="3_hcmn5"]
+
+[sub_resource type="Resource" id="Resource_q647j"]
+script = ExtResource("1_6omd4")
+multishot_mult = 0.01
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[resource]
+script = ExtResource("3_hcmn5")
+effect_name = "Multishot Boon"
+effect_icon = ExtResource("2_6omd4")
+ability_roll_modifier = SubResource("Resource_q647j")
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

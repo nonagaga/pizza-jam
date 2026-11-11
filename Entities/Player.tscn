@@ -74,6 +74,7 @@ default_ability = NodePath("CodexDashAbility")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
 [node name="CodexDashAbility" parent="Movement Ability" index="0" unique_id=552780746 instance=ExtResource("12_yytyf")]
+slot_cooldown = 0.1
 
 [node name="AbilitySlotIO" type="Node" parent="Movement Ability" index="1" unique_id=397377878]
 script = ExtResource("7_nn0oq")

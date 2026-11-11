@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ct2s81llgt60c"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_22u1c"]
+[ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Codex Dash/dash.png" id="2_3a038"]
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="3_3a038"]
+
+[node name="CodexDashAbility" type="Node" unique_id=552780746]
+script = ExtResource("1_22u1c")
+ability_name = "Codex Dash"
+ability_icon = ExtResource("2_3a038")
+slot_cooldown = 1.0
+effects = Array[ExtResource("3_3a038")]([null])
+metadata/_custom_type_script = "uid://cch8y4ugk455o"

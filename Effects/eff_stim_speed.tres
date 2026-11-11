@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://dva7mfff54bm3"]
+
+[ext_resource type="Texture2D" uid="uid://ppr1ptj3fak2" path="res://Effects/Enduring_Speed.png" id="1_7ak03"]
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_uy3ky"]
+[ext_resource type="Script" uid="uid://r7ii7483bc4a" path="res://Rolls/StatRollModifier.gd" id="3_ynkh4"]
+
+[sub_resource type="Resource" id="Resource_y2jkn"]
+script = ExtResource("3_ynkh4")
+walk_speed_bonus = 2.0
+walk_speed_mult = 0.5
+metadata/_custom_type_script = "uid://r7ii7483bc4a"
+
+[resource]
+script = ExtResource("1_uy3ky")
+effect_name = "Speed Stim"
+effect_icon = ExtResource("1_7ak03")
+stat_roll_modifier = SubResource("Resource_y2jkn")
+is_permanent = false
+stacks_separately = true
+lifespan = 10.0
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

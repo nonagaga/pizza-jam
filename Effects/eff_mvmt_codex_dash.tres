@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EntityEffectCodexDash" format=3 uid="uid://b8rq06un3o31c"]
+
+[ext_resource type="Script" uid="uid://dq4vm0ottx7du" path="res://Effects/EntityEffectCodexDash.gd" id="1_i8wol"]
+[ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Codex Dash/dash.png" id="2_w21cv"]
+
+[resource]
+script = ExtResource("1_i8wol")
+effect_name = "Codex Dash"
+effect_icon = ExtResource("2_w21cv")
+is_permanent = false
+stacks_separately = true
+lifespan = 0.9
+metadata/_custom_type_script = "uid://dq4vm0ottx7du"
