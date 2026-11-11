@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3 uid="uid://tdva8x1t3b5b"]
+
+[ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="1_3w4hl"]
+[ext_resource type="Script" uid="uid://u442vuk54821" path="res://Utility/UI/Pick3/Upgrades/Upgrade.gd" id="2_4svk4"]
+
+[resource]
+script = ExtResource("2_4svk4")
+text = "Obscene Health"
+rarity = 4
+tooltip_text = "grants 1000 extra health"
+icon = ExtResource("1_3w4hl")
+health_modifier = 1000
+metadata/_custom_type_script = "uid://u442vuk54821"

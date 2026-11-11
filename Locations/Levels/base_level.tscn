@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://q1dfgdcqvbjy"]
+
+[ext_resource type="Texture2D" uid="uid://dwomav330lw2h" path="res://Locations/Levels/TestLevel.png" id="1_hx7ba"]
+[ext_resource type="Texture2D" uid="uid://dmdieq7trhdt8" path="res://Locations/Levels/Tilemaps/HallwayTest.png" id="2_5g7o5"]
+[ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="2_hmcj5"]
+[ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="3_p2i61"]
+[ext_resource type="Texture2D" uid="uid://bobh8devwmpej" path="res://Locations/Levels/SWKidle.png" id="3_ythob"]
+[ext_resource type="Texture2D" uid="uid://b7lw7oyumcult" path="res://Locations/Levels/all_the_ui_so_far.png" id="6_8ru10"]
+
+[sub_resource type="Resource" id="Resource_5g7o5"]
+script = ExtResource("3_p2i61")
+walk_speed = 2.0
+metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2i61"]
+atlas = ExtResource("3_ythob")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g7o5"]
+atlas = ExtResource("3_ythob")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ru10"]
+atlas = ExtResource("3_ythob")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpclg"]
+atlas = ExtResource("3_ythob")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gik7"]
+atlas = ExtResource("3_ythob")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbb3l"]
+atlas = ExtResource("3_ythob")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn0o7"]
+atlas = ExtResource("3_ythob")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju1de"]
+atlas = ExtResource("3_ythob")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hiny"]
+atlas = ExtResource("3_ythob")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svq7c"]
+atlas = ExtResource("3_ythob")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liplu"]
+atlas = ExtResource("3_ythob")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ehat"]
+atlas = ExtResource("3_ythob")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0euqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2i61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g7o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ru10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpclg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gik7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbb3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn0o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju1de")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hiny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svq7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liplu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ehat")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="BaseLevel" type="Node2D" unique_id=139428011]
+
+[node name="Map" type="Sprite2D" parent="." unique_id=1297112392]
+position = Vector2(416, 0)
+texture = ExtResource("1_hx7ba")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1298967774]
+position = Vector2(-672, 160)
+texture = ExtResource("2_5g7o5")
+
+[node name="Player" parent="." unique_id=639906909 instance=ExtResource("2_hmcj5")]
+combat = SubResource("Resource_5g7o5")
+
+[node name="MainSprite" parent="Player" index="0" unique_id=491664460]
+visible = false
+texture = ExtResource("3_ythob")
+
+[node name="Camera2D" parent="Player" index="4" unique_id=975768696]
+zoom = Vector2(1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=140374843]
+sprite_frames = SubResource("SpriteFrames_0euqp")
+autoplay = "default"
+frame_progress = 0.6116033
+
+[node name="AllTheUiSoFar" type="Sprite2D" parent="." unique_id=681505607]
+position = Vector2(416, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_8ru10")
+
+[editable path="Player"]
