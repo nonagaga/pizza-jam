@@ -28,7 +28,6 @@ metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 
 [sub_resource type="Resource" id="Resource_y048k"]
 script = ExtResource("6_rg81y")
-pickup_amt = 35
 pickups = Array[PackedScene]([ExtResource("5_rxtae")])
 metadata/_custom_type_script = "uid://jph0wm8g60ud"
 

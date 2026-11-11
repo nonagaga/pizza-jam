@@ -24,6 +24,7 @@ metadata/_custom_type_script = "uid://dct7rekk327cg"
 
 [sub_resource type="Resource" id="Resource_oa24y"]
 script = ExtResource("3_8td47")
+max_health = 100000.0
 walk_speed = 8.0
 metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 

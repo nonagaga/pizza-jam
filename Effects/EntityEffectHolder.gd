@@ -46,7 +46,7 @@ func _timeout() -> void:
 
 func modify_ability_roll(abroll: AbilityRoll) -> AbilityRoll:
 	if effect.ability_roll_modifier == null:
-		return
+		return abroll
 	
 	# HACK - This could be more efficient
 	for i in range(dupes):

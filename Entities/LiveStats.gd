@@ -11,6 +11,6 @@ func get_pixel_speed() -> float:
 
 func deal_damage(amt: float, from: Entity = null) -> void:
 	health -= amt
-	
+	print(health)
 	if health <= 0.0:
 		_entity.die.call_deferred()

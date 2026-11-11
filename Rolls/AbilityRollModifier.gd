@@ -28,7 +28,7 @@ func generate_ability_roll() -> AbilityRoll:
 	return modify_ability_roll(ar)
 
 func modify_ability_roll(ar: AbilityRoll) -> AbilityRoll:
-	ar.base_damage = base_damage
+	ar.base_damage += base_damage
 	ar.damage_mult += damage_mult
 	
 	ar.crit_chance += crit_chance
