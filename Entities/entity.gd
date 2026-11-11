@@ -138,7 +138,8 @@ func die() -> void:
 	
 	for i in drop_table.pickup_amt:
 		var p = drop_table.pickups.pick_random().instantiate() as Pickup
-		root.add_child(p)
+		#root.add_child(p)
+		root.add_child.call_deferred(p)
 		p.global_position = global_position + Vector2(randf(), randf()) * Physics.PIXEL_METER * 1
 	
 	queue_free()

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="3_8td47"]
 [ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementIO.gd" id="3_c7jvw"]
 [ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_opvli"]
+[ext_resource type="Script" uid="uid://jph0wm8g60ud" path="res://Entities/EntityDropTable.gd" id="5_mwl8m"]
 [ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="6_drum4"]
 [ext_resource type="Script" uid="uid://1adqfnkapsco" path="res://Entities/Modules/AbilitySlotIO.gd" id="7_nn0oq"]
 [ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Codex Dash/dash.png" id="8_w6hej"]
@@ -31,6 +32,11 @@ script = ExtResource("4_opvli")
 team = 1
 metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 
+[sub_resource type="Resource" id="Resource_0nlcj"]
+script = ExtResource("5_mwl8m")
+pickup_amt = 0
+metadata/_custom_type_script = "uid://jph0wm8g60ud"
+
 [sub_resource type="InputEventAction" id="InputEventAction_cfvty"]
 action = &"Primary Ability"
 
@@ -41,6 +47,7 @@ action = &"Movement Ability"
 civil = SubResource("Resource_wliak")
 combat = SubResource("Resource_oa24y")
 director = SubResource("Resource_jo2oe")
+drop_table = SubResource("Resource_0nlcj")
 
 [node name="MovementModule" type="Node" parent="." index="3" unique_id=1701972523]
 script = ExtResource("2_0gd87")

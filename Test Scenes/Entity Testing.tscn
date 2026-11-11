@@ -12,7 +12,25 @@
 position = Vector2(178, 164)
 
 [node name="Godotbot" parent="." unique_id=930295659 instance=ExtResource("2_wliak")]
-position = Vector2(-999, -474)
+position = Vector2(-1290, -386)
+
+[node name="Godotbot2" parent="." unique_id=1767602413 instance=ExtResource("2_wliak")]
+position = Vector2(-1213, -560)
+
+[node name="Godotbot3" parent="." unique_id=111055697 instance=ExtResource("2_wliak")]
+position = Vector2(-1028, -671)
+
+[node name="Godotbot4" parent="." unique_id=1484172746 instance=ExtResource("2_wliak")]
+position = Vector2(-808, -705)
+
+[node name="Godotbot5" parent="." unique_id=926753907 instance=ExtResource("2_wliak")]
+position = Vector2(-674, -560)
+
+[node name="Godotbot6" parent="." unique_id=1615826799 instance=ExtResource("2_wliak")]
+position = Vector2(-802, -306)
+
+[node name="Godotbot7" parent="." unique_id=2018212115 instance=ExtResource("2_wliak")]
+position = Vector2(-1079, -274)
 
 [node name="Pillar" type="Sprite2D" parent="." unique_id=1305690357]
 position = Vector2(-442.5, -229)

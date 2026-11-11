@@ -13,4 +13,4 @@ func deal_damage(amt: float, from: Entity = null) -> void:
 	health -= amt
 	
 	if health <= 0.0:
-		_entity.die()
+		_entity.die.call_deferred()
