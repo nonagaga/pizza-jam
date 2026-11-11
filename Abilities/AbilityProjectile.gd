@@ -9,9 +9,12 @@ var aim_rotation = 0.0 as float
 var _time_alive = 0.0 as float
 @export var follows_owner = false as bool
 
+var originator: Entity
+var ability_roll: AbilityRoll
+
 func _ready() -> void:
-	pass
-	#aim_rotation = rad_to_deg(get_angle_to(get_global_mouse_position()))
+	set_collision_layer_value(9, true)
+	set_collision_mask_value(9, true)
 
 func _physics_process(delta: float) -> void:
 	rotation_degrees = remap(_time_alive, 0.0, lifetime, starting_rotation, ending_rotation)

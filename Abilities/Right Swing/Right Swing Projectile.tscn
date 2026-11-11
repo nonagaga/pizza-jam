@@ -7,13 +7,13 @@
 size = Vector2(230, 50)
 
 [node name="RightSwingProjectile" type="CharacterBody2D" unique_id=2018038112]
-collision_layer = 0
-collision_mask = 0
+collision_layer = 256
+collision_mask = 256
 motion_mode = 1
 script = ExtResource("1_qjjs3")
-starting_rotation = -40.0
-ending_rotation = 40.0
-lifetime = 0.25
+starting_rotation = -60.0
+ending_rotation = 60.0
+lifetime = 0.15
 follows_owner = true
 metadata/_custom_type_script = "uid://bfe2bxvrm0ckr"
 

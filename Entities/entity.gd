@@ -5,8 +5,9 @@ static var STACKS_LBL_SETTINGS = preload("res://Effects/Buffbar Stacks.tres")
 @export var civil: EntityCivilStats
 @export var combat: EntityCombatStats
 @export var director: EntityDirectorStats
+@export var drop_table: EntityDropTable
 
-@onready var live = LiveStats.new()
+@onready var live := LiveStats.new()
 
 ## This is true when the entity is being forced to move somehow.
 ## After the forced movement ends (push, pull, dash, etc.), this becomes false.
@@ -20,7 +21,9 @@ var _effect_holders := [] as Array[EntityEffectHolder]
 signal added_buff_icon(texture_rect: TextureRect)
 
 func _ready() -> void:
+	live._entity = self
 	update_stats()
+	full_heal()
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
@@ -41,6 +44,9 @@ func _apply_stat_roll(stroll: StatRoll) -> void:
 
 func get_movement_module() -> MovementModule:
 	return _movement_module
+
+func full_heal() -> void:
+	live.health = live.max_health
 
 # Effects
 
@@ -124,3 +130,25 @@ func modify_stat_roll(stroll: StatRoll) -> StatRoll:
 		eh.modify_stat_roll(stroll)
 	
 	return stroll
+
+# Damage, Death
+
+func die() -> void:
+	var root = get_tree().root
+	
+	for i in drop_table.pickup_amt:
+		var p = drop_table.pickups.pick_random().instantiate() as Pickup
+		root.add_child(p)
+		p.global_position = global_position + Vector2(randf(), randf()) * Physics.PIXEL_METER * 1
+	
+	queue_free()
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	
+	if body is AbilityProjectile:
+		if body.originator.director.team == director.team:
+			return
+		
+		live.deal_damage(body.ability_roll.get_final_damage(), body.originator)
+	
+	pass # Replace with function body.

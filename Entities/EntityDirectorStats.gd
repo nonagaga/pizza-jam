@@ -1,5 +1,12 @@
 class_name EntityDirectorStats extends Resource
 
+## Entities on the same team cannot damage each other and will not
+## pathfind towards each other.
+## [br][br]
+## Team 0: Enemies. [br]
+## Team 1: Player.
+@export var team = 0 as int
+
 ## When this enemy is spawned, how many of it should be created?
 @export var population_mult = 1.0 as float
 ## Additive population mult per difficulty.

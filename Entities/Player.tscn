@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="6_drum4"]
 [ext_resource type="Script" uid="uid://1adqfnkapsco" path="res://Entities/Modules/AbilitySlotIO.gd" id="7_nn0oq"]
 [ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Codex Dash/dash.png" id="8_w6hej"]
-[ext_resource type="PackedScene" uid="uid://ddor4v8jhoemv" path="res://Abilities/Right Swing/Right Swing.tscn" id="8_yytyf"]
+[ext_resource type="PackedScene" uid="uid://ddor4v8jhoemv" path="res://Abilities/Right Swing/Right Swing Ability.tscn" id="8_yytyf"]
 [ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="9_paumt"]
 [ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing Ability.tscn" id="10_8td47"]
 [ext_resource type="PackedScene" uid="uid://deorq65d05rx" path="res://Abilities/Circle Swing/Circle Swing Ability.tscn" id="10_hmggr"]
@@ -28,6 +28,7 @@ metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 
 [sub_resource type="Resource" id="Resource_jo2oe"]
 script = ExtResource("4_opvli")
+team = 1
 metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 
 [sub_resource type="InputEventAction" id="InputEventAction_cfvty"]
@@ -41,7 +42,7 @@ civil = SubResource("Resource_wliak")
 combat = SubResource("Resource_oa24y")
 director = SubResource("Resource_jo2oe")
 
-[node name="MovementModule" type="Node" parent="." index="2" unique_id=1701972523]
+[node name="MovementModule" type="Node" parent="." index="3" unique_id=1701972523]
 script = ExtResource("2_0gd87")
 metadata/_custom_type_script = "uid://bufnrj8520j8s"
 
@@ -49,17 +50,16 @@ metadata/_custom_type_script = "uid://bufnrj8520j8s"
 script = ExtResource("3_c7jvw")
 metadata/_custom_type_script = "uid://b30auqqb707te"
 
-[node name="Primary Ability" type="Node" parent="." index="3" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
+[node name="Primary Ability" type="Node" parent="." index="4" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
 script = ExtResource("9_paumt")
-default_ability = NodePath("LeftSwing")
+default_ability = NodePath("LeftSwingAbility")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
-[node name="LeftSwing" parent="Primary Ability" index="0" unique_id=821849793 node_paths=PackedStringArray("combo_ability") instance=ExtResource("10_8td47")]
-combo_ability = NodePath("../RightSwing")
+[node name="LeftSwingAbility" parent="Primary Ability" index="0" unique_id=1098785488 node_paths=PackedStringArray("combo_ability") instance=ExtResource("10_8td47")]
+combo_ability = NodePath("../Right Swing Ability")
 
-[node name="RightSwing" parent="Primary Ability" index="1" unique_id=1919250664 node_paths=PackedStringArray("combo_ability") instance=ExtResource("8_yytyf")]
+[node name="Right Swing Ability" parent="Primary Ability" index="1" unique_id=1919250664 node_paths=PackedStringArray("combo_ability") instance=ExtResource("8_yytyf")]
 combo_ability = NodePath("../CircleSwing")
-combo_timer = 1.0
 
 [node name="CircleSwing" parent="Primary Ability" index="2" unique_id=233933718 instance=ExtResource("10_hmggr")]
 
@@ -68,23 +68,22 @@ script = ExtResource("7_nn0oq")
 input_action = SubResource("InputEventAction_cfvty")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
-[node name="Movement Ability" type="Node" parent="." index="4" unique_id=846931894 node_paths=PackedStringArray("default_ability")]
+[node name="Movement Ability" type="Node" parent="." index="5" unique_id=846931894 node_paths=PackedStringArray("default_ability")]
 script = ExtResource("9_paumt")
 default_ability = NodePath("CodexDashAbility")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
 [node name="CodexDashAbility" parent="Movement Ability" index="0" unique_id=552780746 instance=ExtResource("12_yytyf")]
-slot_cooldown = 0.1
 
 [node name="AbilitySlotIO" type="Node" parent="Movement Ability" index="1" unique_id=397377878]
 script = ExtResource("7_nn0oq")
 input_action = SubResource("InputEventAction_mwl8m")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
-[node name="Camera2D" type="Camera2D" parent="." index="5" unique_id=975768696]
+[node name="Camera2D" type="Camera2D" parent="." index="6" unique_id=975768696]
 zoom = Vector2(0.34, 0.34)
 
-[node name="TestUI" type="Control" parent="." index="6" unique_id=374077456]
+[node name="TestUI" type="Control" parent="." index="7" unique_id=374077456]
 layout_mode = 3
 anchors_preset = 0
 

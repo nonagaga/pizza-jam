@@ -112,6 +112,11 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Geometry"
+2d_physics/layer_9="Projectiles"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

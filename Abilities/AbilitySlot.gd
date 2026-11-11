@@ -42,18 +42,8 @@ func use_ability(target_pos: Vector2) -> void:
 	if !can_use_ability():
 		return
 	
-	var abroll = ability.ar_modifier.generate_ability_roll()
-	entity.modify_ability_roll(abroll)
-	
-	var ms = abroll.get_final_multishot()
-	
 	if ability.projectile != null:
-		if ability.tag_melee:
-			var sep_deg = 360.0 / ms
-			for i in range(ms):
-				_spawn_projectile(target_pos, abroll, sep_deg * i) 
-		else:
-			_spawn_projectile(target_pos, abroll)
+		_shoot_projectile(target_pos)
 	
 	if ability.effects != null:
 		for effect in ability.effects:
@@ -67,9 +57,26 @@ func use_ability(target_pos: Vector2) -> void:
 	
 	_slot_countdown = ability.slot_cooldown
 
+func _shoot_projectile(target_pos: Vector2) -> void:
+	var abroll = ability.ar_modifier.generate_ability_roll()
+	entity.modify_ability_roll(abroll)
+	
+	var ms = abroll.get_final_multishot()
+	
+	if ability.tag_melee:
+		var sep_deg = 360.0 / ms
+		for i in range(ms):
+			_spawn_projectile(target_pos, abroll, sep_deg * i) 
+	else:
+		_spawn_projectile(target_pos, abroll)
+
 func _spawn_projectile(target_pos: Vector2, abroll: AbilityRoll,
 		additional_rotation_deg: float = 0.0) -> void:
 	var proj = ability.projectile.instantiate() as AbilityProjectile
+	
+	proj.originator = entity
+	proj.ability_roll = abroll
+	
 	proj.aim_rotation = rad_to_deg(entity.global_position.angle_to_point(target_pos)
 		) + additional_rotation_deg
 	proj.scale *= abroll.get_final_range()

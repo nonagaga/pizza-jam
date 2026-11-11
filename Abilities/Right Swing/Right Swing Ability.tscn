@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ddor4v8jhoemv"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_68kpk"]
+[ext_resource type="Texture2D" uid="uid://cfmeumu83h3mh" path="res://Abilities/Right Swing/right swing.png" id="2_hw23a"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="3_rlrjr"]
+[ext_resource type="PackedScene" uid="uid://qgaibw6j5r03" path="res://Abilities/Right Swing/Right Swing Projectile.tscn" id="4_0gxes"]
+
+[sub_resource type="Resource" id="Resource_bw3td"]
+script = ExtResource("3_rlrjr")
+base_damage = 25.0
+base_multishot = 1.0
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[node name="Right Swing Ability" type="Node" unique_id=1919250664]
+script = ExtResource("1_68kpk")
+ability_name = "Right Swing"
+ability_icon = ExtResource("2_hw23a")
+ar_modifier = SubResource("Resource_bw3td")
+tag_melee = true
+slot_cooldown = 0.3
+combo_timer = 0.5
+projectile = ExtResource("4_0gxes")
+multishot_spread = 360.0
+metadata/_custom_type_script = "uid://cch8y4ugk455o"
