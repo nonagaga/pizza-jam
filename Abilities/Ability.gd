@@ -33,7 +33,7 @@ var _ability_slot: AbilitySlot
 
 @export_category("Effects")
 
-@export var effects: Array[PackedScene]
+@export var effects: Array[AbilityEffect]
 
 func _ready() -> void:
 	_ability_slot = get_parent() as AbilitySlot

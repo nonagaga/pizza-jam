@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="AbilityEffect" format=3 uid="uid://cmwytl0pjmn1b"]
+
+[ext_resource type="Script" uid="uid://c8evxo60s6jbu" path="res://Effects/AbilityEffect.gd" id="1_agewr"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="1_lawsl"]
+
+[sub_resource type="Resource" id="Resource_lawsl"]
+script = ExtResource("1_lawsl")
+base_multishot = 0.5
+multishot_mult = 0.5
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[resource]
+script = ExtResource("1_agewr")
+effect_name = "Multishot Stim"
+ability_roll_modifier = SubResource("Resource_lawsl")
+is_permanent = false
+stacks_separately = true
+lifetime = 30.0
+metadata/_custom_type_script = "uid://c8evxo60s6jbu"

@@ -37,5 +37,20 @@ texture = ExtResource("2_vl2lw")
 [node name="Pickup" parent="." unique_id=1324348048 instance=ExtResource("4_jo2oe")]
 position = Vector2(898, 373)
 
+[node name="Pickup3" parent="." unique_id=884107599 instance=ExtResource("4_jo2oe")]
+position = Vector2(849, 657)
+
+[node name="Pickup4" parent="." unique_id=1168331916 instance=ExtResource("4_jo2oe")]
+position = Vector2(190, 716)
+
+[node name="Pickup5" parent="." unique_id=253897135 instance=ExtResource("4_jo2oe")]
+position = Vector2(336, 515)
+
+[node name="Pickup6" parent="." unique_id=1495689059 instance=ExtResource("4_jo2oe")]
+position = Vector2(506, 296)
+
+[node name="Pickup7" parent="." unique_id=1962494682 instance=ExtResource("4_jo2oe")]
+position = Vector2(646, 939)
+
 [node name="Pickup2" parent="." unique_id=1154273806 instance=ExtResource("5_0nlcj")]
 position = Vector2(896, -358)

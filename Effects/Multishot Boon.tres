@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://cug03ts7sc8ja"]
+
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_6ewl2"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="1_kh367"]
+
+[sub_resource type="Resource" id="Resource_kh367"]
+script = ExtResource("1_kh367")
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[resource]
+script = ExtResource("1_6ewl2")
+effect_name = "Multishot Boon"
+ability_roll_modifier = SubResource("Resource_kh367")
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b30auqqb707te" path="res://Entities/Modules/MovementIO.gd" id="3_c7jvw"]
 [ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_opvli"]
 [ext_resource type="Texture2D" uid="uid://b80m5nfmsq45u" path="res://Abilities/Left Swing/left swing.png" id="6_drum4"]
+[ext_resource type="Script" uid="uid://bnxdspp431i8o" path="res://Abilities/AbilityEffectManager.gd" id="7_1v5ml"]
 [ext_resource type="Script" uid="uid://1adqfnkapsco" path="res://Entities/Modules/AbilitySlotIO.gd" id="7_nn0oq"]
 [ext_resource type="Texture2D" uid="uid://cabph165cr3in" path="res://Abilities/Dash/dash.png" id="8_w6hej"]
 [ext_resource type="PackedScene" uid="uid://ddor4v8jhoemv" path="res://Abilities/Right Swing/Right Swing.tscn" id="8_yytyf"]
@@ -44,21 +45,25 @@ metadata/_custom_type_script = "uid://bufnrj8520j8s"
 script = ExtResource("3_c7jvw")
 metadata/_custom_type_script = "uid://b30auqqb707te"
 
-[node name="Primary Ability" type="Node" parent="." index="3" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
+[node name="AbilityEffectManager" type="Node" parent="." index="3" unique_id=370170303]
+script = ExtResource("7_1v5ml")
+metadata/_custom_type_script = "uid://bnxdspp431i8o"
+
+[node name="Primary Ability" type="Node" parent="AbilityEffectManager" index="0" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
 script = ExtResource("9_paumt")
 default_ability = NodePath("LeftSwing")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
-[node name="LeftSwing" parent="Primary Ability" index="0" unique_id=821849793 node_paths=PackedStringArray("combo_ability") instance=ExtResource("10_8td47")]
+[node name="LeftSwing" parent="AbilityEffectManager/Primary Ability" index="0" unique_id=821849793 node_paths=PackedStringArray("combo_ability") instance=ExtResource("10_8td47")]
 combo_ability = NodePath("../RightSwing")
 
-[node name="RightSwing" parent="Primary Ability" index="1" unique_id=1919250664 node_paths=PackedStringArray("combo_ability") instance=ExtResource("8_yytyf")]
+[node name="RightSwing" parent="AbilityEffectManager/Primary Ability" index="1" unique_id=1919250664 node_paths=PackedStringArray("combo_ability") instance=ExtResource("8_yytyf")]
 combo_ability = NodePath("../CircleSwing")
 combo_timer = 1.0
 
-[node name="CircleSwing" parent="Primary Ability" index="2" unique_id=233933718 instance=ExtResource("10_hmggr")]
+[node name="CircleSwing" parent="AbilityEffectManager/Primary Ability" index="2" unique_id=233933718 instance=ExtResource("10_hmggr")]
 
-[node name="AbilityModuleIO" type="Node" parent="Primary Ability" index="3" unique_id=997080805]
+[node name="AbilityModuleIO" type="Node" parent="AbilityEffectManager/Primary Ability" index="3" unique_id=997080805]
 script = ExtResource("7_nn0oq")
 input_action = SubResource("InputEventAction_cfvty")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
@@ -109,4 +114,4 @@ offset_top = 705.0
 offset_right = 1464.0
 offset_bottom = 823.0
 
-[connection signal="swapped_ability_icon" from="Primary Ability" to="TestUI/ColorRect/Abil1" method="set_texture"]
+[connection signal="swapped_ability_icon" from="AbilityEffectManager/Primary Ability" to="TestUI/ColorRect/Abil1" method="set_texture"]
