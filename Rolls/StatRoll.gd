@@ -32,4 +32,4 @@ func get_final_max_health() -> float:
 
 func get_final_walk_speed() -> float:
 	finalize_numbers()
-	return final_walk_speed
+	return max(0.0, final_walk_speed)

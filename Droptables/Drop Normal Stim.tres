@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EntityDropTable" format=3 uid="uid://8yv1fwolvmae"]
+
+[ext_resource type="PackedScene" uid="uid://cqn2g3rh2kckx" path="res://Pickups/Pickup Stim Multishot.tscn" id="1_8ht51"]
+[ext_resource type="PackedScene" uid="uid://5i3frewbr8jd" path="res://Pickups/Pickup Stim Range.tscn" id="2_k1rjn"]
+[ext_resource type="PackedScene" uid="uid://lxs678q0or5f" path="res://Pickups/Pickup Stim Speed.tscn" id="3_ct0qu"]
+[ext_resource type="Script" uid="uid://jph0wm8g60ud" path="res://Entities/EntityDropTable.gd" id="4_lxkum"]
+
+[resource]
+script = ExtResource("4_lxkum")
+try_chance = 0.01
+min_drops = 1.0
+max_drops = 1.0
+pickups = Array[PackedScene]([ExtResource("1_8ht51"), ExtResource("2_k1rjn"), ExtResource("3_ct0qu")])
+metadata/_custom_type_script = "uid://jph0wm8g60ud"

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cqn2g3rh2kckx"]
+
+[ext_resource type="PackedScene" uid="uid://c2nrkyerbxoos" path="res://Pickups/Pickup Effect Random Abstract.tscn" id="1_gucju"]
+[ext_resource type="Script" uid="uid://fapqf3g2pv63" path="res://Pickups/Pickup.gd" id="2_tlfx6"]
+[ext_resource type="Texture2D" uid="uid://butewv1lsrf5d" path="res://Effects/Split_Shot.png" id="2_xqug6"]
+[ext_resource type="Resource" uid="uid://3lpoqr0xjl2v" path="res://Effects/eff_stim_multishot.tres" id="3_oyhh2"]
+
+[node name="Pickup Stim Multishot" unique_id=1324348048 instance=ExtResource("1_gucju")]
+script = ExtResource("2_tlfx6")
+effect = ExtResource("3_oyhh2")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1174950053]
+texture = ExtResource("2_xqug6")

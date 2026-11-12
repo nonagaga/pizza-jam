@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://5i3frewbr8jd"]
+
+[ext_resource type="PackedScene" uid="uid://c2nrkyerbxoos" path="res://Pickups/Pickup Effect Random Abstract.tscn" id="1_5iyut"]
+[ext_resource type="Script" uid="uid://fapqf3g2pv63" path="res://Pickups/Pickup.gd" id="2_chadh"]
+[ext_resource type="Resource" uid="uid://dluvpihxaqyd7" path="res://Effects/eff_stim_range.tres" id="3_g8t7a"]
+[ext_resource type="Texture2D" uid="uid://b3kvlig3yt5ih" path="res://Effects/Greater_Expansion.png" id="4_g8t7a"]
+
+[node name="Pickup Stim Range" unique_id=1324348048 instance=ExtResource("1_5iyut")]
+script = ExtResource("2_chadh")
+effect = ExtResource("3_g8t7a")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1174950053]
+texture = ExtResource("4_g8t7a")

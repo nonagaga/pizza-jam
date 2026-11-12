@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2nrkyerbxoos"]
+
+[ext_resource type="PackedScene" uid="uid://3i0feiw858l6" path="res://Pickups/Pickup.tscn" id="1_nsny2"]
+[ext_resource type="Script" uid="uid://b0csn2c35t8lr" path="res://Pickups/PickupRandomEffect.gd" id="2_6rxhx"]
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="3_7hsa8"]
+
+[node name="PickupRandomEffect" unique_id=1324348048 instance=ExtResource("1_nsny2")]
+script = ExtResource("2_6rxhx")
+random_effects = Array[ExtResource("3_7hsa8")]([null])
+potency = 1

@@ -23,6 +23,9 @@ class_name AbilityRollModifier extends Resource
 ## Additive cooldown multipliers.
 @export var cooldown_mult = 0.0 as float
 
+## Effects that are applied on-hit.
+@export var on_hit_effects = [] as Array[EntityEffect]
+
 func generate_ability_roll() -> AbilityRoll:
 	var ar = AbilityRoll.new()
 	return modify_ability_roll(ar)
@@ -40,5 +43,7 @@ func modify_ability_roll(ar: AbilityRoll) -> AbilityRoll:
 	ar.range_mult += range_mult
 	ar.duration_mult += duration_mult
 	ar.cooldown_mult += cooldown_mult
+	
+	ar.on_hit_effects.append_array(on_hit_effects)
 	
 	return ar

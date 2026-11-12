@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://3lpoqr0xjl2v"]
+
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_8ag4c"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="2_3q03y"]
+[ext_resource type="Texture2D" uid="uid://butewv1lsrf5d" path="res://Effects/Split_Shot.png" id="3_8ag4c"]
+
+[sub_resource type="Resource" id="Resource_q647j"]
+script = ExtResource("2_3q03y")
+base_multishot = 1.0
+multishot_mult = 0.5
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[resource]
+script = ExtResource("1_8ag4c")
+effect_name = "Range Stim"
+effect_icon = ExtResource("3_8ag4c")
+ability_roll_modifier = SubResource("Resource_q647j")
+is_permanent = false
+stacks_separately = true
+lifespan = 10.0
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

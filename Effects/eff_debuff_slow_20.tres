@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://b6m8erayelcnh"]
+
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_yxbgj"]
+
+[resource]
+script = ExtResource("1_yxbgj")
+effect_name = "20% Slow"
+is_permanent = false
+lifespan = 3.0
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

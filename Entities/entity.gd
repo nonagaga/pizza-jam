@@ -5,7 +5,7 @@ static var STACKS_LBL_SETTINGS = preload("res://Effects/Buffbar Stacks.tres")
 @export var civil: EntityCivilStats
 @export var combat: EntityCombatStats
 @export var director: EntityDirectorStats
-@export var drop_table: EntityDropTable
+@export var drop_tables: Array[EntityDropTable]
 
 @onready var live := LiveStats.new()
 
@@ -136,13 +136,18 @@ func modify_stat_roll(stroll: StatRoll) -> StatRoll:
 func die() -> void:
 	var root = get_tree().root
 	
-	for i in drop_table.pickup_amt:
-		var p = drop_table.pickups.pick_random().instantiate() as Pickup
-		#root.add_child(p)
-		root.add_child.call_deferred(p)
-		p.global_position = global_position + Vector2(randf(), randf()) * Physics.PIXEL_METER * 1
+	for dt in drop_tables:
+		var pickups = dt.roll_pickups()
+		for p in pickups:
+			_drop_pickup(p)
 	
 	queue_free()
+
+func _drop_pickup(pickup: PackedScene) -> void:
+	var nearby_vec = Vector2(randf(), randf()) * Physics.PIXEL_METER * 1.0
+	var pickup_node = pickup.instantiate() as Pickup
+	pickup_node.global_position = global_position + nearby_vec
+	get_tree().root.add_child(pickup_node)
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	
@@ -151,5 +156,8 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 			return
 		
 		live.deal_damage(body.ability_roll.get_final_damage(), body.originator)
+		
+		for effect in body.ability_roll.on_hit_effects:
+			add_effect(effect)
 	
 	pass # Replace with function body.

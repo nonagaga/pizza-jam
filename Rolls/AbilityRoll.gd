@@ -23,6 +23,9 @@ var duration_mult = 0.0 as float
 ## Additive cooldown multipliers.
 var cooldown_mult = 0.0 as float
 
+## Effects that are applied on-hit.
+var on_hit_effects = [] as Array[EntityEffect]
+
 # Final numbers
 
 var final_damage = 0.0 as float

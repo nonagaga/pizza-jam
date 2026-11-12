@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cgmgtxn1jiexi"]
+
+[ext_resource type="PackedScene" uid="uid://c2nrkyerbxoos" path="res://Pickups/Pickup Effect Random Abstract.tscn" id="1_0243f"]
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="2_la85s"]
+[ext_resource type="Resource" uid="uid://difljdf37nadr" path="res://Effects/eff_boon_multishot.tres" id="3_ib8ut"]
+[ext_resource type="Resource" uid="uid://crbt3uqcdsryo" path="res://Effects/eff_boon_range.tres" id="4_tsag0"]
+[ext_resource type="Resource" uid="uid://dlwe478lg81da" path="res://Effects/eff_boon_speed.tres" id="5_kia6j"]
+[ext_resource type="Texture2D" uid="uid://bxqnv5dtdqxe4" path="res://Pickups/Golden_Goose_Egg.png" id="6_0243f"]
+
+[node name="Pickup Boon Random" unique_id=1324348048 instance=ExtResource("1_0243f")]
+random_effects = Array[ExtResource("2_la85s")]([ExtResource("3_ib8ut"), ExtResource("4_tsag0"), ExtResource("5_kia6j")])
+potency = 1
+
+[node name="Sprite2D" parent="." index="0" unique_id=1174950053]
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("6_0243f")

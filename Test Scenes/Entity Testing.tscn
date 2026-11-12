@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
 [ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="2_wliak"]
-[ext_resource type="PackedScene" uid="uid://lxs678q0or5f" path="res://Pickups/Stims/Walk Speed Stim Pickup.tscn" id="4_oa24y"]
-[ext_resource type="PackedScene" uid="uid://cgmgtxn1jiexi" path="res://Pickups/Boons/Pickup Random Boon.tscn" id="5_jo2oe"]
+[ext_resource type="PackedScene" uid="uid://lxs678q0or5f" path="res://Pickups/Pickup Stim Speed.tscn" id="4_oa24y"]
+[ext_resource type="PackedScene" uid="uid://cgmgtxn1jiexi" path="res://Pickups/Pickup Boon Random.tscn" id="5_jo2oe"]
 
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
@@ -31,6 +31,315 @@ position = Vector2(-802, -306)
 
 [node name="Godotbot7" parent="." unique_id=2018212115 instance=ExtResource("2_wliak")]
 position = Vector2(-1079, -274)
+
+[node name="Godotbot8" parent="." unique_id=279663154 instance=ExtResource("2_wliak")]
+position = Vector2(-918, -480)
+
+[node name="Godotbot9" parent="." unique_id=846331181 instance=ExtResource("2_wliak")]
+position = Vector2(-1085, -458)
+
+[node name="Godotbot10" parent="." unique_id=372591652 instance=ExtResource("2_wliak")]
+position = Vector2(-1202, -736)
+
+[node name="Godotbot11" parent="." unique_id=1239087318 instance=ExtResource("2_wliak")]
+position = Vector2(-3225, -191)
+
+[node name="Godotbot12" parent="." unique_id=282797739 instance=ExtResource("2_wliak")]
+position = Vector2(-3148, -365)
+
+[node name="Godotbot13" parent="." unique_id=1374862615 instance=ExtResource("2_wliak")]
+position = Vector2(-2963, -476)
+
+[node name="Godotbot14" parent="." unique_id=892647233 instance=ExtResource("2_wliak")]
+position = Vector2(-2743, -510)
+
+[node name="Godotbot15" parent="." unique_id=1648773148 instance=ExtResource("2_wliak")]
+position = Vector2(-2609, -365)
+
+[node name="Godotbot16" parent="." unique_id=1208272161 instance=ExtResource("2_wliak")]
+position = Vector2(-2737, -111)
+
+[node name="Godotbot17" parent="." unique_id=111997078 instance=ExtResource("2_wliak")]
+position = Vector2(-3014, -79)
+
+[node name="Godotbot18" parent="." unique_id=1633107631 instance=ExtResource("2_wliak")]
+position = Vector2(-2853, -285)
+
+[node name="Godotbot19" parent="." unique_id=184507301 instance=ExtResource("2_wliak")]
+position = Vector2(-3020, -263)
+
+[node name="Godotbot20" parent="." unique_id=1648838222 instance=ExtResource("2_wliak")]
+position = Vector2(-3137, -541)
+
+[node name="Godotbot21" parent="." unique_id=456553942 instance=ExtResource("2_wliak")]
+position = Vector2(-3181, -758)
+
+[node name="Godotbot22" parent="." unique_id=1400682311 instance=ExtResource("2_wliak")]
+position = Vector2(-3104, -932)
+
+[node name="Godotbot23" parent="." unique_id=971125070 instance=ExtResource("2_wliak")]
+position = Vector2(-2919, -1043)
+
+[node name="Godotbot24" parent="." unique_id=912964082 instance=ExtResource("2_wliak")]
+position = Vector2(-2699, -1077)
+
+[node name="Godotbot25" parent="." unique_id=268479908 instance=ExtResource("2_wliak")]
+position = Vector2(-2565, -932)
+
+[node name="Godotbot26" parent="." unique_id=1035428494 instance=ExtResource("2_wliak")]
+position = Vector2(-2693, -678)
+
+[node name="Godotbot27" parent="." unique_id=107539789 instance=ExtResource("2_wliak")]
+position = Vector2(-2970, -646)
+
+[node name="Godotbot28" parent="." unique_id=914072636 instance=ExtResource("2_wliak")]
+position = Vector2(-2809, -852)
+
+[node name="Godotbot29" parent="." unique_id=473045979 instance=ExtResource("2_wliak")]
+position = Vector2(-2976, -830)
+
+[node name="Godotbot30" parent="." unique_id=160289146 instance=ExtResource("2_wliak")]
+position = Vector2(-3093, -1108)
+
+[node name="Godotbot31" parent="." unique_id=106442781 instance=ExtResource("2_wliak")]
+position = Vector2(-3937, -780)
+
+[node name="Godotbot32" parent="." unique_id=643256069 instance=ExtResource("2_wliak")]
+position = Vector2(-3860, -954)
+
+[node name="Godotbot33" parent="." unique_id=484234305 instance=ExtResource("2_wliak")]
+position = Vector2(-3675, -1065)
+
+[node name="Godotbot34" parent="." unique_id=1213923413 instance=ExtResource("2_wliak")]
+position = Vector2(-3455, -1099)
+
+[node name="Godotbot35" parent="." unique_id=1163177509 instance=ExtResource("2_wliak")]
+position = Vector2(-3321, -954)
+
+[node name="Godotbot36" parent="." unique_id=1531552614 instance=ExtResource("2_wliak")]
+position = Vector2(-3449, -700)
+
+[node name="Godotbot37" parent="." unique_id=1305423957 instance=ExtResource("2_wliak")]
+position = Vector2(-3726, -668)
+
+[node name="Godotbot38" parent="." unique_id=358523424 instance=ExtResource("2_wliak")]
+position = Vector2(-3565, -874)
+
+[node name="Godotbot39" parent="." unique_id=181005833 instance=ExtResource("2_wliak")]
+position = Vector2(-3732, -852)
+
+[node name="Godotbot40" parent="." unique_id=631596802 instance=ExtResource("2_wliak")]
+position = Vector2(-3849, -1130)
+
+[node name="Godotbot41" parent="." unique_id=990749029 instance=ExtResource("2_wliak")]
+position = Vector2(-4004, -202)
+
+[node name="Godotbot42" parent="." unique_id=876272686 instance=ExtResource("2_wliak")]
+position = Vector2(-3927, -376)
+
+[node name="Godotbot43" parent="." unique_id=1456863126 instance=ExtResource("2_wliak")]
+position = Vector2(-3742, -487)
+
+[node name="Godotbot44" parent="." unique_id=7092488 instance=ExtResource("2_wliak")]
+position = Vector2(-3522, -521)
+
+[node name="Godotbot45" parent="." unique_id=1168239528 instance=ExtResource("2_wliak")]
+position = Vector2(-3388, -376)
+
+[node name="Godotbot46" parent="." unique_id=1041501364 instance=ExtResource("2_wliak")]
+position = Vector2(-3516, -122)
+
+[node name="Godotbot47" parent="." unique_id=2025007222 instance=ExtResource("2_wliak")]
+position = Vector2(-3793, -90)
+
+[node name="Godotbot48" parent="." unique_id=576479147 instance=ExtResource("2_wliak")]
+position = Vector2(-3632, -296)
+
+[node name="Godotbot49" parent="." unique_id=1137666397 instance=ExtResource("2_wliak")]
+position = Vector2(-3799, -274)
+
+[node name="Godotbot50" parent="." unique_id=1099680609 instance=ExtResource("2_wliak")]
+position = Vector2(-3916, -552)
+
+[node name="Godotbot51" parent="." unique_id=1434070366 instance=ExtResource("2_wliak")]
+position = Vector2(-3470, -1331)
+
+[node name="Godotbot52" parent="." unique_id=447059094 instance=ExtResource("2_wliak")]
+position = Vector2(-3393, -1505)
+
+[node name="Godotbot53" parent="." unique_id=995052017 instance=ExtResource("2_wliak")]
+position = Vector2(-3208, -1616)
+
+[node name="Godotbot54" parent="." unique_id=878449524 instance=ExtResource("2_wliak")]
+position = Vector2(-2988, -1650)
+
+[node name="Godotbot55" parent="." unique_id=325899030 instance=ExtResource("2_wliak")]
+position = Vector2(-2854, -1505)
+
+[node name="Godotbot56" parent="." unique_id=181485797 instance=ExtResource("2_wliak")]
+position = Vector2(-2982, -1251)
+
+[node name="Godotbot57" parent="." unique_id=40716726 instance=ExtResource("2_wliak")]
+position = Vector2(-3259, -1219)
+
+[node name="Godotbot58" parent="." unique_id=353659260 instance=ExtResource("2_wliak")]
+position = Vector2(-3098, -1425)
+
+[node name="Godotbot59" parent="." unique_id=1592961246 instance=ExtResource("2_wliak")]
+position = Vector2(-3265, -1403)
+
+[node name="Godotbot60" parent="." unique_id=1239309192 instance=ExtResource("2_wliak")]
+position = Vector2(-3382, -1681)
+
+[node name="Godotbot61" parent="." unique_id=2089728201 instance=ExtResource("2_wliak")]
+position = Vector2(-3492, 1566)
+
+[node name="Godotbot62" parent="." unique_id=1410523121 instance=ExtResource("2_wliak")]
+position = Vector2(-3415, 1392)
+
+[node name="Godotbot63" parent="." unique_id=1245432655 instance=ExtResource("2_wliak")]
+position = Vector2(-3230, 1281)
+
+[node name="Godotbot64" parent="." unique_id=1825691151 instance=ExtResource("2_wliak")]
+position = Vector2(-3010, 1247)
+
+[node name="Godotbot65" parent="." unique_id=1339316947 instance=ExtResource("2_wliak")]
+position = Vector2(-2876, 1392)
+
+[node name="Godotbot66" parent="." unique_id=1392802213 instance=ExtResource("2_wliak")]
+position = Vector2(-3004, 1646)
+
+[node name="Godotbot67" parent="." unique_id=1071641049 instance=ExtResource("2_wliak")]
+position = Vector2(-3281, 1678)
+
+[node name="Godotbot68" parent="." unique_id=1587875089 instance=ExtResource("2_wliak")]
+position = Vector2(-3120, 1472)
+
+[node name="Godotbot69" parent="." unique_id=394624536 instance=ExtResource("2_wliak")]
+position = Vector2(-3287, 1494)
+
+[node name="Godotbot70" parent="." unique_id=1063992094 instance=ExtResource("2_wliak")]
+position = Vector2(-3404, 1216)
+
+[node name="Godotbot71" parent="." unique_id=725594300 instance=ExtResource("2_wliak")]
+position = Vector2(-3448, 999)
+
+[node name="Godotbot72" parent="." unique_id=1289637025 instance=ExtResource("2_wliak")]
+position = Vector2(-3371, 825)
+
+[node name="Godotbot73" parent="." unique_id=534029873 instance=ExtResource("2_wliak")]
+position = Vector2(-3186, 714)
+
+[node name="Godotbot74" parent="." unique_id=1742351139 instance=ExtResource("2_wliak")]
+position = Vector2(-2966, 680)
+
+[node name="Godotbot75" parent="." unique_id=673393754 instance=ExtResource("2_wliak")]
+position = Vector2(-2832, 825)
+
+[node name="Godotbot76" parent="." unique_id=1892366878 instance=ExtResource("2_wliak")]
+position = Vector2(-2960, 1079)
+
+[node name="Godotbot77" parent="." unique_id=2131992704 instance=ExtResource("2_wliak")]
+position = Vector2(-3237, 1111)
+
+[node name="Godotbot78" parent="." unique_id=538795369 instance=ExtResource("2_wliak")]
+position = Vector2(-3076, 905)
+
+[node name="Godotbot79" parent="." unique_id=877865756 instance=ExtResource("2_wliak")]
+position = Vector2(-3243, 927)
+
+[node name="Godotbot80" parent="." unique_id=1349337990 instance=ExtResource("2_wliak")]
+position = Vector2(-3360, 649)
+
+[node name="Godotbot81" parent="." unique_id=1816748511 instance=ExtResource("2_wliak")]
+position = Vector2(-4204, 977)
+
+[node name="Godotbot82" parent="." unique_id=396859762 instance=ExtResource("2_wliak")]
+position = Vector2(-4127, 803)
+
+[node name="Godotbot83" parent="." unique_id=1786951453 instance=ExtResource("2_wliak")]
+position = Vector2(-3942, 692)
+
+[node name="Godotbot84" parent="." unique_id=177316167 instance=ExtResource("2_wliak")]
+position = Vector2(-3722, 658)
+
+[node name="Godotbot85" parent="." unique_id=1700804542 instance=ExtResource("2_wliak")]
+position = Vector2(-3588, 803)
+
+[node name="Godotbot86" parent="." unique_id=1392700797 instance=ExtResource("2_wliak")]
+position = Vector2(-3716, 1057)
+
+[node name="Godotbot87" parent="." unique_id=426594035 instance=ExtResource("2_wliak")]
+position = Vector2(-3993, 1089)
+
+[node name="Godotbot88" parent="." unique_id=823090249 instance=ExtResource("2_wliak")]
+position = Vector2(-3832, 883)
+
+[node name="Godotbot89" parent="." unique_id=1836542588 instance=ExtResource("2_wliak")]
+position = Vector2(-3999, 905)
+
+[node name="Godotbot90" parent="." unique_id=486989613 instance=ExtResource("2_wliak")]
+position = Vector2(-4116, 627)
+
+[node name="Godotbot91" parent="." unique_id=1676799061 instance=ExtResource("2_wliak")]
+position = Vector2(-4271, 1555)
+
+[node name="Godotbot92" parent="." unique_id=1495512595 instance=ExtResource("2_wliak")]
+position = Vector2(-4194, 1381)
+
+[node name="Godotbot93" parent="." unique_id=1709905732 instance=ExtResource("2_wliak")]
+position = Vector2(-4009, 1270)
+
+[node name="Godotbot94" parent="." unique_id=1073983019 instance=ExtResource("2_wliak")]
+position = Vector2(-3789, 1236)
+
+[node name="Godotbot95" parent="." unique_id=921765665 instance=ExtResource("2_wliak")]
+position = Vector2(-3655, 1381)
+
+[node name="Godotbot96" parent="." unique_id=494666587 instance=ExtResource("2_wliak")]
+position = Vector2(-3783, 1635)
+
+[node name="Godotbot97" parent="." unique_id=945500083 instance=ExtResource("2_wliak")]
+position = Vector2(-4060, 1667)
+
+[node name="Godotbot98" parent="." unique_id=229354253 instance=ExtResource("2_wliak")]
+position = Vector2(-3899, 1461)
+
+[node name="Godotbot99" parent="." unique_id=1558197984 instance=ExtResource("2_wliak")]
+position = Vector2(-4066, 1483)
+
+[node name="Godotbot100" parent="." unique_id=1095202635 instance=ExtResource("2_wliak")]
+position = Vector2(-4183, 1205)
+
+[node name="Godotbot101" parent="." unique_id=221614292 instance=ExtResource("2_wliak")]
+position = Vector2(-3737, 426)
+
+[node name="Godotbot102" parent="." unique_id=2035652253 instance=ExtResource("2_wliak")]
+position = Vector2(-3660, 252)
+
+[node name="Godotbot103" parent="." unique_id=575683180 instance=ExtResource("2_wliak")]
+position = Vector2(-3475, 141)
+
+[node name="Godotbot104" parent="." unique_id=335484167 instance=ExtResource("2_wliak")]
+position = Vector2(-3255, 107)
+
+[node name="Godotbot105" parent="." unique_id=525770307 instance=ExtResource("2_wliak")]
+position = Vector2(-3121, 252)
+
+[node name="Godotbot106" parent="." unique_id=972910661 instance=ExtResource("2_wliak")]
+position = Vector2(-3249, 506)
+
+[node name="Godotbot107" parent="." unique_id=998055356 instance=ExtResource("2_wliak")]
+position = Vector2(-3526, 538)
+
+[node name="Godotbot108" parent="." unique_id=1499577919 instance=ExtResource("2_wliak")]
+position = Vector2(-3365, 332)
+
+[node name="Godotbot109" parent="." unique_id=1872401016 instance=ExtResource("2_wliak")]
+position = Vector2(-3532, 354)
+
+[node name="Godotbot110" parent="." unique_id=1392648002 instance=ExtResource("2_wliak")]
+position = Vector2(-3649, 76)
 
 [node name="Pillar" type="Sprite2D" parent="." unique_id=1305690357]
 position = Vector2(-442.5, -229)
