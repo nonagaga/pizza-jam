@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5ix564cfw5mb" path="res://Utility/UI/Main Menu/main_menu.gd" id="1_r43h1"]
 [ext_resource type="Theme" uid="uid://d2vsi8sdrtiql" path="res://Utility/UI/Main Menu/main_menu.tres" id="2_bhgc5"]
+[ext_resource type="Resource" uid="uid://bioi5u6pih424" path="res://Utility/UI/DialogueSystem/Dialogue/gabe_dialogue.tres" id="2_g46rs"]
 [ext_resource type="Texture2D" uid="uid://b7lw7oyumcult" path="res://Locations/Levels/all_the_ui_so_far.png" id="2_xs6v4"]
 
 [node name="MainMenu" type="Control" unique_id=1134082915 node_paths=PackedStringArray("start_button", "quit_button", "credits_button")]
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r43h1")
+starting_dialogue = ExtResource("2_g46rs")
 start_button = NodePath("CenterContainer/VBoxContainer/StartButton")
 quit_button = NodePath("CenterContainer/VBoxContainer/QuitButton")
 credits_button = NodePath("CenterContainer/VBoxContainer/CreditsButton")

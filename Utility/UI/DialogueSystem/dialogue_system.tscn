@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dcnpwmg4l4rux"]
 
-[ext_resource type="Script" path="res://Utility/UI/DialogueSystem/dialogue_system.gd" id="1_y3xpn"]
+[ext_resource type="Script" uid="uid://d2r50qriwttvn" path="res://Utility/UI/DialogueSystem/dialogue_system.gd" id="1_y3xpn"]
 
 [node name="DialogueSystem" type="Control" unique_id=965254132 node_paths=PackedStringArray("dialogue_box", "response_box", "option1", "option2", "option3", "option4")]
 layout_mode = 3

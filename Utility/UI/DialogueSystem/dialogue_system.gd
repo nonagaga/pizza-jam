@@ -21,6 +21,20 @@ var opt2_data
 var opt3_data
 var opt4_data
 
+var scene_manager: SceneManager
+var dialogue_start_id: StringName = &"start"
+
+func setup(
+	manager: SceneManager,
+	data: Dictionary = {}
+) -> void:
+	scene_manager = manager
+
+	var dialogue: Dialogue = data.get("dialogue")
+
+	if dialogue != null:
+		setup_dialogue(dialogue)
+		
 func setup_dialogue(dialogue:Dialogue):
 	current_dialogue = dialogue
 	current_point = 0 
@@ -86,11 +100,12 @@ func display_options(dialogue:Dialogue):
 			printerr("too many options")
 
 func _ready() -> void:
-	var dialogue = load("res://Utility/UI/DialogueSystem/Dialogue/TestDialogue.tres")
-	setup_dialogue(dialogue)
+	pass
+	
 
 func close_dialogue():
-	pass
+	scene_manager.change_scene(current_dialogue.exit_scene, scene_manager.default_transition,
+	current_dialogue.exit_data)
 
 ##checks if we're left clicking to iterate through dialogue
 func _process(delta: float) -> void:

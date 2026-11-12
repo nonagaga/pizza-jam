@@ -3,18 +3,14 @@
 [ext_resource type="Script" uid="uid://bmrxixbjfctup" path="res://Utility/UI/DialogueSystem/DialogueChoices/DialogueChoice.gd" id="1_6jt5c"]
 [ext_resource type="Script" uid="uid://b1ldlngofb26k" path="res://Utility/UI/DialogueSystem/Dialogue/dialogue.gd" id="2_eurrc"]
 
-[sub_resource type="Resource" id="Resource_odg2m"]
+[sub_resource type="Resource" id="Resource_6jt5c"]
 script = ExtResource("1_6jt5c")
-text = "Fuck Ya"
-metadata/_custom_type_script = "uid://bmrxixbjfctup"
-
-[sub_resource type="Resource" id="Resource_p5mhh"]
-script = ExtResource("1_6jt5c")
-text = "Fuck Nah"
+text = "Fuck Yeah"
 metadata/_custom_type_script = "uid://bmrxixbjfctup"
 
 [resource]
 script = ExtResource("2_eurrc")
 text = "Fuck it we Ball."
-options = Array[ExtResource("1_6jt5c")]([SubResource("Resource_odg2m"), SubResource("Resource_p5mhh")])
+options = Array[ExtResource("1_6jt5c")]([SubResource("Resource_6jt5c")])
+exit_scene = &"test_level"
 metadata/_custom_type_script = "uid://b1ldlngofb26k"
