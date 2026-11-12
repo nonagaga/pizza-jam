@@ -22,11 +22,16 @@ signal added_buff_icon(texture_rect: TextureRect)
 
 func _ready() -> void:
 	live._entity = self
+	set_navigation_map()
 	update_stats()
 	full_heal()
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
+
+# TODO - For Gabe
+func set_navigation_map() -> void:
+	pass
 
 ## Creates a [StatRoll] object and passes it through all effects.
 ## This will update the entity's max health, speed, etc.
@@ -50,13 +55,14 @@ func full_heal() -> void:
 
 # Effects
 
-func add_effect(new_effect: EntityEffect) -> void:
+func add_effect(new_effect: EntityEffect, dupes: int = 1) -> void:
 	if new_effect.stacks_separately:
-		_add_new_effect_holder(new_effect)
+		_add_new_effect_holder(new_effect).add_dupes(dupes-1)
 	elif _find_effect_holder_by_name(new_effect.effect_name) == null:
-		_add_new_effect_holder(new_effect)
+		_add_new_effect_holder(new_effect).add_dupes(dupes-1)
 	else:
-		_add_effect_dupes(_find_effect_holder_by_name(new_effect.effect_name), 1)
+		_add_effect_dupes(
+			_find_effect_holder_by_name(new_effect.effect_name), dupes)
 	
 	update_stats()
 
@@ -86,7 +92,7 @@ func _find_effect_holder_by_name(eff_name: String) -> EntityEffectHolder:
 func _add_effect_dupes(owned_eh: EntityEffectHolder, amt: int) -> void:
 	owned_eh.add_dupes(amt)
 
-func _add_new_effect_holder(new_effect: EntityEffect) -> void:
+func _add_new_effect_holder(new_effect: EntityEffect) -> EntityEffectHolder:
 	var new_eh = EntityEffectHolder.new()
 	new_eh.effect = new_effect
 	add_child(new_eh)
@@ -113,6 +119,7 @@ func _add_new_effect_holder(new_effect: EntityEffect) -> void:
 	
 	new_eh.update_icon()
 	update_stats()
+	return new_eh
 
 # Rolls
 
@@ -161,3 +168,9 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 			add_effect(effect)
 	
 	pass # Replace with function body.
+
+# Saving
+
+## Saving data that carries between levels and deaths.
+func save_carryover_data() -> void:
+	Director.save_carryover_data(self)

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Globals="*uid://8p18yh78uic3"
 Physics="*uid://k6wg416cd601"
 Compute="*uid://deom6o4v3dc1t"
+Director="*uid://lc3g8i1b17m3"
 
 [display]
 
@@ -40,6 +41,7 @@ folder_colors={
 [global_group]
 
 Player=""
+Entity=""
 
 [input]
 
