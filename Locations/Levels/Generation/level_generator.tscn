@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bd0pwtgyv0uph"]
 
 [ext_resource type="Script" uid="uid://cciilo734epcl" path="res://Locations/Levels/Generation/level_generator.gd" id="1_8cb1g"]
-[ext_resource type="PackedScene" uid="uid://bppm1o2rvvcxd" path="res://Locations/Levels/Rooms/stone_room.tscn" id="2_wt8nh"]
+[ext_resource type="Resource" uid="uid://bo1bdpxisn1hj" path="res://Locations/Levels/Rooms/stone_room.tres" id="2_wt8nh"]
 [ext_resource type="PackedScene" uid="uid://cnu3rqiqvfnb6" path="res://Locations/Levels/Rooms/hallway_test.tscn" id="3_66lhv"]
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="4_wt8nh"]
 [ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="5_yugmb"]
@@ -9,7 +9,7 @@
 
 [sub_resource type="Resource" id="Resource_1c00x"]
 script = ExtResource("5_yugmb")
-walk_speed = 1.0
+walk_speed = 5.0
 metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_661rv"]
@@ -110,9 +110,9 @@ animations = [{
 
 [node name="LevelGenerator" type="Node2D" unique_id=1501019675]
 script = ExtResource("1_8cb1g")
-max_rooms = 7
+max_rooms = 30
 room_resource_directory = "res://Locations/Levels/Rooms/"
-room_scene = ExtResource("2_wt8nh")
+starting_room = ExtResource("2_wt8nh")
 hallway_scene = ExtResource("3_66lhv")
 
 [node name="Player" parent="." unique_id=639906909 instance=ExtResource("4_wt8nh")]

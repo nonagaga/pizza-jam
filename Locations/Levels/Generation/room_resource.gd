@@ -1,7 +1,7 @@
 class_name RoomResource extends Resource
 
 # create enum with flag values 1, 2, 4, 8
-enum DoorDir {NORTH = 1 << 1, EAST = 1 << 2, SOUTH = 1 << 3, WEST = 1 << 4}
+enum DoorDir {NORTH = 1 << 0, EAST = 1 << 1, SOUTH = 1 << 2, WEST = 1 << 3}
 
 @export var room_scene : PackedScene
 @export_flags("North", "East", "South", "West") var door_directions : int
@@ -17,3 +17,12 @@ func get_door_directions() -> Array[DoorDir]:
 ## getter for packed room scene
 func get_room_scene() -> PackedScene:
 	return room_scene
+
+## iterates through directions and ensures it has at least target doors
+## target_doors stored in enum flag format
+func does_contain_doors(target_doors : int) -> bool:
+	for dir in DoorDir.values():
+		# target contains a door we don't have, so return false
+		if target_doors & dir != 0 and door_directions & dir == 0:
+			return false
+	return true

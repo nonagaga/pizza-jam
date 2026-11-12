@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RoomResource" format=3 uid="uid://bfectv6yutv0t"]
+
+[ext_resource type="PackedScene" uid="uid://dv8vflhsvqhk8" path="res://Locations/Levels/Rooms/cluttered2_room.tscn" id="1_lpcfm"]
+[ext_resource type="Script" uid="uid://cd137nqf76rgw" path="res://Locations/Levels/Generation/room_resource.gd" id="1_otlxe"]
+
+[resource]
+script = ExtResource("1_otlxe")
+room_scene = ExtResource("1_lpcfm")
+door_directions = 15
+metadata/_custom_type_script = "uid://cd137nqf76rgw"

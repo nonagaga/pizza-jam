@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RoomResource" format=3 uid="uid://bo1bdpxisn1hj"]
 
-[ext_resource type="Script" uid="uid://cd137nqf76rgw" path="res://Locations/Levels/Rooms/room_resource.gd" id="1_7xsbw"]
+[ext_resource type="Script" uid="uid://cd137nqf76rgw" path="res://Locations/Levels/Generation/room_resource.gd" id="1_7xsbw"]
 [ext_resource type="PackedScene" uid="uid://bppm1o2rvvcxd" path="res://Locations/Levels/Rooms/stone_room.tscn" id="1_xxkxw"]
 
 [resource]
