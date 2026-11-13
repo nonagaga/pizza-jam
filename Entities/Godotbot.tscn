@@ -8,7 +8,8 @@
 [ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_gx638"]
 [ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="7_3ve2a"]
 [ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilitySlotAI.gd" id="7_hms4s"]
-[ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing Ability.tscn" id="8_gasj4"]
+[ext_resource type="PackedScene" uid="uid://mnckitssbbla" path="res://Abilities/StraightShot/straight_shot.tscn" id="10_8isoi"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="10_rg81y"]
 
 [sub_resource type="Resource" id="Resource_wgj20"]
 script = ExtResource("2_ujlot")
@@ -23,6 +24,11 @@ metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 [sub_resource type="Resource" id="Resource_e0011"]
 script = ExtResource("4_gx638")
 metadata/_custom_type_script = "uid://c63a4rftwo8ch"
+
+[sub_resource type="Resource" id="Resource_8isoi"]
+script = ExtResource("10_rg81y")
+base_multishot = 5.0
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
 
 [node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
 civil = SubResource("Resource_wgj20")
@@ -39,11 +45,14 @@ metadata/_custom_type_script = "uid://bo74fsscbnqd1"
 
 [node name="Swing" type="Node" parent="." index="3" unique_id=1252636442 node_paths=PackedStringArray("default_ability")]
 script = ExtResource("7_3ve2a")
-default_ability = NodePath("LeftSwing")
+default_ability = NodePath("StraightShot")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
-[node name="LeftSwing" parent="Swing" index="0" unique_id=1098785488 instance=ExtResource("8_gasj4")]
-slot_cooldown = 1.0
+[node name="StraightShot" parent="Swing" index="0" unique_id=997557398 instance=ExtResource("10_8isoi")]
+ar_modifier = SubResource("Resource_8isoi")
+tag_melee = true
+follows_entity = true
+multishot_spread = 360.0
 
 [node name="AbilitySlotAI" type="Node" parent="Swing" index="1" unique_id=2008964635]
 script = ExtResource("7_hms4s")

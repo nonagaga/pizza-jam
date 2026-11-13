@@ -49,7 +49,7 @@ func use_ability(target_pos: Vector2) -> void:
 	
 	if ability.projectile != null:
 		if ability.tag_melee:
-			var sep_deg = 360.0 / ms
+			var sep_deg = ability.multishot_spread / ms
 			for i in range(ms):
 				_spawn_projectile(target_pos, abroll, sep_deg * i) 
 		else:
