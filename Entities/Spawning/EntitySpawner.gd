@@ -1,0 +1,1 @@
+class_name EntitySpawner extends Marker2D

@@ -5,6 +5,11 @@ class_name AbilityRollModifier extends Resource
 ## Additive damage multipliers.
 @export var damage_mult = 0.0 as float
 
+## Running heals
+@export var base_healing = 0.0 as float
+## Additive healing multiplier.
+@export var healing_mult = 0.0 as float
+
 ## Running crit chance.
 @export var crit_chance = 0.0 as float
 ## Running crit mult.
@@ -33,6 +38,9 @@ func generate_ability_roll() -> AbilityRoll:
 func modify_ability_roll(ar: AbilityRoll) -> AbilityRoll:
 	ar.base_damage += base_damage
 	ar.damage_mult += damage_mult
+	
+	ar.base_healing += base_healing
+	ar.healing_mult += healing_mult
 	
 	ar.crit_chance += crit_chance
 	ar.crit_damage_mult += crit_damage_mult

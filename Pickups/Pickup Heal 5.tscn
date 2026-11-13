@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://28gsl7v3rmi7"]
+
+[ext_resource type="PackedScene" uid="uid://3i0feiw858l6" path="res://Pickups/Pickup.tscn" id="1_87llr"]
+[ext_resource type="Resource" uid="uid://bu2iai3my45s0" path="res://Effects/eff_stat_heal_5.tres" id="2_cdxkc"]
+[ext_resource type="Texture2D" uid="uid://4runc5gqeswl" path="res://Pickups/heal.png" id="3_fxqly"]
+
+[node name="Pickup Heal 5" unique_id=1324348048 instance=ExtResource("1_87llr")]
+effect = ExtResource("2_cdxkc")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1174950053]
+texture = ExtResource("3_fxqly")

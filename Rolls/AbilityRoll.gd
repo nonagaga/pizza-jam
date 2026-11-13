@@ -5,6 +5,11 @@ var base_damage = 0.0 as float
 ## Additive damage multipliers.
 var damage_mult = 0.0 as float
 
+## Running heals
+var base_healing = 0.0 as float
+## Additive healing multiplier.
+var healing_mult = 0.0 as float
+
 ## Running crit chance.
 var crit_chance = 0.0 as float
 ## Running crit mult.
@@ -29,6 +34,9 @@ var on_hit_effects = [] as Array[EntityEffect]
 # Final numbers
 
 var final_damage = 0.0 as float
+
+var final_healing = 0.0 as float
+
 var final_multishot = 1 as int
 
 var final_range_mult = 1.0 as float
@@ -40,6 +48,8 @@ func finalize_numbers() -> void:
 		return
 	
 	final_damage = base_damage
+	
+	final_healing = base_healing * (1.0 + healing_mult)
 	
 	var crit_roll = Compute.roll_int(crit_chance)
 	final_damage += base_damage * crit_roll * (1.0 + crit_damage_mult)

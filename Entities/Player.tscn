@@ -82,7 +82,7 @@ input_action = SubResource("InputEventAction_mwl8m")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
 [node name="Camera2D" type="Camera2D" parent="." index="6" unique_id=975768696]
-zoom = Vector2(0.34, 0.34)
+zoom = Vector2(0.71, 0.71)
 
 [node name="TestUI" type="Control" parent="." index="7" unique_id=374077456]
 layout_mode = 3
