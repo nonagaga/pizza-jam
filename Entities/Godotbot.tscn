@@ -30,6 +30,7 @@ base_multishot = 5.0
 metadata/_custom_type_script = "uid://c0ny0w83asqax"
 
 [node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
+scale = Vector2(0.25, 0.25)
 civil = SubResource("Resource_wgj20")
 combat = SubResource("Resource_kxl0c")
 director = SubResource("Resource_e0011")
