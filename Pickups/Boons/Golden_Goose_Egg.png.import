@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cabph165cr3in"
-path="res://.godot/imported/dash.png-a042e78844e718851c67fab665ae149f.ctex"
+uid="uid://bxqnv5dtdqxe4"
+path="res://.godot/imported/Golden_Goose_Egg.png-50c3cdc4124f7d7b828d9667f98fe956.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Abilities/Dash/dash.png"
-dest_files=["res://.godot/imported/dash.png-a042e78844e718851c67fab665ae149f.ctex"]
+source_file="res://Pickups/Boons/Golden_Goose_Egg.png"
+dest_files=["res://.godot/imported/Golden_Goose_Egg.png-50c3cdc4124f7d7b828d9667f98fe956.ctex"]
 
 [params]
 

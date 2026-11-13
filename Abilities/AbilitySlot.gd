@@ -55,6 +55,10 @@ func use_ability(target_pos: Vector2) -> void:
 		else:
 			_spawn_projectile(target_pos, abroll)
 	
+	if ability.effects != null:
+		for effect in ability.effects:
+			entity.add_effect(effect.instantiate())
+	
 	if ability.combo_ability == null:
 		swap_ability(default_ability)
 	else:
