@@ -21,6 +21,9 @@ var _movement_module: MovementModule
 
 var _effect_holders := [] as Array[EntityEffectHolder]
 
+var _collider: CollisionShape2D
+var _hitbox: Area2D
+
 signal added_buff_icon(texture_rect: TextureRect)
 
 func _ready() -> void:
@@ -28,9 +31,35 @@ func _ready() -> void:
 	set_navigation_map()
 	update_stats()
 	full_heal()
+	
+	for child in get_children():
+		if child is Area2D:
+			_hitbox = child
 
 func _physics_process(delta: float) -> void:
+	var overlaps = _hitbox.get_overlapping_bodies()
+	
+	for e in overlaps:
+		if e is not Entity:
+			continue
+		if e == self:
+			continue
+		
+		print(e, self)
+		if global_position.distance_to(e.global_position) < 0.001:
+			print("close")
+			global_position += Vector2(randf(), randf()) * 1.0 * Physics.PIXEL_METER
+		
+		else:
+			var direction = global_position.direction_to(e.global_position)
+			global_position += direction * -1.0 * Physics.PIXEL_METER
+			e.global_position += direction * 1.0 * Physics.PIXEL_METER
+		
+		print("uiowheiufhwief")
+	
 	move_and_slide()
+
+
 
 # TODO - For Gabe
 func set_navigation_map() -> void:

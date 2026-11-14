@@ -3,37 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
 [ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="2_3288i"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
-[ext_resource type="PackedScene" uid="uid://lxs678q0or5f" path="res://Pickups/Pickup Stim Speed.tscn" id="4_oa24y"]
-[ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="6_0nlcj"]
-[ext_resource type="PackedScene" uid="uid://5i3frewbr8jd" path="res://Pickups/Pickup Stim Range.tscn" id="7_3288i"]
 [ext_resource type="Script" uid="uid://cxs4bxpru02xd" path="res://Entities/Spawning/SkirmishManager.gd" id="7_njub7"]
-[ext_resource type="PackedScene" uid="uid://cqn2g3rh2kckx" path="res://Pickups/Pickup Stim Multishot.tscn" id="8_3288i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 75.0
 
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
 [node name="Player" parent="." unique_id=639906909 instance=ExtResource("1_gfd0l")]
 position = Vector2(245, 247)
-
-[node name="Godotbot" parent="." unique_id=1632048412 instance=ExtResource("2_3288i")]
-position = Vector2(794, -584)
-
-[node name="Godotbot2" parent="." unique_id=832613085 instance=ExtResource("2_3288i")]
-position = Vector2(654, -683)
-
-[node name="Godotbot3" parent="." unique_id=1610181111 instance=ExtResource("2_3288i")]
-position = Vector2(802, -740)
-
-[node name="Godotbot4" parent="." unique_id=1323700628 instance=ExtResource("2_3288i")]
-position = Vector2(960, -657)
-
-[node name="Godotbot5" parent="." unique_id=466002203 instance=ExtResource("2_3288i")]
-position = Vector2(646, -844)
-
-[node name="Godotbot6" parent="." unique_id=1767984417 instance=ExtResource("2_3288i")]
-position = Vector2(965, -823)
-
-[node name="Godotbot7" parent="." unique_id=1524986812 instance=ExtResource("2_3288i")]
-position = Vector2(807, -901)
 
 [node name="Pillar" type="Sprite2D" parent="." unique_id=1305690357]
 position = Vector2(-442.5, -229)
@@ -55,21 +33,34 @@ position = Vector2(511, 556)
 scale = Vector2(0.1484375, 1)
 texture = ExtResource("2_vl2lw")
 
-[node name="Walk Speed Stim Pickup" parent="." unique_id=1324348048 instance=ExtResource("4_oa24y")]
-position = Vector2(-856, -106)
-
 [node name="SkirmishManager" type="Node2D" parent="." unique_id=1012398122]
-position = Vector2(-459, -86)
+position = Vector2(-13, 2)
 script = ExtResource("7_njub7")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("2_3288i"): 15
+})
 metadata/_custom_type_script = "uid://cxs4bxpru02xd"
 
-[node name="EntitySpawner" type="Marker2D" parent="SkirmishManager" unique_id=1822180423]
-position = Vector2(949, -555)
-script = ExtResource("6_0nlcj")
-metadata/_custom_type_script = "uid://bfj654chgrloo"
+[node name="EntitySpawner" type="Area2D" parent="SkirmishManager" unique_id=1034616619]
+position = Vector2(-1066, -680)
 
-[node name="Pickup Stim Range" parent="." unique_id=2083890827 instance=ExtResource("7_3288i")]
-position = Vector2(-57, 571)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner" unique_id=1466458665]
+shape = SubResource("CircleShape2D_g4v7s")
 
-[node name="Pickup Stim Multishot" parent="." unique_id=1269886164 instance=ExtResource("8_3288i")]
-position = Vector2(-78, 283)
+[node name="EntitySpawner2" type="Area2D" parent="SkirmishManager" unique_id=2087265993]
+position = Vector2(-1073, 1165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner2" unique_id=2137485512]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="EntitySpawner3" type="Area2D" parent="SkirmishManager" unique_id=1780614328]
+position = Vector2(1601, -693)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner3" unique_id=92228386]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="EntitySpawner4" type="Area2D" parent="SkirmishManager" unique_id=579453753]
+position = Vector2(1601, 1171)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner4" unique_id=1005021099]
+shape = SubResource("CircleShape2D_g4v7s")

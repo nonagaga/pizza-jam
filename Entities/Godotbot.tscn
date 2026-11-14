@@ -27,10 +27,16 @@ script = ExtResource("4_gx638")
 metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 
 [node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
+collision_layer = 0
+collision_mask = 3
 civil = SubResource("Resource_wgj20")
 combat = SubResource("Resource_kxl0c")
 director = SubResource("Resource_e0011")
 drop_tables = Array[ExtResource("6_rg81y")]([ExtResource("6_rxtae")])
+
+[node name="Hitbox" parent="." index="2" unique_id=2100489449]
+collision_layer = 0
+collision_mask = 256
 
 [node name="MovementModule" type="Node" parent="." index="3" unique_id=1140205346]
 script = ExtResource("2_selh3")
