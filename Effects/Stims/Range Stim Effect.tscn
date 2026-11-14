@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dgih2oboq2wl0"]
+
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_gkyuj"]
+[ext_resource type="Texture2D" uid="uid://b3kvlig3yt5ih" path="res://Effects/Greater_Expansion.png" id="2_lhbm4"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="2_q6ehv"]
+
+[sub_resource type="Resource" id="Resource_gkyuj"]
+script = ExtResource("2_q6ehv")
+range_mult = 0.4
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[node name="RangeStim" type="Node" unique_id=2007771765]
+script = ExtResource("1_gkyuj")
+effect_name = "Range Stim"
+effect_icon = ExtResource("2_lhbm4")
+ability_roll_modifier = SubResource("Resource_gkyuj")
+is_permanent = false
+stacks_separately = true
+lifespan = 10.0
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

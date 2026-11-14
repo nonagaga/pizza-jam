@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ef2jgprhwdri"]
+
+[ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_tuxp0"]
+[ext_resource type="Texture2D" uid="uid://mwakwgr8pkc7" path="res://Abilities/Circle Swing/circle swing.png" id="2_3nq3f"]
+[ext_resource type="Script" uid="uid://r7ii7483bc4a" path="res://Rolls/StatRollModifier.gd" id="3_yvebo"]
+
+[sub_resource type="Resource" id="Resource_7irq2"]
+script = ExtResource("3_yvebo")
+walk_speed_bonus = -2.0
+walk_speed_mult = -0.2
+metadata/_custom_type_script = "uid://r7ii7483bc4a"
+
+[node name="CircleSwingEffect" type="Node" unique_id=1389107003]
+script = ExtResource("1_tuxp0")
+effect_icon = ExtResource("2_3nq3f")
+stat_roll_modifier = SubResource("Resource_7irq2")
+is_permanent = false
+stacks_separately = true
+lifespan = 0.5
+metadata/_custom_type_script = "uid://5og2uxwi2y2e"

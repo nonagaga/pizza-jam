@@ -3,13 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
 [ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="2_wliak"]
-[ext_resource type="PackedScene" uid="uid://dmtsn0krhhios" path="res://Pickups/Multishot Stim Pickup.tscn" id="4_jo2oe"]
-[ext_resource type="PackedScene" uid="uid://c6tspxjj2cd6s" path="res://Pickups/Range Stim Pickup.tscn" id="5_0nlcj"]
+[ext_resource type="PackedScene" uid="uid://lxs678q0or5f" path="res://Pickups/Stims/Walk Speed Stim Pickup.tscn" id="4_oa24y"]
 
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
 [node name="Player" parent="." unique_id=639906909 instance=ExtResource("1_gfd0l")]
-position = Vector2(156, 191)
+position = Vector2(178, 164)
 
 [node name="Godotbot" parent="." unique_id=930295659 instance=ExtResource("2_wliak")]
 position = Vector2(-999, -474)
@@ -34,8 +33,4 @@ position = Vector2(511, 556)
 scale = Vector2(0.1484375, 1)
 texture = ExtResource("2_vl2lw")
 
-[node name="Pickup" parent="." unique_id=1324348048 instance=ExtResource("4_jo2oe")]
-position = Vector2(898, 373)
-
-[node name="Pickup2" parent="." unique_id=1154273806 instance=ExtResource("5_0nlcj")]
-position = Vector2(896, -358)
+[node name="Walk Speed Stim Pickup" parent="." unique_id=1324348048 instance=ExtResource("4_oa24y")]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3 uid="uid://dkku0t5bmxsab"]
+
+[ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="1_fry8v"]
+[ext_resource type="Script" uid="uid://u442vuk54821" path="res://Utility/UI/Pick3/Upgrades/Upgrade.gd" id="2_e6ohm"]
+
+[resource]
+script = ExtResource("2_e6ohm")
+text = "More Extra Health"
+rarity = 2
+tooltip_text = "grants 25 extra health"
+icon = ExtResource("1_fry8v")
+health_modifier = 25
+metadata/_custom_type_script = "uid://u442vuk54821"

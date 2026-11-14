@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://mnckitssbbla"]
+
+[ext_resource type="Script" uid="uid://cch8y4ugk455o" path="res://Abilities/Ability.gd" id="1_dspc3"]
+[ext_resource type="Texture2D" uid="uid://mwakwgr8pkc7" path="res://Abilities/Circle Swing/circle swing.png" id="2_rk6ja"]
+[ext_resource type="PackedScene" uid="uid://biwei77an8ukj" path="res://Abilities/StraightShot/straight_shot_projectile.tscn" id="2_wslxo"]
+[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="3_ajum4"]
+
+[sub_resource type="Resource" id="Resource_rxtae"]
+script = ExtResource("3_ajum4")
+metadata/_custom_type_script = "uid://c0ny0w83asqax"
+
+[node name="StraightShot" type="Node" unique_id=997557398]
+script = ExtResource("1_dspc3")
+ability_name = "Straight Shot"
+ability_icon = ExtResource("2_rk6ja")
+ar_modifier = SubResource("Resource_rxtae")
+slot_cooldown = 1.0
+projectile = ExtResource("2_wslxo")
+follows_entity = false
+multishot_spread = 45.0

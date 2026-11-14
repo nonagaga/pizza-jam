@@ -6,4 +6,5 @@ func _ready() -> void:
 func apply_movement_input(move_vec: Vector2) -> void:
 	if entity.is_force_moved:
 		return
-	entity.velocity = move_vec * entity.combat.get_walk_speed()
+	entity._last_move_vec = move_vec
+	entity.velocity = move_vec * entity.live.get_pixel_speed()
