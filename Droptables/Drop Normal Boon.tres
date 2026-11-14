@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="EntityDropTable" format=3 uid="uid://dknsrp645pfn6"]
 
-[ext_resource type="PackedScene" uid="uid://cgmgtxn1jiexi" path="res://Pickups/Pickup Boon Random.tscn" id="1_s33kv"]
 [ext_resource type="Script" uid="uid://jph0wm8g60ud" path="res://Entities/EntityDropTable.gd" id="1_tu8uq"]
 
 [resource]
@@ -8,5 +7,4 @@ script = ExtResource("1_tu8uq")
 try_chance = 0.1
 min_drops = 1.0
 max_drops = 1.0
-pickups = Array[PackedScene]([ExtResource("1_s33kv")])
 metadata/_custom_type_script = "uid://jph0wm8g60ud"

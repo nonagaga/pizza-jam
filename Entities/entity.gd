@@ -2,6 +2,9 @@ class_name Entity extends CharacterBody2D
 
 static var STACKS_LBL_SETTINGS = preload("res://Effects/Buffbar Stacks.tres")
 
+signal updated_health(new_amt: float)
+signal updated_max_health(new_amt: float)
+
 @export var civil: EntityCivilStats
 @export var combat: EntityCombatStats
 @export var director: EntityDirectorStats
@@ -42,10 +45,16 @@ func update_stats() -> void:
 
 func _apply_stat_roll(stroll: StatRoll) -> void:
 	live.max_health = stroll.get_final_max_health()
+	
+	live.heal(stroll.get_final_instant_healing())
+	
 	if live.health > live.max_health:
 		live.health = live.max_health
 	
 	live.walk_speed = stroll.get_final_walk_speed()
+	
+	updated_health.emit(live.health)
+	updated_max_health.emit(live.max_health)
 
 func get_movement_module() -> MovementModule:
 	return _movement_module
@@ -166,6 +175,9 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 		
 		for effect in body.ability_roll.on_hit_effects:
 			add_effect(effect)
+		
+		updated_health.emit(live.health)
+		updated_max_health.emit(live.max_health)
 	
 	pass # Replace with function body.
 

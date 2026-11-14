@@ -23,7 +23,6 @@ metadata/_custom_type_script = "uid://dct7rekk327cg"
 
 [sub_resource type="Resource" id="Resource_oa24y"]
 script = ExtResource("3_8td47")
-max_health = 100000.0
 walk_speed = 8.0
 metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 
@@ -82,13 +81,21 @@ input_action = SubResource("InputEventAction_mwl8m")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
 [node name="Camera2D" type="Camera2D" parent="." index="6" unique_id=975768696]
-zoom = Vector2(0.71, 0.71)
+zoom = Vector2(0.485, 0.485)
 
 [node name="TestUI" type="Control" parent="." index="7" unique_id=374077456]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="TestUI" index="0" unique_id=1701081411]
+[node name="ProgressBar" type="ProgressBar" parent="TestUI" index="0" unique_id=575176423]
+layout_mode = 0
+offset_left = -106.0
+offset_top = 87.0
+offset_right = 105.0
+offset_bottom = 114.0
+step = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="TestUI" index="1" unique_id=1701081411]
 layout_mode = 0
 offset_left = -917.0
 offset_top = 575.0
@@ -104,7 +111,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_drum4")
 
-[node name="ColorRect2" type="ColorRect" parent="TestUI" index="1" unique_id=1523958160]
+[node name="ColorRect2" type="ColorRect" parent="TestUI" index="2" unique_id=1523958160]
 layout_mode = 0
 offset_left = -775.0
 offset_top = 575.0
@@ -120,7 +127,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_w6hej")
 
-[node name="Buffbar" type="HBoxContainer" parent="TestUI" index="2" unique_id=142582480]
+[node name="Buffbar" type="HBoxContainer" parent="TestUI" index="3" unique_id=142582480]
 layout_mode = 0
 offset_left = -936.0
 offset_top = 705.0
@@ -129,4 +136,6 @@ offset_bottom = 823.0
 script = ExtResource("14_1v5ml")
 
 [connection signal="added_buff_icon" from="." to="TestUI/Buffbar" method="_on_player_added_buff_icon"]
+[connection signal="updated_health" from="." to="TestUI/ProgressBar" method="set_value"]
+[connection signal="updated_max_health" from="." to="TestUI/ProgressBar" method="set_max"]
 [connection signal="swapped_ability_icon" from="Primary Ability" to="TestUI/ColorRect/Abil1" method="set_texture"]

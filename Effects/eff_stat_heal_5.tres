@@ -1,16 +1,18 @@
 [gd_resource type="Resource" script_class="EntityEffect" format=3 uid="uid://bu2iai3my45s0"]
 
 [ext_resource type="Script" uid="uid://5og2uxwi2y2e" path="res://Effects/EntityEffect.gd" id="1_3a6pf"]
-[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Rolls/AbilityRollModifier.gd" id="2_vl1rw"]
+[ext_resource type="Script" uid="uid://r7ii7483bc4a" path="res://Rolls/StatRollModifier.gd" id="2_vl1rw"]
 
-[sub_resource type="Resource" id="Resource_3288i"]
+[sub_resource type="Resource" id="Resource_m8jwi"]
 script = ExtResource("2_vl1rw")
-metadata/_custom_type_script = "uid://c0ny0w83asqax"
+instant_healing = 5.0
+metadata/_custom_type_script = "uid://r7ii7483bc4a"
 
 [resource]
 script = ExtResource("1_3a6pf")
 effect_name = "Heal 5"
-ability_roll_modifier = SubResource("Resource_3288i")
+stat_roll_modifier = SubResource("Resource_m8jwi")
 is_permanent = false
 stacks_separately = true
+lifespan = 0.01
 metadata/_custom_type_script = "uid://5og2uxwi2y2e"

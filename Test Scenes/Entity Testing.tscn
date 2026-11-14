@@ -1,19 +1,39 @@
 [gd_scene format=3 uid="uid://bxkb1jyo3t6im"]
 
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
+[ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="2_3288i"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
 [ext_resource type="PackedScene" uid="uid://lxs678q0or5f" path="res://Pickups/Pickup Stim Speed.tscn" id="4_oa24y"]
-[ext_resource type="PackedScene" uid="uid://cgmgtxn1jiexi" path="res://Pickups/Pickup Boon Random.tscn" id="5_jo2oe"]
 [ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="6_0nlcj"]
 [ext_resource type="PackedScene" uid="uid://5i3frewbr8jd" path="res://Pickups/Pickup Stim Range.tscn" id="7_3288i"]
 [ext_resource type="Script" uid="uid://cxs4bxpru02xd" path="res://Entities/Spawning/SkirmishManager.gd" id="7_njub7"]
 [ext_resource type="PackedScene" uid="uid://cqn2g3rh2kckx" path="res://Pickups/Pickup Stim Multishot.tscn" id="8_3288i"]
-[ext_resource type="PackedScene" uid="uid://28gsl7v3rmi7" path="res://Pickups/Pickup Heal 5.tscn" id="9_1nofu"]
 
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
 [node name="Player" parent="." unique_id=639906909 instance=ExtResource("1_gfd0l")]
-position = Vector2(178, 164)
+position = Vector2(245, 247)
+
+[node name="Godotbot" parent="." unique_id=1632048412 instance=ExtResource("2_3288i")]
+position = Vector2(794, -584)
+
+[node name="Godotbot2" parent="." unique_id=832613085 instance=ExtResource("2_3288i")]
+position = Vector2(654, -683)
+
+[node name="Godotbot3" parent="." unique_id=1610181111 instance=ExtResource("2_3288i")]
+position = Vector2(802, -740)
+
+[node name="Godotbot4" parent="." unique_id=1323700628 instance=ExtResource("2_3288i")]
+position = Vector2(960, -657)
+
+[node name="Godotbot5" parent="." unique_id=466002203 instance=ExtResource("2_3288i")]
+position = Vector2(646, -844)
+
+[node name="Godotbot6" parent="." unique_id=1767984417 instance=ExtResource("2_3288i")]
+position = Vector2(965, -823)
+
+[node name="Godotbot7" parent="." unique_id=1524986812 instance=ExtResource("2_3288i")]
+position = Vector2(807, -901)
 
 [node name="Pillar" type="Sprite2D" parent="." unique_id=1305690357]
 position = Vector2(-442.5, -229)
@@ -36,26 +56,10 @@ scale = Vector2(0.1484375, 1)
 texture = ExtResource("2_vl2lw")
 
 [node name="Walk Speed Stim Pickup" parent="." unique_id=1324348048 instance=ExtResource("4_oa24y")]
-
-[node name="Pickup Random Boon" parent="." unique_id=184386294 instance=ExtResource("5_jo2oe")]
-position = Vector2(902, 845)
-
-[node name="Pickup Random Boon2" parent="." unique_id=457736448 instance=ExtResource("5_jo2oe")]
-position = Vector2(1055, 842)
-
-[node name="Pickup Random Boon3" parent="." unique_id=277940372 instance=ExtResource("5_jo2oe")]
-position = Vector2(977, 969)
-
-[node name="Pickup Random Boon4" parent="." unique_id=1581451932 instance=ExtResource("5_jo2oe")]
-position = Vector2(1125, 969)
-
-[node name="Pickup Random Boon5" parent="." unique_id=1636220181 instance=ExtResource("5_jo2oe")]
-position = Vector2(1205, 842)
-
-[node name="Pickup Random Boon6" parent="." unique_id=2010686084 instance=ExtResource("5_jo2oe")]
-position = Vector2(1270, 977)
+position = Vector2(-856, -106)
 
 [node name="SkirmishManager" type="Node2D" parent="." unique_id=1012398122]
+position = Vector2(-459, -86)
 script = ExtResource("7_njub7")
 metadata/_custom_type_script = "uid://cxs4bxpru02xd"
 
@@ -69,5 +73,3 @@ position = Vector2(-57, 571)
 
 [node name="Pickup Stim Multishot" parent="." unique_id=1269886164 instance=ExtResource("8_3288i")]
 position = Vector2(-78, 283)
-
-[node name="Pickup" parent="." unique_id=362108192 instance=ExtResource("9_1nofu")]

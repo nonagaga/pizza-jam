@@ -6,11 +6,10 @@
 [ext_resource type="Script" uid="uid://bo74fsscbnqd1" path="res://Entities/Modules/MovementAI.gd" id="3_hms4s"]
 [ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="3_selh3"]
 [ext_resource type="Script" uid="uid://c63a4rftwo8ch" path="res://Entities/EntityDirectorStats.gd" id="4_gx638"]
-[ext_resource type="Resource" uid="uid://dknsrp645pfn6" path="res://Droptables/Drop Normal Boon.tres" id="6_mhxcv"]
 [ext_resource type="Script" uid="uid://jph0wm8g60ud" path="res://Entities/EntityDropTable.gd" id="6_rg81y"]
+[ext_resource type="Resource" uid="uid://celaevetoiekt" path="res://Droptables/Drop Normal Heals.tres" id="6_rxtae"]
 [ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="7_3ve2a"]
 [ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilitySlotAI.gd" id="7_hms4s"]
-[ext_resource type="Resource" uid="uid://8yv1fwolvmae" path="res://Droptables/Drop Normal Stim.tres" id="7_jcyse"]
 [ext_resource type="PackedScene" uid="uid://c5v0g21ebeius" path="res://Abilities/Left Swing/Left Swing Ability.tscn" id="8_gasj4"]
 
 [sub_resource type="Resource" id="Resource_wgj20"]
@@ -31,7 +30,7 @@ metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 civil = SubResource("Resource_wgj20")
 combat = SubResource("Resource_kxl0c")
 director = SubResource("Resource_e0011")
-drop_tables = Array[ExtResource("6_rg81y")]([ExtResource("6_mhxcv"), ExtResource("7_jcyse")])
+drop_tables = Array[ExtResource("6_rg81y")]([ExtResource("6_rxtae")])
 
 [node name="MovementModule" type="Node" parent="." index="3" unique_id=1140205346]
 script = ExtResource("2_selh3")
