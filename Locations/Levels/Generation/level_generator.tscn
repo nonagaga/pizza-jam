@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bd0pwtgyv0uph"]
 
 [ext_resource type="Script" uid="uid://cciilo734epcl" path="res://Locations/Levels/Generation/level_generator.gd" id="1_8cb1g"]
-[ext_resource type="Resource" uid="uid://bo1bdpxisn1hj" path="res://Locations/Levels/Rooms/stone_room.tres" id="2_wt8nh"]
+[ext_resource type="PackedScene" uid="uid://dy0jfqehiv8nr" path="res://Locations/Levels/Rooms/stone_room.tscn" id="2_wt8nh"]
 [ext_resource type="PackedScene" uid="uid://cnu3rqiqvfnb6" path="res://Locations/Levels/Rooms/hallway_test.tscn" id="3_66lhv"]
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="4_wt8nh"]
 [ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="5_yugmb"]
@@ -110,7 +110,7 @@ animations = [{
 
 [node name="LevelGenerator" type="Node2D" unique_id=1501019675]
 script = ExtResource("1_8cb1g")
-max_rooms = 30
+max_rooms = 7
 room_resource_directory = "res://Locations/Levels/Rooms/"
 starting_room = ExtResource("2_wt8nh")
 hallway_scene = ExtResource("3_66lhv")
@@ -134,8 +134,5 @@ zoom = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_0p60y")
 autoplay = "default"
 frame_progress = 0.7410968
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=887298557]
-zoom = Vector2(0.1, 0.1)
 
 [editable path="Player"]

@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dm5tcwlehk272"]
+
+[ext_resource type="Script" uid="uid://coofltptbisxx" path="res://Locations/Levels/room.gd" id="1_n6tl4"]
+[ext_resource type="Texture2D" uid="uid://btv21j4o84jal" path="res://Locations/Levels/Tilemaps/Textures/SmallCrateTest.png" id="3_gwqak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x13ba"]
+size = Vector2(32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0euqp"]
+size = Vector2(288, 288)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" unique_id=1125468377 node_paths=PackedStringArray("player_detector")]
+script = ExtResource("1_n6tl4")
+player_detector = NodePath("PlayerDetector")
+
+[node name="Doors" type="Node2D" parent="." unique_id=859938090]
+z_index = 1
+
+[node name="N" type="StaticBody2D" parent="Doors" unique_id=19642204]
+position = Vector2(192, -32)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/N" unique_id=2046790578]
+position = Vector2(16, 32)
+shape = SubResource("RectangleShape2D_x13ba")
+
+[node name="Sprite2D" type="Sprite2D" parent="Doors/N" unique_id=428708842]
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Doors/N" unique_id=959932527]
+position = Vector2(0, 32)
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="E" type="StaticBody2D" parent="Doors" unique_id=302848848]
+position = Vector2(320, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/E" unique_id=1609029218]
+position = Vector2(16, 32)
+shape = SubResource("RectangleShape2D_x13ba")
+
+[node name="Sprite2D" type="Sprite2D" parent="Doors/E" unique_id=1140320795]
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Doors/E" unique_id=1563944401]
+position = Vector2(0, 32)
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="S" type="StaticBody2D" parent="Doors" unique_id=250733010]
+position = Vector2(128, 352)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/S" unique_id=1938773076]
+position = Vector2(16, 32)
+shape = SubResource("RectangleShape2D_x13ba")
+
+[node name="Sprite2D" type="Sprite2D" parent="Doors/S" unique_id=1495743134]
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Doors/S" unique_id=372465365]
+position = Vector2(0, 32)
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="W" type="StaticBody2D" parent="Doors" unique_id=595801944]
+position = Vector2(-32, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/W" unique_id=363599084]
+position = Vector2(16, 32)
+shape = SubResource("RectangleShape2D_x13ba")
+
+[node name="Sprite2D" type="Sprite2D" parent="Doors/W" unique_id=1051417064]
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Doors/W" unique_id=65911819]
+position = Vector2(0, 32)
+texture = ExtResource("3_gwqak")
+centered = false
+
+[node name="PlayerDetector" type="Area2D" parent="." unique_id=307824021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=1959231774]
+position = Vector2(160, 160)
+shape = SubResource("RectangleShape2D_0euqp")
