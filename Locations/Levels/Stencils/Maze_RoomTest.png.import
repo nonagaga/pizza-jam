@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwomav330lw2h"
-path="res://.godot/imported/TestLevel.png-f3d998b0aacdc20c390ae184f3f0179e.ctex"
+uid="uid://chuxj2b3oios3"
+path="res://.godot/imported/Maze_RoomTest.png-5014d3092b4decbb6dba89c8e1004272.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Locations/Levels/TestLevel.png"
-dest_files=["res://.godot/imported/TestLevel.png-f3d998b0aacdc20c390ae184f3f0179e.ctex"]
+source_file="res://Locations/Levels/Stencils/Maze_RoomTest.png"
+dest_files=["res://.godot/imported/Maze_RoomTest.png-5014d3092b4decbb6dba89c8e1004272.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

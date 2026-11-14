@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RoomResource" format=3 uid="uid://duh4xqpr8qggs"]
+
+[ext_resource type="Script" uid="uid://cd137nqf76rgw" path="res://Locations/Levels/Generation/room_resource.gd" id="1_cc3b4"]
+[ext_resource type="PackedScene" uid="uid://ukcy1g66ueen" path="res://Locations/Levels/Rooms/disco_room.tscn" id="1_t8a6e"]
+
+[resource]
+script = ExtResource("1_cc3b4")
+room_scene = ExtResource("1_t8a6e")
+door_directions = 15
+metadata/_custom_type_script = "uid://cd137nqf76rgw"

@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://dpdxhna2ucv43"]
+
+[ext_resource type="PackedScene" uid="uid://dm5tcwlehk272" path="res://Locations/Levels/base_room.tscn" id="1_ch5ud"]
+[ext_resource type="TileSet" uid="uid://yuq702wpi4d3" path="res://Locations/Levels/Tilemaps/debug_tile_set.tres" id="1_lewei"]
+[ext_resource type="Texture2D" uid="uid://dfmgstjeu7nw" path="res://Locations/Levels/Stencils/H_RoomTest.png" id="2_lewei"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_85r38"]
+vertices = PackedVector2Array(214, 310, 106, 310, 106, 202, 214, 202, 242, 146, 242, 18, 302, 18, 302, 302, 242, 302, 242, 174, 78, 146, 78, 174, 78, 302, 18, 302, 18, 18, 78, 18, 214, 118, 106, 118, 106, 10, 214, 10)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 8, 9), PackedInt32Array(4, 7, 9), PackedInt32Array(10, 4, 9, 11), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(10, 11, 14), PackedInt32Array(15, 10, 14), PackedInt32Array(16, 17, 18, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 320, 0, 320, 320, 0, 320)])
+
+[node name="NavigationRegion2D" unique_id=1125468377 node_paths=PackedStringArray("east_door", "west_door") instance=ExtResource("1_ch5ud")]
+navigation_polygon = SubResource("NavigationPolygon_85r38")
+east_door = NodePath("Doors/E")
+west_door = NodePath("Doors/W")
+
+[node name="N" parent="Doors" parent_id_path=PackedInt32Array(859938090) index="0" unique_id=19642204]
+visible = false
+
+[node name="S" parent="Doors" parent_id_path=PackedInt32Array(859938090) index="2" unique_id=250733010]
+visible = false
+
+[node name="Square Room" type="TileMapLayer" parent="." index="2" unique_id=477980062]
+z_index = -2
+tile_map_data = PackedByteArray("AAAJAAQAAAABAAIAAWAJAAUAAAABAAIAAWAAAAQAAAABAAIAAVAAAAUAAAABAAIAAVAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAABAAkAAAAAAAEAAGACAAgAAAAAAAEAADACAAcAAAAAAAEAADACAAYAAAAAAAEAADACAAEAAAAAAAEAADACAAIAAAAAAAEAADACAAMAAAAAAAEAADABAAAAAAAAAAEAAFADAAQAAAAAAAEAAFAEAAQAAAAAAAEAAFAFAAQAAAAAAAEAAFAGAAQAAAAAAAEAAFAHAAMAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAEAAAAAAAEAAAAIAAAAAAAAAAEAAFAJAAEAAAAAAAEAADAJAAIAAAAAAAEAADAJAAMAAAAAAAEAADAJAAYAAAAAAAEAADAJAAcAAAAAAAEAADAJAAgAAAAAAAEAADAIAAkAAAAAAAEAAGAHAAgAAAAAAAEAAAAHAAcAAAAAAAEAAAAHAAYAAAAAAAEAAAAGAAUAAAAAAAEAAGAFAAUAAAAAAAEAAGAEAAUAAAAAAAEAAGADAAUAAAAAAAEAAGABAAEAAAABAAEAAAABAAIAAAABAAEAAAABAAMAAAABAAEAAAABAAQAAAABAAEAAAABAAUAAAABAAEAAAABAAYAAAABAAEAAAABAAcAAAABAAEAAAABAAgAAAABAAEAAAACAAQAAQAAAAAAADACAAUAAQAAAAAAAGAHAAQAAQAAAAAAAFAHAAUAAQAAAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAEAAAAIAAMAAAABAAEAAAAIAAQAAAABAAEAAAAIAAUAAAABAAEAAAAIAAYAAAABAAEAAAAIAAcAAAABAAEAAAAIAAgAAAABAAEAAAAHAAkAAAAAAAAAAGAJAAkAAAAAAAAAADAJAAAAAAAAAAAAAFAHAAAAAAAAAAAAAAACAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAGACAAkAAAAAAAAAADA=")
+tile_set = ExtResource("1_lewei")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square Room" index="0" unique_id=1328201737]
+modulate = Color(1, 1, 1, 0.22745098)
+texture = ExtResource("2_lewei")
+centered = false
