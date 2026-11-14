@@ -9,7 +9,7 @@ enum DoorDir {NORTH = 1 << 0, EAST = 1 << 1, SOUTH = 1 << 2, WEST = 1 << 3}
 
 @export var player_detector : Area2D
 ## Spawner that adds / removes enemies for this room
-@export var spawner : Variant
+@export var _skirmish_manager : SkirmishManager
 
 var is_doors_open = true
 var room_cleared = false
@@ -78,6 +78,7 @@ func _on_player_detector_entered(body : Node2D):
 	if body.is_in_group("Player") and not room_cleared and not in_fight:
 		in_fight = true
 		## this is our player
+		_skirmish_manager.spawn_enemies()
 		close_doors()
 		await get_tree().create_timer(1).timeout
 		open_doors()

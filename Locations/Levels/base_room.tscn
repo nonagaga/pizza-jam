@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://dm5tcwlehk272"]
+[gd_scene format=3 uid="uid://bo676s2id2ykb"]
 
 [ext_resource type="Script" uid="uid://coofltptbisxx" path="res://Locations/Levels/room.gd" id="1_n6tl4"]
 [ext_resource type="Texture2D" uid="uid://btv21j4o84jal" path="res://Locations/Levels/Tilemaps/Textures/SmallCrateTest.png" id="3_gwqak"]
+[ext_resource type="Script" uid="uid://cxs4bxpru02xd" path="res://Entities/Spawning/SkirmishManager.gd" id="3_ils31"]
+[ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="4_5domc"]
+[ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="4_dbdpu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x13ba"]
 size = Vector2(32, 64)
@@ -9,9 +12,10 @@ size = Vector2(32, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0euqp"]
 size = Vector2(288, 288)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" unique_id=1125468377 node_paths=PackedStringArray("player_detector")]
+[node name="NavigationRegion2D" type="NavigationRegion2D" unique_id=1125468377 node_paths=PackedStringArray("player_detector", "_skirmish_manager")]
 script = ExtResource("1_n6tl4")
 player_detector = NodePath("PlayerDetector")
+_skirmish_manager = NodePath("SkirmishManager")
 
 [node name="Doors" type="Node2D" parent="." unique_id=859938090]
 z_index = 1
@@ -83,7 +87,21 @@ texture = ExtResource("3_gwqak")
 centered = false
 
 [node name="PlayerDetector" type="Area2D" parent="." unique_id=307824021]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=1959231774]
 position = Vector2(160, 160)
 shape = SubResource("RectangleShape2D_0euqp")
+
+[node name="SkirmishManager" type="Node2D" parent="." unique_id=2036163195]
+script = ExtResource("3_ils31")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("4_5domc"): 6
+})
+metadata/_custom_type_script = "uid://cxs4bxpru02xd"
+
+[node name="EntitySpawner" type="Marker2D" parent="SkirmishManager" unique_id=1118806598]
+position = Vector2(258, 52)
+script = ExtResource("4_dbdpu")
+metadata/_custom_type_script = "uid://bfj654chgrloo"

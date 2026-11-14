@@ -3,10 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="1_gfd0l"]
 [ext_resource type="PackedScene" uid="uid://camuf4gugq7o3" path="res://Entities/Godotbot.tscn" id="2_3288i"]
 [ext_resource type="Texture2D" uid="uid://0v0jwdc1tpa3" path="res://icon.svg" id="2_vl2lw"]
+[ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="5_jo2oe"]
 [ext_resource type="Script" uid="uid://cxs4bxpru02xd" path="res://Entities/Spawning/SkirmishManager.gd" id="7_njub7"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
-radius = 75.0
 
 [node name="EntityTesting" type="Node2D" unique_id=1040795723]
 
@@ -38,30 +36,25 @@ texture = ExtResource("2_vl2lw")
 position = Vector2(-13, 2)
 script = ExtResource("7_njub7")
 enemies = Dictionary[PackedScene, int]({
-ExtResource("2_3288i"): 15
+ExtResource("2_3288i"): 10
 })
 metadata/_custom_type_script = "uid://cxs4bxpru02xd"
 
-[node name="EntitySpawner" type="Area2D" parent="SkirmishManager" unique_id=1034616619]
-position = Vector2(-1066, -680)
+[node name="EntitySpawner" type="Marker2D" parent="SkirmishManager" unique_id=427303908]
+script = ExtResource("5_jo2oe")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner" unique_id=1466458665]
-shape = SubResource("CircleShape2D_g4v7s")
+[node name="EntitySpawner2" type="Marker2D" parent="SkirmishManager" unique_id=1270732150]
+position = Vector2(1211, 841)
+script = ExtResource("5_jo2oe")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
 
-[node name="EntitySpawner2" type="Area2D" parent="SkirmishManager" unique_id=2087265993]
-position = Vector2(-1073, 1165)
+[node name="EntitySpawner3" type="Marker2D" parent="SkirmishManager" unique_id=1398289087]
+position = Vector2(69, 901)
+script = ExtResource("5_jo2oe")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner2" unique_id=2137485512]
-shape = SubResource("CircleShape2D_g4v7s")
-
-[node name="EntitySpawner3" type="Area2D" parent="SkirmishManager" unique_id=1780614328]
-position = Vector2(1601, -693)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner3" unique_id=92228386]
-shape = SubResource("CircleShape2D_g4v7s")
-
-[node name="EntitySpawner4" type="Area2D" parent="SkirmishManager" unique_id=579453753]
-position = Vector2(1601, 1171)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SkirmishManager/EntitySpawner4" unique_id=1005021099]
-shape = SubResource("CircleShape2D_g4v7s")
+[node name="EntitySpawner4" type="Marker2D" parent="SkirmishManager" unique_id=675323820]
+position = Vector2(1073, 41)
+script = ExtResource("5_jo2oe")
+metadata/_custom_type_script = "uid://bfj654chgrloo"

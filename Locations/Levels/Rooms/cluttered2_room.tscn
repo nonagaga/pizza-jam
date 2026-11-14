@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://dv8vflhsvqhk8"]
 
-[ext_resource type="PackedScene" uid="uid://dm5tcwlehk272" path="res://Locations/Levels/base_room.tscn" id="1_0dhgq"]
+[ext_resource type="PackedScene" uid="uid://bo676s2id2ykb" path="res://Locations/Levels/base_room.tscn" id="1_0dhgq"]
 [ext_resource type="TileSet" uid="uid://yuq702wpi4d3" path="res://Locations/Levels/Tilemaps/debug_tile_set.tres" id="1_a06bk"]
 [ext_resource type="Texture2D" uid="uid://dug4x8y4ttu56" path="res://Locations/Levels/Stencils/Cluttered2_RoomTest.png" id="2_a06bk"]
+[ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="4_s1k31"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8p8mm"]
 vertices = PackedVector2Array(302, 18, 302, 302, 266, 202, 266, 150, 18, 302, 182, 202, 234, 150, 234, 118, 202, 118, 202, 86, 106, 86, 106, 22, 22, 106, 54, 106, 54, 138, 118, 138, 118, 170, 182, 170, 18, 18, 22, 22)
@@ -29,3 +30,16 @@ centered = false
 [node name="Props" type="TileMapLayer" parent="Square Room" index="1" unique_id=561115387]
 tile_map_data = PackedByteArray("AAABAAEAAgAAAAAAAAABAAIAAgAAAAEAAAACAAEAAgABAAAAAAACAAIAAgABAAEAAAAEAAMAAgAAAAAAAAAEAAQAAgAAAAEAAAAFAAMAAgABAAAAAAAFAAQAAgABAAEAAAACAAMAAwAAAAAAAAADAAMAAwAAAAAAAAAGAAQAAwAAAAAAAAAGAAUAAwAAAAAAAAAHAAUAAwAAAAAAAAA=")
 tile_set = ExtResource("1_a06bk")
+
+[node name="EntitySpawner" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="0" unique_id=1118806598]
+position = Vector2(112, 32)
+
+[node name="EntitySpawner2" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="1" unique_id=605840908]
+position = Vector2(28, 295)
+script = ExtResource("4_s1k31")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
+
+[node name="EntitySpawner3" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="2" unique_id=793709564]
+position = Vector2(296, 295)
+script = ExtResource("4_s1k31")
+metadata/_custom_type_script = "uid://bfj654chgrloo"

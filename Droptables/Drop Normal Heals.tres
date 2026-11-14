@@ -5,8 +5,7 @@
 
 [resource]
 script = ExtResource("1_82mj6")
-try_chance = 0.1
-min_drops = 1.0
-max_drops = 2.0
+try_chance = 0.2
+max_drops = 3.0
 pickups = Array[PackedScene]([ExtResource("1_gg1sg")])
 metadata/_custom_type_script = "uid://jph0wm8g60ud"

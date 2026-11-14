@@ -24,8 +24,8 @@ Director="*uid://lc3g8i1b17m3"
 
 [display]
 
-window/size/viewport_width=1400
-window/size/viewport_height=1000
+window/size/viewport_width=400
+window/size/viewport_height=300
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 "<<<<<<<HEAD[file_customization]folder_colors"={

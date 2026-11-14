@@ -127,7 +127,7 @@ position = Vector2(0, 8)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_661rv")
 
-[node name="Camera2D" parent="Player" index="4" unique_id=975768696]
+[node name="Camera2D" parent="Player" index="7" unique_id=975768696]
 zoom = Vector2(1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1026024145]

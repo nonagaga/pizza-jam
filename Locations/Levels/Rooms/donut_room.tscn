@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://di08vewy0kknx"]
 
 [ext_resource type="TileSet" uid="uid://yuq702wpi4d3" path="res://Locations/Levels/Tilemaps/debug_tile_set.tres" id="1_2ke30"]
-[ext_resource type="PackedScene" uid="uid://dm5tcwlehk272" path="res://Locations/Levels/base_room.tscn" id="1_85r38"]
+[ext_resource type="PackedScene" uid="uid://bo676s2id2ykb" path="res://Locations/Levels/base_room.tscn" id="1_85r38"]
 [ext_resource type="Texture2D" uid="uid://bh5ysp1kv4o4w" path="res://Locations/Levels/Stencils/Donut_RoomTest copy.png" id="2_r010x"]
+[ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="4_wrg7f"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_85r38"]
 vertices = PackedVector2Array(22, 298, 54, 298, 54, 310, 10, 310, 10, 266, 22, 266, 310, 310, 266, 310, 266, 298, 298, 298, 310, 266, 298, 266, 238, 298, 238, 302, 82, 302, 82, 298, 54, 266, 54, 270, 50, 270, 50, 266, 270, 266, 270, 270, 266, 270, 266, 266, 182, 138, 214, 138, 214, 182, 182, 182, 182, 214, 138, 214, 138, 182, 106, 182, 106, 138, 138, 138, 182, 106, 138, 106, 22, 82, 22, 238, 18, 238, 18, 82, 302, 82, 302, 238, 298, 238, 298, 82, 54, 10, 54, 22, 22, 22, 10, 10, 10, 54, 22, 54, 54, 50, 54, 54, 50, 54, 50, 50, 270, 50, 270, 54, 266, 54, 266, 50, 310, 10, 310, 54, 298, 54, 298, 22, 266, 10, 266, 22, 238, 18, 238, 22, 82, 22, 82, 18, 246, 106, 246, 214, 242, 210, 242, 110, 214, 106, 210, 110, 210, 78, 214, 74, 214, 214, 210, 210, 210, 242, 214, 246, 106, 246, 110, 242, 106, 214, 110, 210, 78, 210, 74, 214, 74, 106, 78, 110, 106, 106, 110, 110, 110, 78, 106, 74)
@@ -28,3 +29,21 @@ modulate = Color(1, 1, 1, 0.11764706)
 z_index = -1
 texture = ExtResource("2_r010x")
 centered = false
+
+[node name="EntitySpawner" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="0" unique_id=1118806598]
+position = Vector2(89, 89)
+
+[node name="EntitySpawner2" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="1" unique_id=1849508287]
+position = Vector2(230, 89)
+script = ExtResource("4_wrg7f")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
+
+[node name="EntitySpawner3" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="2" unique_id=394064777]
+position = Vector2(230, 230)
+script = ExtResource("4_wrg7f")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
+
+[node name="EntitySpawner4" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="3" unique_id=1624194249]
+position = Vector2(90, 231)
+script = ExtResource("4_wrg7f")
+metadata/_custom_type_script = "uid://bfj654chgrloo"

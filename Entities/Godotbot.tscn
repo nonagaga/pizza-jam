@@ -26,11 +26,29 @@ metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 script = ExtResource("4_gx638")
 metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxtae"]
+size = Vector2(10, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rxtae"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rg81y"]
+radius = 5.0
+
 [node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
 civil = SubResource("Resource_wgj20")
 combat = SubResource("Resource_kxl0c")
 director = SubResource("Resource_e0011")
 drop_tables = Array[ExtResource("6_rg81y")]([ExtResource("6_rxtae")])
+
+[node name="MainSprite" parent="." index="0" unique_id=491664460]
+scale = Vector2(0.1, 0.1)
+
+[node name="MainCollider" parent="." index="1" unique_id=108793456]
+shape = SubResource("RectangleShape2D_rxtae")
+
+[node name="CollisionShape2D" parent="Hitbox" parent_id_path=PackedInt32Array(2100489449) index="0" unique_id=751187676]
+shape = SubResource("CircleShape2D_rxtae")
 
 [node name="MovementModule" type="Node" parent="." index="3" unique_id=1140205346]
 script = ExtResource("2_selh3")
@@ -51,3 +69,6 @@ tag_melee = true
 [node name="AbilitySlotAI" type="Node" parent="Swing" index="1" unique_id=2008964635]
 script = ExtResource("7_hms4s")
 metadata/_custom_type_script = "uid://blthoc0bdrqwn"
+
+[node name="CollisionShape2D" parent="Nudgebox" parent_id_path=PackedInt32Array(989747513) index="0" unique_id=562664799]
+shape = SubResource("CircleShape2D_rg81y")

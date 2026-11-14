@@ -4,6 +4,9 @@ extends Node
 # (can realistically just be a variable instead of dict).
 var player_data = {} as Dictionary[int, PlayerData]
 
+## Current difficulty.
+var difficulty = 0 as int
+
 func save_carryover_data(entity: Entity) -> void:
 	var data := player_data.get_or_add(1, PlayerData.new()) as PlayerData
 	

@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://cdjds8tortgj"]
 
 [ext_resource type="TileSet" uid="uid://yuq702wpi4d3" path="res://Locations/Levels/Tilemaps/debug_tile_set.tres" id="1_lle5o"]
-[ext_resource type="PackedScene" uid="uid://dm5tcwlehk272" path="res://Locations/Levels/base_room.tscn" id="1_lp2j1"]
+[ext_resource type="PackedScene" uid="uid://bo676s2id2ykb" path="res://Locations/Levels/base_room.tscn" id="1_lp2j1"]
 [ext_resource type="Texture2D" uid="uid://b03nakblc22r1" path="res://Locations/Levels/Stencils/Cluttered1_RoomTest.png" id="2_lle5o"]
+[ext_resource type="Script" uid="uid://bfj654chgrloo" path="res://Entities/Spawning/EntitySpawner.gd" id="4_30tg5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8p8mm"]
 vertices = PackedVector2Array(106, 298, 302, 302, 18, 302, 54, 298, 266, 106, 266, 54, 302, 18, 18, 18, 214, 54, 266, 234, 214, 234, 170, 202, 106, 214, 118, 202, 170, 86, 214, 182, 54, 214, 138, 86, 138, 54, 86, 170, 118, 170, 86, 54, 266, 182, 214, 106)
@@ -29,3 +30,21 @@ centered = false
 [node name="Props" type="TileMapLayer" parent="Square Room" index="1" unique_id=561115387]
 tile_map_data = PackedByteArray("AAADAAMAAgAAAAAAAAADAAQAAgAAAAEAAAAEAAMAAgABAAAAAAAEAAQAAgABAAEAAAADAAIAAwAAAAAAAAAEAAUAAwAAAAAAAAAHAAIAAwAAAAAAAAAHAAYAAwAAAAAAAAACAAcAAwAAAAAAAAACAAgAAwAAAAAAAAA=")
 tile_set = ExtResource("1_lle5o")
+
+[node name="EntitySpawner" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="0" unique_id=1118806598]
+position = Vector2(26, 27)
+
+[node name="EntitySpawner2" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="1" unique_id=1631667612]
+position = Vector2(27, 296)
+script = ExtResource("4_30tg5")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
+
+[node name="EntitySpawner3" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="2" unique_id=630713756]
+position = Vector2(297, 298)
+script = ExtResource("4_30tg5")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
+
+[node name="EntitySpawner4" type="Marker2D" parent="SkirmishManager" parent_id_path=PackedInt32Array(2036163195) index="3" unique_id=1549115730]
+position = Vector2(295, 24)
+script = ExtResource("4_30tg5")
+metadata/_custom_type_script = "uid://bfj654chgrloo"
