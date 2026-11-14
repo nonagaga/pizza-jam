@@ -74,7 +74,8 @@ func _spawn_projectile(target_pos: Vector2, abroll: AbilityRoll,
 		additional_rotation_deg: float = 0.0) -> void:
 	var proj = ability.projectile.instantiate() as AbilityProjectile
 	
-	proj.originator = entity
+	#proj.originator = entity
+	proj.originator_team = entity.director.team
 	proj.ability_roll = abroll
 	
 	proj.aim_rotation = rad_to_deg(entity.global_position.angle_to_point(target_pos)
@@ -84,5 +85,6 @@ func _spawn_projectile(target_pos: Vector2, abroll: AbilityRoll,
 	if ability.follows_entity:
 		entity.add_child(proj)
 	else:
-		# HACK - Spawns the projectile without a Node2D parent so it technically is free of the player's position.
-		add_child(proj)
+		# Spawn independent of entity
+		entity.get_tree().root.add_child(proj)
+		proj.global_position = entity.global_position

@@ -9,6 +9,8 @@ var _player: Entity
 func _process(delta: float) -> void:
 	if _player == null:
 		_player = get_tree().get_first_node_in_group("Player")
+		if _player == null:
+			return
 	
 	var target_meters = ability_slot.entity.global_position.distance_to(
 		_player.global_position) / Physics.PIXEL_METER

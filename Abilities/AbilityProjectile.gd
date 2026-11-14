@@ -9,7 +9,10 @@ var aim_rotation = 0.0 as float
 var _time_alive = 0.0 as float
 @export var follows_owner = false as bool
 
-var originator: Entity
+@export var expire_on_hit = false as bool
+
+#var originator: Entity
+var originator_team = 0 as int
 var ability_roll: AbilityRoll
 
 func _ready() -> void:

@@ -42,7 +42,7 @@ civil = SubResource("Resource_wliak")
 combat = SubResource("Resource_oa24y")
 director = SubResource("Resource_jo2oe")
 
-[node name="MovementModule" type="Node" parent="." index="3" unique_id=1701972523]
+[node name="MovementModule" type="Node" parent="." index="4" unique_id=1701972523]
 script = ExtResource("2_0gd87")
 metadata/_custom_type_script = "uid://bufnrj8520j8s"
 
@@ -50,7 +50,7 @@ metadata/_custom_type_script = "uid://bufnrj8520j8s"
 script = ExtResource("3_c7jvw")
 metadata/_custom_type_script = "uid://b30auqqb707te"
 
-[node name="Primary Ability" type="Node" parent="." index="4" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
+[node name="Primary Ability" type="Node" parent="." index="5" unique_id=1564335115 node_paths=PackedStringArray("default_ability")]
 script = ExtResource("9_paumt")
 default_ability = NodePath("LeftSwingAbility")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
@@ -68,7 +68,7 @@ script = ExtResource("7_nn0oq")
 input_action = SubResource("InputEventAction_cfvty")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
-[node name="Movement Ability" type="Node" parent="." index="5" unique_id=846931894 node_paths=PackedStringArray("default_ability")]
+[node name="Movement Ability" type="Node" parent="." index="6" unique_id=846931894 node_paths=PackedStringArray("default_ability")]
 script = ExtResource("9_paumt")
 default_ability = NodePath("CodexDashAbility")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
@@ -80,12 +80,14 @@ script = ExtResource("7_nn0oq")
 input_action = SubResource("InputEventAction_mwl8m")
 metadata/_custom_type_script = "uid://1adqfnkapsco"
 
-[node name="Camera2D" type="Camera2D" parent="." index="6" unique_id=975768696]
-zoom = Vector2(0.485, 0.485)
+[node name="Camera2D" type="Camera2D" parent="." index="7" unique_id=975768696]
+zoom = Vector2(0.25, 0.25)
 
-[node name="TestUI" type="Control" parent="." index="7" unique_id=374077456]
+[node name="TestUI" type="Control" parent="." index="8" unique_id=374077456]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 1.0
+offset_bottom = 1.0
 
 [node name="ProgressBar" type="ProgressBar" parent="TestUI" index="0" unique_id=575176423]
 layout_mode = 0

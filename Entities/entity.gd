@@ -21,8 +21,8 @@ var _movement_module: MovementModule
 
 var _effect_holders := [] as Array[EntityEffectHolder]
 
-var _collider: CollisionShape2D
-var _hitbox: Area2D
+@export var _hitbox: Area2D
+@export var _nudgebox: Area2D
 
 signal added_buff_icon(texture_rect: TextureRect)
 
@@ -31,13 +31,9 @@ func _ready() -> void:
 	set_navigation_map()
 	update_stats()
 	full_heal()
-	
-	for child in get_children():
-		if child is Area2D:
-			_hitbox = child
 
 func _physics_process(delta: float) -> void:
-	var overlaps = _hitbox.get_overlapping_bodies()
+	var overlaps = _nudgebox.get_overlapping_bodies()
 	
 	for e in overlaps:
 		if e is not Entity:
@@ -45,17 +41,15 @@ func _physics_process(delta: float) -> void:
 		if e == self:
 			continue
 		
-		print(e, self)
-		if global_position.distance_to(e.global_position) < 0.001:
-			print("close")
-			global_position += Vector2(randf(), randf()) * 1.0 * Physics.PIXEL_METER
+		if global_position.distance_to(e.global_position) < Physics.NUDGE_PIXELS:
+			var rand_dir = Vector2(randf(), randf()) * Physics.NUDGE_PIXELS
+			global_position += rand_dir
+			e.global_position -= rand_dir
 		
 		else:
 			var direction = global_position.direction_to(e.global_position)
-			global_position += direction * -1.0 * Physics.PIXEL_METER
-			e.global_position += direction * 1.0 * Physics.PIXEL_METER
-		
-		print("uiowheiufhwief")
+			global_position -= direction * Physics.NUDGE_PIXELS
+			e.global_position += direction * Physics.NUDGE_PIXELS
 	
 	move_and_slide()
 
@@ -197,16 +191,19 @@ func _drop_pickup(pickup: PackedScene) -> void:
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	
 	if body is AbilityProjectile:
-		if body.originator.director.team == director.team:
+		if body.originator_team == director.team:
 			return
 		
-		live.deal_damage(body.ability_roll.get_final_damage(), body.originator)
+		live.deal_damage(body.ability_roll.get_final_damage())
 		
 		for effect in body.ability_roll.on_hit_effects:
 			add_effect(effect)
 		
 		updated_health.emit(live.health)
 		updated_max_health.emit(live.max_health)
+		
+		if body.expire_on_hit:
+			body.queue_free()
 	
 	pass # Replace with function body.
 

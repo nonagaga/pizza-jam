@@ -9,11 +9,15 @@ size = Vector2(100, 100)
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 70.0
 
-[node name="Entity" type="CharacterBody2D" unique_id=639906909 groups=["Entity"]]
-collision_layer = 2
-collision_mask = 3
+[sub_resource type="CircleShape2D" id="CircleShape2D_y048k"]
+radius = 50.0
+
+[node name="Entity" type="CharacterBody2D" unique_id=639906909 node_paths=PackedStringArray("_hitbox", "_nudgebox") groups=["Entity"]]
+collision_layer = 6
 motion_mode = 1
 script = ExtResource("1_0p8jp")
+_hitbox = NodePath("Hitbox")
+_nudgebox = NodePath("Nudgebox")
 metadata/_custom_type_script = "uid://ci2vi7y2at8db"
 
 [node name="MainSprite" type="Sprite2D" parent="." unique_id=491664460]
@@ -23,11 +27,20 @@ texture = ExtResource("2_y048k")
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=2100489449]
-collision_layer = 257
-collision_mask = 257
+collision_layer = 0
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=751187676]
 shape = SubResource("CircleShape2D_g4v7s")
 
+[node name="Nudgebox" type="Area2D" parent="." unique_id=989747513]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nudgebox" unique_id=562664799]
+shape = SubResource("CircleShape2D_y048k")
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="area_entered" from="Nudgebox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Nudgebox" to="." method="_on_hitbox_body_entered"]

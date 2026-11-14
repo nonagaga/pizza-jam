@@ -11,7 +11,6 @@
 [ext_resource type="Script" uid="uid://cnsr7os6okjd" path="res://Abilities/AbilitySlot.gd" id="7_3ve2a"]
 [ext_resource type="Script" uid="uid://blthoc0bdrqwn" path="res://Entities/Modules/AbilitySlotAI.gd" id="7_hms4s"]
 [ext_resource type="PackedScene" uid="uid://mnckitssbbla" path="res://Abilities/StraightShot/straight_shot.tscn" id="10_8isoi"]
-[ext_resource type="Script" uid="uid://c0ny0w83asqax" path="res://Abilities/AbilityRollModifier.gd" id="10_rg81y"]
 
 [sub_resource type="Resource" id="Resource_wgj20"]
 script = ExtResource("2_ujlot")
@@ -27,22 +26,11 @@ metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
 script = ExtResource("4_gx638")
 metadata/_custom_type_script = "uid://c63a4rftwo8ch"
 
-[sub_resource type="Resource" id="Resource_8isoi"]
-script = ExtResource("10_rg81y")
-base_multishot = 5.0
-metadata/_custom_type_script = "uid://c0ny0w83asqax"
-
 [node name="Godotbot" unique_id=639906909 instance=ExtResource("1_wgj20")]
-collision_layer = 0
-collision_mask = 3
 civil = SubResource("Resource_wgj20")
 combat = SubResource("Resource_kxl0c")
 director = SubResource("Resource_e0011")
 drop_tables = Array[ExtResource("6_rg81y")]([ExtResource("6_rxtae")])
-
-[node name="Hitbox" parent="." index="2" unique_id=2100489449]
-collision_layer = 0
-collision_mask = 256
 
 [node name="MovementModule" type="Node" parent="." index="3" unique_id=1140205346]
 script = ExtResource("2_selh3")
@@ -58,10 +46,7 @@ default_ability = NodePath("StraightShot")
 metadata/_custom_type_script = "uid://cnsr7os6okjd"
 
 [node name="StraightShot" parent="Swing" index="0" unique_id=997557398 instance=ExtResource("10_8isoi")]
-ar_modifier = SubResource("Resource_8isoi")
 tag_melee = true
-follows_entity = true
-multishot_spread = 360.0
 
 [node name="AbilitySlotAI" type="Node" parent="Swing" index="1" unique_id=2008964635]
 script = ExtResource("7_hms4s")
