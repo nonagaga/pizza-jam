@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djowgb550unnq"
-path="res://.godot/imported/RoomTest.png-fca7a3960565b82e7601ab4ea84800b3.ctex"
+uid="uid://dmdieq7trhdt8"
+path="res://.godot/imported/HallwayTest.png-36a1cf8480fa5f8009b0718664213d61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Locations/Levels/RoomTest.png"
-dest_files=["res://.godot/imported/RoomTest.png-fca7a3960565b82e7601ab4ea84800b3.ctex"]
+source_file="res://Locations/Levels/Tilemaps/Textures/HallwayTest.png"
+dest_files=["res://.godot/imported/HallwayTest.png-36a1cf8480fa5f8009b0718664213d61.ctex"]
 
 [params]
 

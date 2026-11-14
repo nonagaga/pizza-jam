@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmdieq7trhdt8"
-path="res://.godot/imported/HallwayTest.png-18217f75bf95e7f65603b367342820d3.ctex"
+uid="uid://bbw05m6olnd6"
+path="res://.godot/imported/LargeCrate.png-d2dcddf5012b726bb496298461d22b3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Locations/Levels/Tilemaps/HallwayTest.png"
-dest_files=["res://.godot/imported/HallwayTest.png-18217f75bf95e7f65603b367342820d3.ctex"]
+source_file="res://Locations/Levels/Tilemaps/Textures/LargeCrate.png"
+dest_files=["res://.godot/imported/LargeCrate.png-d2dcddf5012b726bb496298461d22b3b.ctex"]
 
 [params]
 

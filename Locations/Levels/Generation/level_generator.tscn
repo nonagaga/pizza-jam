@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bd0pwtgyv0uph"]
+
+[ext_resource type="Script" uid="uid://cciilo734epcl" path="res://Locations/Levels/Generation/level_generator.gd" id="1_8cb1g"]
+[ext_resource type="PackedScene" uid="uid://dy0jfqehiv8nr" path="res://Locations/Levels/Rooms/stone_room.tscn" id="2_wt8nh"]
+[ext_resource type="PackedScene" uid="uid://cnu3rqiqvfnb6" path="res://Locations/Levels/Rooms/hallway_test.tscn" id="3_66lhv"]
+[ext_resource type="PackedScene" uid="uid://cr5py23pbo0th" path="res://Entities/Player.tscn" id="4_wt8nh"]
+[ext_resource type="Script" uid="uid://c1pi6b1cu8by2" path="res://Entities/EntityCombatStats.gd" id="5_yugmb"]
+[ext_resource type="Texture2D" uid="uid://bobh8devwmpej" path="res://Locations/Levels/SWKidle.png" id="6_3xro7"]
+
+[sub_resource type="Resource" id="Resource_1c00x"]
+script = ExtResource("5_yugmb")
+walk_speed = 5.0
+metadata/_custom_type_script = "uid://c1pi6b1cu8by2"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_661rv"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2ytx"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjblj"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipucb"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22gxl"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61jww"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8074k"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ottps"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ect0p"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds0sf"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7qlk"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5yyj"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5b8f"]
+atlas = ExtResource("6_3xro7")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0p60y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2ytx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjblj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipucb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22gxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61jww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8074k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ottps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ect0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ds0sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7qlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5yyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5b8f")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="LevelGenerator" type="Node2D" unique_id=1501019675]
+script = ExtResource("1_8cb1g")
+max_rooms = 7
+room_resource_directory = "res://Locations/Levels/Rooms/"
+starting_room = ExtResource("2_wt8nh")
+hallway_scene = ExtResource("3_66lhv")
+
+[node name="Player" parent="." unique_id=639906909 instance=ExtResource("4_wt8nh")]
+position = Vector2(160, 160)
+combat = SubResource("Resource_1c00x")
+
+[node name="MainSprite" parent="Player" index="0" unique_id=491664460]
+visible = false
+
+[node name="MainCollider" parent="Player" index="1" unique_id=108793456]
+position = Vector2(0, 8)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_661rv")
+
+[node name="Camera2D" parent="Player" index="4" unique_id=975768696]
+zoom = Vector2(1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1026024145]
+sprite_frames = SubResource("SpriteFrames_0p60y")
+autoplay = "default"
+frame_progress = 0.7410968
+
+[editable path="Player"]

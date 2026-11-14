@@ -1,12 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://d2vsi8sdrtiql"]
 
-[ext_resource type="Texture2D" uid="uid://b7lw7oyumcult" path="res://Locations/Levels/all_the_ui_so_far.png" id="1_xw46r"]
+[ext_resource type="Texture2D" uid="uid://by0dr887fcxqq" path="res://Utility/UI/Scene 1 Assets .png" id="1_xw46r"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1jrwk"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jh7el"]
 texture = ExtResource("1_xw46r")
-region_rect = Rect2(42, 25, 214, 64)
+region_rect = Rect2(261, 60, 258, 107)
 
 [resource]
-Button/styles/hover = SubResource("StyleBoxTexture_1jrwk")
-Button/styles/normal = SubResource("StyleBoxTexture_1jrwk")
-Button/styles/pressed = SubResource("StyleBoxTexture_1jrwk")
+Button/styles/normal = SubResource("StyleBoxTexture_jh7el")

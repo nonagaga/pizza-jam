@@ -5,14 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://dgy8c0ydtbm64" path="res://Utility/SceneManager/Transitions/TRANS_black_wipe.tscn" id="3_c2nx3"]
 [ext_resource type="PackedScene" uid="uid://dvv8e64tiq8ou" path="res://Utility/UI/Main Menu/main_menu.tscn" id="3_dbat5"]
 [ext_resource type="PackedScene" uid="uid://bxkb1jyo3t6im" path="res://Test Scenes/Entity Testing.tscn" id="4_nmoos"]
-[ext_resource type="PackedScene" uid="uid://q1dfgdcqvbjy" path="res://Locations/Levels/base_level.tscn" id="5_twral"]
+[ext_resource type="PackedScene" uid="uid://bd0pwtgyv0uph" path="res://Locations/Levels/Generation/level_generator.tscn" id="6_jptc7"]
 
 [node name="SceneManager" type="Node" unique_id=836661501 node_paths=PackedStringArray("canvas_layer")]
 script = ExtResource("1_w5pm8")
 scene_list = Dictionary[StringName, PackedScene]({
 &"entity_testing": ExtResource("4_nmoos"),
+&"level_generator": ExtResource("6_jptc7"),
 &"main_menu": ExtResource("3_dbat5"),
-&"test_level": ExtResource("5_twral"),
 &"test_scene": ExtResource("2_vrua0")
 })
 default_transition = ExtResource("3_c2nx3")
