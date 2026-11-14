@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dgy8c0ydtbm64" path="res://Utility/SceneManager/Transitions/TRANS_black_wipe.tscn" id="3_c2nx3"]
 [ext_resource type="PackedScene" uid="uid://dvv8e64tiq8ou" path="res://Utility/UI/Main Menu/main_menu.tscn" id="3_dbat5"]
 [ext_resource type="PackedScene" uid="uid://q1dfgdcqvbjy" path="res://Locations/Levels/base_level.tscn" id="5_twral"]
+[ext_resource type="Resource" uid="uid://bioi5u6pih424" path="res://Utility/UI/DialogueSystem/Dialogue/gabe_dialogue.tres" id="6_emer6"]
 [ext_resource type="PackedScene" uid="uid://dcnpwmg4l4rux" path="res://Utility/UI/DialogueSystem/dialogue_system.tscn" id="6_jptc7"]
 
 [node name="SceneManager" type="Node" unique_id=836661501 node_paths=PackedStringArray("canvas_layer")]
@@ -16,5 +17,10 @@ scene_list = Dictionary[StringName, PackedScene]({
 default_transition = ExtResource("3_c2nx3")
 default_scene = &"main_menu"
 canvas_layer = NodePath("CanvasLayer")
+default_data = {
+&"dialogue": ExtResource("6_emer6"),
+&"effects": null,
+&"updgrades": [null, null, null]
+}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2067561443]

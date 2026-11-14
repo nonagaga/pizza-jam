@@ -1,5 +1,5 @@
 extends Control
-@export var starting_dialogue: Dialogue
+@export var starting_dialogue: Dictionary = {}
 @export var start_button : Button
 @export var quit_button : Button
 @export var credits_button : Button
@@ -13,4 +13,4 @@ func _ready() -> void:
 
 func _on_start_pressed():
 	scene_manager.change_scene("dialogue", scene_manager.default_transition, 
-	{"dialogue": starting_dialogue})
+	starting_dialogue)

@@ -11,6 +11,7 @@ class_name SceneManager extends Node
 @export var default_transition : PackedScene
 @export var default_scene : StringName
 @export var canvas_layer : CanvasLayer
+@export var default_data : Dictionary = {}
 
 func _ready() -> void:
 	var default_scene_instance = scene_list[default_scene].instantiate()
@@ -43,7 +44,10 @@ data: Dictionary = {}):
 			
 	# Codex additions passing dependencies and transtion data
 	if scene_instance.has_method("setup"):
-		scene_instance.setup(self, data)
+		if data.is_empty():
+			scene_instance.setup(self, default_data)
+		else:
+			scene_instance.setup(self, data)
 	
 	add_child(scene_instance)
 	

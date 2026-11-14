@@ -137,22 +137,10 @@ position = Vector2(416, 64)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_8ru10")
 
-[node name="Godotbot" parent="." unique_id=1507266857 instance=ExtResource("8_4gik7")]
-position = Vector2(313, -225)
-
 [node name="Godotbot2" parent="." unique_id=2061683426 instance=ExtResource("8_4gik7")]
 position = Vector2(637, -170)
 
-[node name="Godotbot3" parent="." unique_id=1740332115 instance=ExtResource("8_4gik7")]
-position = Vector2(452, 300)
-
-[node name="Godotbot4" parent="." unique_id=617231199 instance=ExtResource("8_4gik7")]
-position = Vector2(516, 197)
-
 [node name="Godotbot5" parent="." unique_id=1540432035 instance=ExtResource("8_4gik7")]
 position = Vector2(83, -228)
-
-[node name="Godotbot6" parent="." unique_id=506024561 instance=ExtResource("8_4gik7")]
-position = Vector2(340, -70)
 
 [editable path="Player"]
