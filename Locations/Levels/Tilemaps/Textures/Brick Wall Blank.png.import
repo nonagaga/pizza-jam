@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmnwov2qb2clk"
-path="res://.godot/imported/Tilemap.png-1072c912167d43608a4389951af68e3c.ctex"
+uid="uid://ldoq301fs3f3"
+path="res://.godot/imported/Brick Wall Blank.png-892b6bf3fb39e27129f3f97bcde3de9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Locations/Levels/Tilemaps/Tilemap.png"
-dest_files=["res://.godot/imported/Tilemap.png-1072c912167d43608a4389951af68e3c.ctex"]
+source_file="res://Locations/Levels/Tilemaps/Textures/Brick Wall Blank.png"
+dest_files=["res://.godot/imported/Brick Wall Blank.png-892b6bf3fb39e27129f3f97bcde3de9f.ctex"]
 
 [params]
 
