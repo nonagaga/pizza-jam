@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7lw7oyumcult"
-path="res://.godot/imported/all_the_ui_so_far.png-134b5d18c0efc047be55d0452defa704.ctex"
+uid="uid://ceqbpklt2ficq"
+path="res://.godot/imported/Intersection_RoomTest.png-ae66dd94d313008249ecded3c8b83938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Locations/Levels/all_the_ui_so_far.png"
-dest_files=["res://.godot/imported/all_the_ui_so_far.png-134b5d18c0efc047be55d0452defa704.ctex"]
+source_file="res://Locations/Levels/Stencils/Intersection_RoomTest.png"
+dest_files=["res://.godot/imported/Intersection_RoomTest.png-ae66dd94d313008249ecded3c8b83938.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RoomResource" format=3 uid="uid://vp20wxv2uvgo"]
+
+[ext_resource type="Script" uid="uid://cd137nqf76rgw" path="res://Locations/Levels/Generation/room_resource.gd" id="1_c3l55"]
+[ext_resource type="PackedScene" uid="uid://tb4vkbu2ua33" path="res://Locations/Levels/Rooms/Unused Rooms/intersection_room.tscn" id="1_qpx8u"]
+
+[resource]
+script = ExtResource("1_c3l55")
+room_scene = ExtResource("1_qpx8u")
+door_directions = 15
+metadata/_custom_type_script = "uid://cd137nqf76rgw"
