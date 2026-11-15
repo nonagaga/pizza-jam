@@ -3,8 +3,6 @@ extends Control
 @export var start_button : Button
 @export var quit_button : Button
 @export var credits_button : Button
-@export var start_scene : StringName = "level_generator"
-
 var scene_manager : SceneManager
 
 func setup(sm : SceneManager):
